@@ -3,22 +3,22 @@ export const siteConfig = {
   legalName: "Pulse CPR Oklahoma, LLC",
   tagline: "Lifesaving skills. Oklahoma-ready teams.",
   description:
-    "Pulse CPR delivers professional CPR, BLS, AED, and First Aid certification across Oklahoma. Book public classes or request on-site corporate training for workplaces, schools, and healthcare teams.",
+    "Pulse CPR delivers professional CPR, BLS, AED, and First Aid certification from Edmond, Oklahoma, and on-site across the state. Book a public class or request workplace training for schools, clinics, and companies.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://pulsecprok.com",
-  phone: "(405) 555-7873",
-  phoneHref: "tel:+14055557873",
-  email: "hello@pulsecprok.com",
-  bookingEmail: "book@pulsecprok.com",
+  phone: "(405) 763-6811",
+  phoneHref: "tel:+14057636811",
+  email: "Pulse.CPR2024@gmail.com",
+  bookingEmail: "Pulse.CPR2024@gmail.com",
   address: {
-    street: "101 Park Avenue, Suite 200",
-    city: "Oklahoma City",
+    street: "1019 Waterwood Pkwy, Ste C",
+    city: "Edmond",
     region: "OK",
-    postalCode: "73102",
+    postalCode: "73034",
     country: "US",
   },
   geo: {
-    latitude: 35.4676,
-    longitude: -97.5164,
+    latitude: 35.65247,
+    longitude: -97.46978,
   },
   hours: [
     { day: "Monday–Friday", time: "8:00 AM – 6:00 PM" },
@@ -30,8 +30,8 @@ export const siteConfig = {
     "Sa 09:00-14:00",
   ],
   serviceArea: [
-    "Oklahoma City",
     "Edmond",
+    "Oklahoma City",
     "Norman",
     "Moore",
     "Yukon",
@@ -70,7 +70,7 @@ export const navItems = [
 ] as const
 
 export const stats = [
-  { value: "OKC + on-site", label: "Classroom and statewide training" },
+  { value: "Edmond + on-site", label: "Classroom and statewide training" },
   { value: "2-year", label: "Typical card validity" },
   { value: "10/10", label: "Facebook reviews recommend Pulse.CPR" },
   { value: "Same-week", label: "Corporate scheduling" },
@@ -303,7 +303,7 @@ export const faqs = [
   {
     question: "Do you offer evening or weekend classes?",
     answer:
-      "Public classes run weeknights and Saturdays in Oklahoma City. Corporate sessions can be scheduled before open, after close, or across multiple shifts.",
+      "Public classes run weeknights and Saturdays in Edmond. Corporate sessions can be scheduled before open, after close, or across multiple shifts.",
   },
   {
     question: "What is your cancellation policy?",
@@ -318,7 +318,7 @@ export const faqs = [
   {
     question: "Who is Pulse CPR?",
     answer:
-      "Pulse CPR (Facebook: Pulse.CPR) is an Oklahoma training company that teaches CPR, AED, First Aid, BLS, ACLS, and PALS. Classes are available in the Oklahoma City classroom and on-site statewide.",
+      "Pulse CPR (Facebook: Pulse.CPR) is an Oklahoma training company that teaches CPR, AED, First Aid, BLS, ACLS, and PALS. Public classes meet at 1019 Waterwood Pkwy, Ste C, Edmond, OK 73034. Instructors also train on-site statewide.",
   },
   {
     question: "Which Oklahoma cities do you serve?",
@@ -333,7 +333,7 @@ export const faqs = [
   {
     question: "How do I book a CPR class in Oklahoma?",
     answer:
-      "Use the booking form at pulsecprok.com/book, call (405) 555-7873, or request an on-site quote for groups of six or more. A coordinator confirms seats within one business day.",
+      "Use the booking form at pulsecprok.com/book, call (405) 763-6811, or email Pulse.CPR2024@gmail.com. Request an on-site quote for groups of six or more. A coordinator confirms seats within one business day.",
   },
 ] as const
 
@@ -344,7 +344,7 @@ export const classes = [
     category: "Healthcare",
     date: "2026-09-06",
     time: "8:00 AM – 12:30 PM",
-    location: "Oklahoma City classroom",
+    location: "Edmond classroom",
     seats: 6,
     price: "$95",
   },
@@ -354,7 +354,7 @@ export const classes = [
     category: "CPR",
     date: "2026-09-08",
     time: "5:30 PM – 9:00 PM",
-    location: "Oklahoma City classroom",
+    location: "Edmond classroom",
     seats: 8,
     price: "$75",
   },
@@ -364,7 +364,7 @@ export const classes = [
     category: "First Aid",
     date: "2026-09-12",
     time: "9:00 AM – 12:00 PM",
-    location: "Oklahoma City classroom",
+    location: "Edmond classroom",
     seats: 10,
     price: "$69",
   },
@@ -374,7 +374,7 @@ export const classes = [
     category: "AED",
     date: "2026-09-16",
     time: "6:00 PM – 8:00 PM",
-    location: "Oklahoma City classroom",
+    location: "Edmond classroom",
     seats: 12,
     price: "$59",
   },
@@ -384,7 +384,7 @@ export const classes = [
     category: "Healthcare",
     date: "2026-09-20",
     time: "8:00 AM – 11:30 AM",
-    location: "Oklahoma City classroom",
+    location: "Edmond classroom",
     seats: 4,
     price: "$85",
   },
@@ -394,7 +394,7 @@ export const classes = [
     category: "CPR",
     date: "2026-09-26",
     time: "9:00 AM – 3:00 PM",
-    location: "Oklahoma City classroom",
+    location: "Edmond classroom",
     seats: 7,
     price: "$119",
   },
@@ -404,7 +404,7 @@ export const classes = [
     category: "Healthcare",
     date: "2026-10-03",
     time: "8:00 AM – 4:00 PM",
-    location: "Oklahoma City classroom",
+    location: "Edmond classroom",
     seats: 5,
     price: "$195",
   },
@@ -414,7 +414,7 @@ export const classes = [
     category: "CPR",
     date: "2026-10-07",
     time: "5:30 PM – 9:00 PM",
-    location: "Oklahoma City classroom",
+    location: "Edmond classroom",
     seats: 9,
     price: "$75",
   },
@@ -424,7 +424,7 @@ export const classes = [
     category: "Healthcare",
     date: "2026-10-17",
     time: "8:00 AM – 4:30 PM",
-    location: "Oklahoma City classroom",
+    location: "Edmond classroom",
     seats: 6,
     price: "$195",
   },
@@ -434,7 +434,7 @@ export const classes = [
     category: "First Aid",
     date: "2026-10-24",
     time: "9:00 AM – 2:00 PM",
-    location: "Oklahoma City classroom",
+    location: "Edmond classroom",
     seats: 8,
     price: "$99",
   },
@@ -454,7 +454,7 @@ export const classes = [
     category: "Healthcare",
     date: "2026-11-07",
     time: "8:00 AM – 12:30 PM",
-    location: "Oklahoma City classroom",
+    location: "Edmond classroom",
     seats: 8,
     price: "$95",
   },

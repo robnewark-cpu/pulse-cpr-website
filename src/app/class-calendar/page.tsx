@@ -8,7 +8,7 @@ import { breadcrumbJsonLd, classEventJsonLd, createMetadata } from "@/lib/seo"
 export const metadata = createMetadata({
   title: "Class Calendar",
   description:
-    "Upcoming Pulse CPR classes in Oklahoma City: Heartsaver CPR, First Aid, AED, BLS, ACLS, and PALS. Book a seat or request an on-site date.",
+    "Upcoming Pulse CPR classes in Edmond: Heartsaver CPR, First Aid, AED, BLS, ACLS, and PALS. Book a seat or request an on-site date.",
   path: "/class-calendar",
 })
 
@@ -25,7 +25,7 @@ export default function ClassCalendarPage() {
         ]}
       />
       <PageHero
-        eyebrow="Oklahoma City classroom"
+        eyebrow="Edmond classroom"
         title="Upcoming certification dates"
         description="Filter by course type and reserve a seat. Need a private date at your facility? Request a corporate session instead of a public class."
         primaryCta={{ href: "/book", label: "Book a class" }}

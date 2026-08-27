@@ -1,6 +1,7 @@
 "use server"
 
 import { z } from "zod"
+import { siteConfig } from "@/lib/site"
 
 export type FormState = {
   status: "idle" | "success" | "error"
@@ -111,7 +112,7 @@ export async function submitContact(
   } catch {
     return {
       status: "error",
-      message: "We could not send your message. Please call (405) 555-7873.",
+      message: `We could not send your message. Please call ${siteConfig.phone}.`,
     }
   }
 }
@@ -149,7 +150,7 @@ export async function submitBooking(
   } catch {
     return {
       status: "error",
-      message: "Booking could not be submitted. Call (405) 555-7873 to reserve a seat.",
+      message: `Booking could not be submitted. Call ${siteConfig.phone} to reserve a seat.`,
     }
   }
 }
@@ -188,7 +189,7 @@ export async function submitQuote(
   } catch {
     return {
       status: "error",
-      message: "We could not send your quote request. Email hello@pulsecprok.com or call us.",
+      message: `We could not send your quote request. Email ${siteConfig.email} or call us.`,
     }
   }
 }
@@ -218,7 +219,7 @@ export async function submitNewsletter(
   } catch {
     return {
       status: "error",
-      message: "Signup failed. Please try again or email hello@pulsecprok.com.",
+      message: `Signup failed. Please try again or email ${siteConfig.email}.`,
     }
   }
 }

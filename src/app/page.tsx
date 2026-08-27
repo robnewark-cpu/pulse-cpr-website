@@ -48,7 +48,7 @@ export default function HomePage() {
         <Container className="relative grid gap-10 py-16 sm:py-20 lg:grid-cols-[1.15fr_0.85fr] lg:py-24">
           <FadeIn>
             <p className="text-sm font-semibold tracking-[0.18em] text-red-200 uppercase">
-              Oklahoma City · Statewide on-site
+              Edmond · Statewide on-site
             </p>
             <h1 className="mt-4 text-4xl font-bold text-white sm:text-5xl lg:text-[3.4rem] lg:leading-[1.08]">
               CPR certification that holds up when seconds matter.
@@ -79,7 +79,7 @@ export default function HomePage() {
             <dl className="mt-10 grid max-w-lg grid-cols-3 gap-4 border-t border-white/15 pt-6">
               <div>
                 <dt className="text-xs tracking-wide text-white/60 uppercase">Classroom</dt>
-                <dd className="mt-1 text-sm font-medium">Oklahoma City</dd>
+                <dd className="mt-1 text-sm font-medium">Edmond</dd>
               </div>
               <div>
                 <dt className="text-xs tracking-wide text-white/60 uppercase">Call</dt>
@@ -129,7 +129,7 @@ export default function HomePage() {
                 Geography
               </dt>
               <dd className="mt-2 text-sm leading-6 text-navy">
-                Oklahoma City classroom plus on-site training in Edmond, Norman, Tulsa, Lawton, and statewide.
+                Edmond classroom at 1019 Waterwood Pkwy, plus on-site training in Oklahoma City, Norman, Tulsa, Lawton, and statewide.
               </dd>
             </div>
             <div>
@@ -163,7 +163,7 @@ export default function HomePage() {
             </p>
             <h2 className="mt-2 text-3xl font-bold">Training matched to the people who need it</h2>
             <p className="mt-3 text-muted-foreground">
-              Public classes in Oklahoma City and on-site sessions for companies, schools, clinics, and agencies.
+              Public classes in Edmond and on-site sessions for companies, schools, clinics, and agencies.
             </p>
           </div>
           <ServiceCards />
@@ -263,7 +263,7 @@ export default function HomePage() {
       </section>
       <CtaBanner
         title="Get your team certified this month."
-        description="Public seats in Oklahoma City or an instructor at your door. Book online or request a corporate quote."
+        description="Public seats in Edmond or an instructor at your door. Book online or request a corporate quote."
         primary={{ href: "/book", label: "Book a class" }}
         secondary={{ href: "/corporate-training", label: "Corporate quote" }}
       />

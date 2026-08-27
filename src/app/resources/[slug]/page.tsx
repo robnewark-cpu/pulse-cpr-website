@@ -15,7 +15,7 @@ const bodies: Record<string, string[]> = {
   ],
   "how-often-to-renew-cpr-certification": [
     "Heartsaver, First Aid, AED, and BLS cards are almost always issued for two years. Skills fade much faster than that, which is why we encourage annual refreshers for high-risk workplaces even when the card is still valid.",
-    "Set a reminder 45 days before expiration. That window covers Oklahoma City public classes and most corporate on-site lead times.",
+    "Set a reminder 45 days before expiration. That window covers Edmond public classes and most corporate on-site lead times.",
     "If a card lapses, do not assume you can take a short renewal. Call us with the expiration date and we will place you in the correct track.",
   ],
   "oklahoma-aed-good-samaritan": [
@@ -31,7 +31,7 @@ const bodies: Record<string, string[]> = {
   "cpr-for-teachers-and-childcare": [
     "Oklahoma classrooms need pediatric CPR, choking response, and first aid more than they need a lecture. We schedule on teacher workdays and evenings so substitutes are not required.",
     "Licensed childcare often needs a combined pediatric CPR and first aid card. Tell us your licensing language and we will match the course.",
-    "Coaches should not wait for a district-wide day. Public Saturday classes in Oklahoma City keep cards from expiring mid-season.",
+    "Coaches should not wait for a district-wide day. Public Saturday classes in Edmond keep cards from expiring mid-season.",
   ],
   "what-to-expect-in-a-bls-class": [
     "Plan on focused prework, then a morning of skills: compressions on measured manikins, AED practice, bag-mask, and two-rescuer cycles.",

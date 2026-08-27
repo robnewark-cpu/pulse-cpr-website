@@ -4,7 +4,7 @@ import { createMetadata } from "@/lib/seo"
 export const metadata = createMetadata({
   title: "CPR Certification in Oklahoma",
   description:
-    "Heartsaver CPR certification in Oklahoma City and on-site across the state. Adult, child, and infant CPR with choking response and same-day eCards.",
+    "Heartsaver CPR certification at the Edmond classroom and on-site across Oklahoma City and the state. Adult, child, and infant CPR with choking response and same-day eCards.",
   path: "/cpr-certification",
   keywords: ["CPR certification Oklahoma City", "Heartsaver CPR OKC", "CPR class Oklahoma"],
 })

@@ -51,7 +51,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-border/80 bg-white/95 shadow-sm backdrop-blur-md">
       <div className="hidden border-b border-navy/10 bg-navy text-white md:block">
         <div className="container-site flex h-9 items-center justify-between text-xs tracking-wide">
-          <p>Serving Oklahoma City · Edmond · Norman · Tulsa · statewide</p>
+          <p>Edmond classroom · Oklahoma City · Norman · Tulsa · statewide</p>
           <a
             href={siteConfig.phoneHref}
             className="inline-flex items-center gap-1.5 font-medium hover:text-white/80"

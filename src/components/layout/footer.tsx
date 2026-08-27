@@ -61,7 +61,7 @@ export function Footer() {
         ))}
         <div>
           <p className="text-sm font-semibold tracking-wide text-white">
-            Oklahoma classroom
+            Edmond classroom
           </p>
           <ul className="mt-4 space-y-3 text-sm text-white/75">
             <li className="flex gap-2">
