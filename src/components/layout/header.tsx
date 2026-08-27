@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useEffect, useId, useRef, useState } from "react"
-import { ChevronDown, Menu, Phone } from "lucide-react"
+import { ChevronDown, Mail, Menu, Phone } from "lucide-react"
 import { Logo } from "@/components/brand/logo"
 import { Button } from "@/components/ui/button"
 import { buttonVariants } from "@/components/ui/button-variants"
@@ -54,13 +54,22 @@ export function Header() {
       <div className="hidden border-b border-navy/10 bg-navy text-white md:block">
         <div className="container-site flex h-9 items-center justify-between text-xs tracking-wide">
           <p>Edmond classroom · Oklahoma City · Norman · Tulsa · statewide</p>
-          <a
-            href={siteConfig.phoneHref}
-            className="inline-flex items-center gap-1.5 font-medium hover:text-white/80"
-          >
-            <Phone className="size-3.5" aria-hidden="true" />
-            {siteConfig.phone}
-          </a>
+          <div className="flex items-center gap-4">
+            <a
+              href={siteConfig.phoneHref}
+              className="inline-flex items-center gap-1.5 font-medium hover:text-white/80"
+            >
+              <Phone className="size-3.5" aria-hidden="true" />
+              {siteConfig.phone}
+            </a>
+            <a
+              href={`mailto:${siteConfig.email}`}
+              className="inline-flex items-center gap-1.5 font-medium hover:text-white/80"
+            >
+              <Mail className="size-3.5" aria-hidden="true" />
+              {siteConfig.email}
+            </a>
+          </div>
         </div>
       </div>
       <div className="container-site flex h-16 items-center justify-between gap-4 lg:h-[4.25rem]">
@@ -191,6 +200,13 @@ export function Header() {
                 >
                   <Phone className="size-4" aria-hidden="true" />
                   {siteConfig.phone}
+                </a>
+                <a
+                  href={`mailto:${siteConfig.email}`}
+                  className="inline-flex items-center justify-center gap-2 rounded-xl border px-4 py-3 text-sm font-medium text-navy"
+                >
+                  <Mail className="size-4" aria-hidden="true" />
+                  {siteConfig.email}
                 </a>
               </nav>
             </SheetContent>

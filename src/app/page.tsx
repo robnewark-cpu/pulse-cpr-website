@@ -1,10 +1,11 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, HeartPulse, Building2, Stethoscope } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { Container } from "@/components/layout/container"
 import { FadeIn } from "@/components/motion/fade-in"
 import { ServiceCards } from "@/components/sections/service-cards"
 import { TrustBar } from "@/components/sections/trust-bar"
+import { WhyTrainWithPulse } from "@/components/sections/why-train-with-pulse"
 import { InstructorGrid } from "@/components/sections/instructor-grid"
 import { TestimonialCarousel } from "@/components/sections/testimonial-carousel"
 import { FaqAccordion } from "@/components/sections/faq-accordion"
@@ -169,68 +170,19 @@ export default function HomePage() {
           <ServiceCards />
         </Container>
       </section>
-      <section className="bg-accent/50 py-14 sm:py-20">
-        <Container className="grid gap-10 lg:grid-cols-2 lg:items-center">
-          <FadeIn>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-              <Image
-                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1400&q=80"
-                alt="Clinician reviewing patient information during coordinated emergency care"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
-              />
-            </div>
-          </FadeIn>
-          <FadeIn delay={0.08}>
-            <p className="text-sm font-semibold tracking-[0.16em] text-primary uppercase">
-              Why Pulse CPR
-            </p>
-            <h2 className="mt-2 text-3xl font-bold">
-              High-trust instruction for HR, credentialing, and first-time students.
-            </h2>
-            <ul className="mt-6 space-y-5">
-              {[
-                {
-                  icon: HeartPulse,
-                  title: "Skills first, not slides first",
-                  body: "Manikin time is protected. Students leave having actually performed compressions, breaths, and AED prompts.",
-                },
-                {
-                  icon: Building2,
-                  title: "Built for Oklahoma employers",
-                  body: "Shift-aware scheduling, group invoices, and reporting that safety officers can file without extra chasing.",
-                },
-                {
-                  icon: Stethoscope,
-                  title: "Taught by Christine Oldenburg",
-                  body: "Pulse CPR classes are taught by Christine in Edmond and on-site across Oklahoma. Full credentials will be posted once her resume is on file.",
-                },
-              ].map((item) => (
-                <li key={item.title} className="flex gap-4">
-                  <item.icon className="mt-1 size-5 text-primary" aria-hidden="true" />
-                  <div>
-                    <p className="font-semibold text-navy">{item.title}</p>
-                    <p className="mt-1 text-sm leading-6 text-muted-foreground">{item.body}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
-            <Link href="/about" className={cn(buttonVariants({ variant: "outline", size: "xl" }), "mt-8")}>
-              Meet Christine
-            </Link>
-          </FadeIn>
-        </Container>
-      </section>
+      <WhyTrainWithPulse />
       <section className="py-14 sm:py-20">
         <Container>
           <div className="mb-10">
             <p className="text-sm font-semibold tracking-[0.16em] text-primary uppercase">
-              Instructor
+              Meet your instructor
             </p>
-            <h2 className="mt-2 text-3xl font-bold">Train with Christine Oldenburg</h2>
+            <h2 className="mt-2 text-3xl font-bold">Christine Oldenburg, RN</h2>
           </div>
-          <InstructorGrid />
+          <InstructorGrid variant="short" />
+          <Link href="/about" className={cn(buttonVariants({ variant: "outline", size: "xl" }), "mt-8")}>
+            Read Christine’s full bio
+          </Link>
         </Container>
       </section>
       <section className="bg-accent/40 py-14 sm:py-20">

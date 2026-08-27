@@ -7,8 +7,8 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://pulsecprok.com",
   phone: "(405) 763-6811",
   phoneHref: "tel:+14057636811",
-  email: "Pulse.CPR2024@gmail.com",
-  bookingEmail: "Pulse.CPR2024@gmail.com",
+  email: "contact@pulsecprok.com",
+  bookingEmail: "contact@pulsecprok.com",
   address: {
     street: "1019 Waterwood Pkwy, Ste C",
     city: "Edmond",
@@ -183,13 +183,38 @@ export const defaultInstructor = "Christine Oldenburg"
 
 export const instructors = [
   {
-    name: defaultInstructor,
-    role: "Instructor",
-    credentials: "Credentials and certifications will be added from her resume",
-    bio: "Instructor biography coming soon. Pulse CPR will publish Christine Oldenburg’s background, credentials, and teaching experience here once her resume is on file.",
+    name: "Christine Oldenburg, RN",
+    role: "Founder and Lead Instructor",
+    credentials: "RN · ACLS · AHA CPR · AHA Instructor",
+    certifications: [
+      "Registered Nurse (RN)",
+      "Advanced Cardiac Life Support (ACLS)",
+      "American Heart Association CPR Certification",
+      "American Heart Association Instructor Certification",
+    ],
+    shortBio:
+      "Christine Oldenburg, RN, is the founder and lead instructor of Pulse CPR. With more than 24 years of nursing experience and extensive clinical backgrounds in emergency, critical care, telemetry, cardiac, and hospital nursing, she brings real-world healthcare expertise into every classroom. As an American Heart Association Instructor and former healthcare educator, Christine is passionate about teaching practical lifesaving skills that help individuals and organizations respond confidently during emergencies.",
+    bio: [
+      "Christine Oldenburg is a Registered Nurse with more than 24 years of healthcare experience serving patients throughout Oklahoma. Throughout her nursing career, she has worked in medical-surgical units, oncology, telemetry, intensive care, critical care, emergency care, cardiac step-down units, and hospital float nursing, providing care to patients across a wide range of healthcare settings.",
+      "Christine earned her Associate Degree in Nursing from Rose State College and has maintained active nursing licensure in the State of Oklahoma. Her professional experience includes work with Mercy Hospital, Norman Regional Hospital, OU Medical Center, and Midwest Regional Medical Center. Throughout her career, she has cared for patients experiencing cardiac emergencies, critical illness, and complex medical conditions, developing the calm decision-making skills required during life-threatening situations.",
+      "In addition to her bedside nursing experience, Christine served as an Adjunct Instructor RN for Moore Norman Technology Center, where she helped develop, teach, and implement state-approved healthcare training programs. Her experience as both a clinician and educator allows her to present lifesaving skills in a clear, practical, and engaging way for students of all experience levels.",
+      "Through Pulse CPR, Christine is committed to empowering individuals, families, healthcare professionals, businesses, schools, churches, and community organizations with the skills and confidence needed to respond during emergencies when every second matters.",
+    ],
     image: "",
   },
 ] as const
+
+export const trustReasons = [
+  "Led by a Registered Nurse with 24+ years of healthcare experience",
+  "American Heart Association Instructor Certified",
+  "Hands-On Training From Real Healthcare Experience",
+  "Flexible Classes for Individuals and Organizations",
+  "Corporate and On-Site Training Available",
+  "Practical, Easy-to-Understand Instruction",
+] as const
+
+export const aboutMission =
+  "At Pulse CPR, our mission is to equip individuals and organizations with the knowledge, skills, and confidence needed to respond effectively during medical emergencies. We believe that quality CPR and first aid training saves lives, strengthens communities, and empowers people to act when moments matter most."
 
 export const testimonials = [
   {
@@ -295,7 +320,7 @@ export const faqs = [
   {
     question: "Who is Pulse CPR?",
     answer:
-      "Pulse CPR (Facebook: Pulse.CPR) is an Oklahoma training company that teaches CPR, AED, First Aid, BLS, ACLS, and PALS. Public classes meet at 1019 Waterwood Pkwy, Ste C, Edmond, OK 73034. Instructor Christine Oldenburg also trains on-site statewide.",
+      "Pulse CPR (Facebook: Pulse.CPR) is an Oklahoma training company founded by Christine Oldenburg, RN, an American Heart Association Instructor. Public classes meet at 1019 Waterwood Pkwy, Ste C, Edmond, OK 73034. Christine also trains on-site statewide.",
   },
   {
     question: "Which Oklahoma cities do you serve?",
@@ -310,7 +335,7 @@ export const faqs = [
   {
     question: "How do I book a CPR class in Oklahoma?",
     answer:
-      "Use the booking form at pulsecprok.com/book, call (405) 763-6811, or email Pulse.CPR2024@gmail.com. Request an on-site quote for groups of six or more. A coordinator confirms seats within one business day.",
+      "Use the booking form at pulsecprok.com/book, call (405) 763-6811, or email contact@pulsecprok.com. Request an on-site quote for groups of six or more. A coordinator confirms seats within one business day.",
   },
 ] as const
 

@@ -47,8 +47,8 @@ export async function sendRegistrationConfirmation(
     <p>You are registered for Pulse CPR:</p>
     <p><strong>${classSummary(session)}</strong></p>
     <p>Seats held: ${registration.seats}<br/>Price: ${formatPrice(session.price)}</p>
-    <p>Bring a photo ID and clothes you can move in. Call ${siteConfig.phone} if you need to change this reservation.</p>
-    <p>Pulse CPR<br/>${siteConfig.address.street}<br/>${siteConfig.address.city}, ${siteConfig.address.region} ${siteConfig.address.postalCode}</p>
+    <p>Bring a photo ID and clothes you can move in. Questions? Call ${siteConfig.phone} or email ${siteConfig.email}.</p>
+    <p>Pulse CPR<br/>${siteConfig.address.street}<br/>${siteConfig.address.city}, ${siteConfig.address.region} ${siteConfig.address.postalCode}<br/>${siteConfig.email}</p>
   `
   const result = await sendEmail({
     to: registration.email,
@@ -74,7 +74,7 @@ export async function sendClassCancellation(
   await sendEmail({
     to: recipients,
     subject: `Class cancelled: ${session.name} on ${formatClassDate(session.class_date)}`,
-    html: `<p>Pulse CPR has cancelled ${classSummary(session)}. We will help you move to another date — reply to this email or call ${siteConfig.phone}.</p>`,
+    html: `<p>Pulse CPR has cancelled ${classSummary(session)}. We will help you move to another date — reply to this email, call ${siteConfig.phone}, or write ${siteConfig.email}.</p>`,
   })
 }
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { defaultInstructor, siteConfig, testimonials } from "@/lib/site"
+import { defaultInstructor, instructors, siteConfig, testimonials } from "@/lib/site"
 import type { ClassRecord } from "@/lib/tms/types"
 import { formatTimeRange } from "@/lib/tms/format"
 
@@ -140,10 +140,26 @@ export function localBusinessJsonLd() {
       worstRating: "1",
     },
     sameAs: [siteConfig.social.facebook, siteConfig.social.facebookReviews],
+    founder: {
+      "@type": "Person",
+      name: defaultInstructor,
+      honorificSuffix: "RN",
+      jobTitle: instructors[0].role,
+    },
     employee: {
       "@type": "Person",
       name: defaultInstructor,
-      jobTitle: "Instructor",
+      honorificSuffix: "RN",
+      jobTitle: instructors[0].role,
+      description: instructors[0].shortBio,
+      alumniOf: {
+        "@type": "CollegeOrUniversity",
+        name: "Rose State College",
+      },
+      hasCredential: instructors[0].certifications.map((credential) => ({
+        "@type": "EducationalOccupationalCredential",
+        name: credential,
+      })),
       worksFor: { "@id": `${siteConfig.url}/#business` },
     },
     knowsAbout: [
