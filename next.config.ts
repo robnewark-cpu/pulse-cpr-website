@@ -11,6 +11,18 @@ const nextConfig: NextConfig = {
   },
   poweredByHeader: false,
   reactStrictMode: true,
+  async headers() {
+    return [
+      {
+        source: "/og-image.jpg",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" },
+          { key: "Content-Type", value: "image/jpeg" },
+          { key: "Access-Control-Allow-Origin", value: "*" },
+        ],
+      },
+    ]
+  },
 }
 
 export default nextConfig

@@ -32,6 +32,18 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
         disallow: ["/admin", "/api/admin", "/review"],
       })),
+      {
+        userAgent: "facebookexternalhit",
+        allow: ["/", "/og-image.jpg"],
+      },
+      {
+        userAgent: "Facebot",
+        allow: ["/", "/og-image.jpg"],
+      },
+      {
+        userAgent: "LinkedInBot",
+        allow: ["/", "/og-image.jpg"],
+      },
     ],
     sitemap: `${siteConfig.url}/sitemap.xml`,
     host: siteConfig.url,
