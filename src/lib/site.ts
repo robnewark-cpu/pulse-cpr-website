@@ -135,7 +135,7 @@ export const courses = [
     shortTitle: "BLS Provider",
     audience: "Nurses, EMTs, dentists, and clinical teams",
     duration: "4 hours",
-    price: "From $95",
+    price: "$95",
     renewal: "Valid 2 years",
     summary:
       "BLS Provider for licensed clinicians who need current cards for credentialing, privileging, or onboarding.",
