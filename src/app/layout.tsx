@@ -7,7 +7,7 @@ import { Footer } from "@/components/layout/footer"
 import { SkipLink } from "@/components/layout/skip-link"
 import { JsonLd } from "@/components/seo/json-ld"
 import { Toaster } from "@/components/ui/sonner"
-import { localBusinessJsonLd } from "@/lib/seo"
+import { localBusinessJsonLd, websiteJsonLd } from "@/lib/seo"
 import { siteConfig } from "@/lib/site"
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -36,16 +36,27 @@ export const metadata: Metadata = {
   category: "education",
   keywords: [
     "CPR certification Oklahoma",
-    "BLS class Oklahoma City",
-    "AED training OKC",
+    "CPR class Oklahoma City",
+    "BLS class OKC",
+    "AED training Oklahoma",
     "First Aid certification Oklahoma",
-    "corporate CPR training",
+    "corporate CPR training Oklahoma",
     "Pulse CPR",
+    "Pulse.CPR",
+    "CPR Edmond",
+    "CPR Norman",
+    "CPR Tulsa",
   ],
   robots: {
     index: true,
     follow: true,
-    googleBot: { index: true, follow: true, "max-image-preview": "large" },
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
   openGraph: {
     type: "website",
@@ -56,16 +67,32 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [{ url: "/og-image.svg", width: 1200, height: 630, alt: siteConfig.name }],
   },
-  twitter: {
-    card: "summary_large_image",
-    title: `${siteConfig.name} | CPR Training in Oklahoma`,
-    description: siteConfig.description,
-  },
+    twitter: {
+      card: "summary_large_image",
+      title: `${siteConfig.name} | CPR Training in Oklahoma`,
+      description: siteConfig.description,
+      images: ["/og-image.svg"],
+    },
   icons: {
     icon: [{ url: "/logo.svg", type: "image/svg+xml" }],
     apple: [{ url: "/logo.svg" }],
   },
-  alternates: { canonical: siteConfig.url },
+  alternates: {
+    canonical: siteConfig.url,
+    types: {
+      "text/plain": [
+        { url: "/llms.txt", title: "llms.txt" },
+        { url: "/ai.txt", title: "ai.txt" },
+      ],
+      "application/rss+xml": [{ url: "/feed.xml", title: "Pulse CPR resources" }],
+    },
+  },
+  other: {
+    "geo.region": "US-OK",
+    "geo.placename": "Oklahoma City, OK",
+    "geo.position": `${siteConfig.geo.latitude};${siteConfig.geo.longitude}`,
+    ICBM: `${siteConfig.geo.latitude}, ${siteConfig.geo.longitude}`,
+  },
 }
 
 export const viewport: Viewport = {
@@ -86,7 +113,7 @@ export default function RootLayout({
       <body
         className={`${plusJakarta.variable} ${geistMono.variable} flex min-h-screen flex-col font-sans antialiased`}
       >
-        <JsonLd data={localBusinessJsonLd()} />
+        <JsonLd data={[localBusinessJsonLd(), websiteJsonLd()]} />
         <SkipLink />
         <Header />
         <main id="main-content" className="flex-1">

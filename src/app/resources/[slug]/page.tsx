@@ -4,7 +4,7 @@ import { PageHero } from "@/components/sections/page-hero"
 import { CtaBanner } from "@/components/sections/cta-banner"
 import { Container } from "@/components/layout/container"
 import { JsonLd } from "@/components/seo/json-ld"
-import { breadcrumbJsonLd, createMetadata } from "@/lib/seo"
+import { articleJsonLd, breadcrumbJsonLd, createMetadata } from "@/lib/seo"
 import { resources, siteConfig } from "@/lib/site"
 
 const bodies: Record<string, string[]> = {
@@ -74,13 +74,12 @@ export default async function ResourceArticlePage({
             { name: "Resources", path: "/resources" },
             { name: article.title, path: `/resources/${article.slug}` },
           ]),
-          {
-            "@context": "https://schema.org",
-            "@type": "Article",
-            headline: article.title,
+          articleJsonLd({
+            title: article.title,
+            description: article.excerpt,
+            path: `/resources/${article.slug}`,
             datePublished: article.date,
-            author: { "@type": "Organization", name: siteConfig.name },
-          },
+          }),
         ]}
       />
       <PageHero

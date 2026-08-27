@@ -12,7 +12,7 @@ import { CtaBanner } from "@/components/sections/cta-banner"
 import { LeadCaptureForm } from "@/components/forms/lead-capture-form"
 import { JsonLd } from "@/components/seo/json-ld"
 import { buttonVariants } from "@/components/ui/button-variants"
-import { createMetadata, faqJsonLd } from "@/lib/seo"
+import { createMetadata, faqJsonLd, howToGetCertifiedJsonLd } from "@/lib/seo"
 import { faqs, siteConfig } from "@/lib/site"
 import { cn } from "@/lib/utils"
 
@@ -25,13 +25,16 @@ export const metadata = createMetadata({
     "BLS class OKC",
     "AED training Oklahoma",
     "corporate CPR training",
+    "CPR class Edmond",
+    "CPR training Norman",
+    "Pulse.CPR",
   ],
 })
 
 export default function HomePage() {
   return (
     <>
-      <JsonLd data={faqJsonLd(faqs)} />
+      <JsonLd data={[faqJsonLd(faqs), howToGetCertifiedJsonLd()]} />
       <section className="relative overflow-hidden bg-navy-deep text-white">
         <Image
           src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=2000&q=80"
@@ -107,6 +110,51 @@ export default function HomePage() {
         </Container>
       </section>
       <TrustBar />
+      <section className="border-b py-10">
+        <Container>
+          <dl
+            data-speakable="true"
+            className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
+          >
+            <div>
+              <dt className="text-xs font-semibold tracking-[0.14em] text-primary uppercase">
+                Entity
+              </dt>
+              <dd className="mt-2 text-sm leading-6 text-navy">
+                Pulse CPR / Pulse.CPR. Oklahoma CPR, AED, First Aid, BLS, ACLS, and PALS training.
+              </dd>
+            </div>
+            <div>
+              <dt className="text-xs font-semibold tracking-[0.14em] text-primary uppercase">
+                Geography
+              </dt>
+              <dd className="mt-2 text-sm leading-6 text-navy">
+                Oklahoma City classroom plus on-site training in Edmond, Norman, Tulsa, Lawton, and statewide.
+              </dd>
+            </div>
+            <div>
+              <dt className="text-xs font-semibold tracking-[0.14em] text-primary uppercase">
+                Reviews
+              </dt>
+              <dd className="mt-2 text-sm leading-6 text-navy">
+                10 public Facebook reviews, all recommend.{" "}
+                <Link href="/testimonials" className="font-medium text-primary hover:underline">
+                  Read them here
+                </Link>
+                .
+              </dd>
+            </div>
+            <div>
+              <dt className="text-xs font-semibold tracking-[0.14em] text-primary uppercase">
+                Book
+              </dt>
+              <dd className="mt-2 text-sm leading-6 text-navy">
+                Online at /book, or group quotes for six or more students. eCards typically same business day.
+              </dd>
+            </div>
+          </dl>
+        </Container>
+      </section>
       <section className="py-14 sm:py-20">
         <Container>
           <div className="mb-10 max-w-2xl">

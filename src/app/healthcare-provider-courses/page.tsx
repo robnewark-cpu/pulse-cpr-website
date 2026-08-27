@@ -5,6 +5,7 @@ export const metadata = createMetadata({
   title: "Healthcare Provider Courses | BLS, ACLS, PALS",
   description:
     "BLS Provider, ACLS, and PALS courses in Oklahoma City for nurses, EMTs, dentists, and clinical teams. Renewal and initial tracks available.",
+  keywords: ["BLS class Oklahoma City", "ACLS Oklahoma", "PALS certification OKC", "healthcare CPR Oklahoma"],
   path: "/healthcare-provider-courses",
 })
 

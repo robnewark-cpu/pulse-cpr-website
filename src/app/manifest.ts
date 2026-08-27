@@ -1,19 +1,23 @@
 import type { MetadataRoute } from "next"
+import { siteConfig } from "@/lib/site"
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Pulse CPR Oklahoma",
+    name: siteConfig.name,
     short_name: "Pulse CPR",
-    description: "CPR, BLS, AED, and First Aid certification across Oklahoma.",
+    description: siteConfig.description,
     start_url: "/",
     display: "standalone",
-    background_color: "#ffffff",
-    theme_color: "#0F2744",
+    background_color: "#0f2744",
+    theme_color: "#0f2744",
+    lang: "en-US",
+    categories: ["education", "health"],
     icons: [
       {
         src: "/logo.svg",
         sizes: "any",
         type: "image/svg+xml",
+        purpose: "any",
       },
     ],
   }

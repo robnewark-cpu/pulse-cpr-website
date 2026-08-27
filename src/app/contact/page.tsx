@@ -3,7 +3,7 @@ import { PageHero } from "@/components/sections/page-hero"
 import { Container } from "@/components/layout/container"
 import { ContactForm } from "@/components/forms/contact-form"
 import { JsonLd } from "@/components/seo/json-ld"
-import { breadcrumbJsonLd, createMetadata } from "@/lib/seo"
+import { breadcrumbJsonLd, contactPageJsonLd, createMetadata } from "@/lib/seo"
 import { siteConfig } from "@/lib/site"
 
 export const metadata = createMetadata({
@@ -21,10 +21,13 @@ export default function ContactPage() {
   return (
     <>
       <JsonLd
-        data={breadcrumbJsonLd([
-          { name: "Home", path: "/" },
-          { name: "Contact", path: "/contact" },
-        ])}
+        data={[
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Contact", path: "/contact" },
+          ]),
+          contactPageJsonLd(),
+        ]}
       />
       <PageHero
         eyebrow="We're here"

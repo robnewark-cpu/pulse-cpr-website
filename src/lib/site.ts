@@ -63,15 +63,16 @@ export const navItems = [
   },
   { href: "/class-calendar", label: "Class Calendar" },
   { href: "/resources", label: "Resources" },
+  { href: "/oklahoma-cpr-training", label: "Oklahoma" },
   { href: "/testimonials", label: "Testimonials" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ] as const
 
 export const stats = [
-  { value: "12,000+", label: "Oklahomans certified" },
-  { value: "98%", label: "First-attempt pass rate" },
-  { value: "10", label: "Facebook reviews, all recommend" },
+  { value: "OKC + on-site", label: "Classroom and statewide training" },
+  { value: "2-year", label: "Typical card validity" },
+  { value: "10/10", label: "Facebook reviews recommend Pulse.CPR" },
   { value: "Same-week", label: "Corporate scheduling" },
 ] as const
 
@@ -313,6 +314,26 @@ export const faqs = [
     question: "Can I combine CPR, AED, and First Aid?",
     answer:
       "Yes. Heartsaver CPR/AED/First Aid is our most requested workplace package. Tell us your industry and we will recommend the shortest course that still meets OSHA, childcare, or school requirements.",
+  },
+  {
+    question: "Who is Pulse CPR?",
+    answer:
+      "Pulse CPR (Facebook: Pulse.CPR) is an Oklahoma training company that teaches CPR, AED, First Aid, BLS, ACLS, and PALS. Classes are available in the Oklahoma City classroom and on-site statewide.",
+  },
+  {
+    question: "Which Oklahoma cities do you serve?",
+    answer:
+      "Pulse CPR serves Oklahoma City, Edmond, Norman, Moore, Yukon, Midwest City, Tulsa, Broken Arrow, Stillwater, Lawton, and other Oklahoma communities by request.",
+  },
+  {
+    question: "Where can I read Pulse CPR reviews?",
+    answer:
+      "Public student reviews are on the Pulse.CPR Facebook page. As of August 2026, all 10 public Facebook reviews recommend Pulse.CPR. We do not currently display Google reviews.",
+  },
+  {
+    question: "How do I book a CPR class in Oklahoma?",
+    answer:
+      "Use the booking form at pulsecprok.com/book, call (405) 555-7873, or request an on-site quote for groups of six or more. A coordinator confirms seats within one business day.",
   },
 ] as const
 
