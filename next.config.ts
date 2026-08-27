@@ -30,4 +30,6 @@ const nextConfig: NextConfig = {
 
 export default nextConfig
 
-initOpenNextCloudflareForDev()
+if (process.env.NODE_ENV !== "production") {
+  initOpenNextCloudflareForDev()
+}
