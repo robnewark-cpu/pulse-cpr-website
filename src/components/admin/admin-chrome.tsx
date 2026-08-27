@@ -28,11 +28,20 @@ export function AdminChrome({
           <Link href="/admin" className="text-sm font-semibold tracking-wide">
             Pulse CPR · Classes
           </Link>
-          <form action={signOutInstructor}>
-            <button type="submit" className="text-xs text-white/80 hover:text-white">
-              Sign out
-            </button>
-          </form>
+          <div className="flex items-center gap-4">
+            <Link
+              href="/admin/help"
+              className="text-xs text-white/80 hover:text-white"
+              aria-label="How to add a class from your phone"
+            >
+              Help
+            </Link>
+            <form action={signOutInstructor}>
+              <button type="submit" className="text-xs text-white/80 hover:text-white">
+                Sign out
+              </button>
+            </form>
+          </div>
         </div>
         <p className="sr-only">{email}</p>
       </header>

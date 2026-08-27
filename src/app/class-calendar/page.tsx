@@ -4,6 +4,7 @@ import { CtaBanner } from "@/components/sections/cta-banner"
 import { Container } from "@/components/layout/container"
 import { JsonLd } from "@/components/seo/json-ld"
 import { breadcrumbJsonLd, classEventJsonLd, createMetadata } from "@/lib/seo"
+import { siteConfig } from "@/lib/site"
 import { listPublicClasses } from "@/lib/tms/queries"
 import { isSupabaseConfigured } from "@/lib/tms/types"
 
@@ -44,7 +45,7 @@ export default async function ClassCalendarPage() {
       </section>
       <CtaBanner
         title="Do not see a date that works?"
-        description="Ask for another public date, or request a private class for six or more students. Payments are processed by Aegis Pay."
+        description={`Ask for another public date, or request a private class for six or more students. Payments are processed by ${siteConfig.payments.processor}.`}
         primary={{ href: "/contact", label: "Ask for another date" }}
         secondary={{ href: "/book", label: "Request a custom date" }}
       />

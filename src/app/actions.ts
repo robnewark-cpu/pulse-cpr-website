@@ -145,7 +145,7 @@ export async function submitBooking(
     return {
       status: "success",
       message:
-        "Your class request is in. Pulse CPR will send an Aegis Pay payment link to confirm the seat.",
+        `Your class request is in. Pulse CPR will send a ${siteConfig.payments.processor} payment link to confirm the seat.`,
     }
   } catch {
     return {

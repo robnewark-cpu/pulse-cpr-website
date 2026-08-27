@@ -215,7 +215,7 @@ export async function submitClassRegistration(
       status: "success",
       message: siteConfig.payments.url
         ? `Complete payment with ${siteConfig.payments.processor} to confirm your seat.`
-        : `Your request is in. Pulse CPR will send an ${siteConfig.payments.processor} payment link to confirm your seat.`,
+        : `Your request is in. Pulse CPR will send a ${siteConfig.payments.processor} payment link to confirm your seat.`,
     }
   } catch (error) {
     const message = error instanceof Error ? error.message : "Registration failed."

@@ -339,7 +339,7 @@ export function howToGetCertifiedJsonLd() {
         "@type": "HowToStep",
         position: 2,
         name: "Book a seat or on-site date",
-        text: "Submit the online booking form or call Pulse CPR. Pay through Aegis Pay to confirm your seat, or request a corporate quote for six or more students.",
+        text: `Submit the online booking form or call Pulse CPR. Pay through ${siteConfig.payments.processor} to confirm your seat, or request a corporate quote for six or more students.`,
         url: new URL("/book", siteConfig.url).toString(),
       },
       {

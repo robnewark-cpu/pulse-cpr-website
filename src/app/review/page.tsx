@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { AddClassFromPhoneGuide } from "@/components/admin/add-class-from-phone"
 import { PageHero } from "@/components/sections/page-hero"
 import { Container } from "@/components/layout/container"
 import { createMetadata } from "@/lib/seo"
@@ -18,6 +19,7 @@ const pagesToReview = [
   { href: "/", label: "Home", note: "First impression, phone, and booking" },
   { href: "/about", label: "About", note: "Your name and bio placeholder" },
   { href: "/class-calendar", label: "Class calendar", note: "Empty until you add dates from your phone" },
+  { href: "/review#add-a-class", label: "Add a class from your phone", note: "Step-by-step for Safari or Chrome" },
   { href: "/cpr-certification", label: "CPR", note: `Listed at ${courses[0].price}` },
   { href: "/first-aid-training", label: "First Aid", note: `Listed at ${courses[1].price}` },
   { href: "/aed-training", label: "AED", note: `Listed at ${courses[2].price}` },
@@ -65,7 +67,7 @@ const christineActions = [
   {
     title: "Add real class dates from your phone",
     detail:
-      "The public calendar is empty on purpose. Sign in at /admin/login, tap New class, and students will see the date on Schedule.",
+      "The public calendar is empty on purpose. Follow How to add a class from your phone on this page: sign in at /admin/login, tap New class, and students will see the date on Schedule.",
   },
   {
     title: "Confirm the live domain",
@@ -91,7 +93,7 @@ const builderActions = [
   {
     title: "Set production environment variables",
     detail:
-      "NEXT_PUBLIC_SITE_URL=https://pulsecprok.com. NEXT_PUBLIC_AEGIS_PAY_URL if you have an Aegis Pay checkout or invoice link. Leave NEXT_PUBLIC_DRAFT_MODE unset so the yellow draft bar disappears.",
+      "NEXT_PUBLIC_SITE_URL=https://pulsecprok.com. NEXT_PUBLIC_SQUARE_PAY_URL if you have a Square payment or invoice link. Leave NEXT_PUBLIC_DRAFT_MODE unset so the yellow draft bar disappears.",
   },
   {
     title: "Make forms actually deliver",
@@ -116,7 +118,7 @@ const builderActions = [
   {
     title: "Optional today, not required to publish",
     detail:
-      "Google Business Profile matching the Edmond NAP, GA4 ID, Resend confirmation emails, Aegis Pay checkout URL, replace remaining Unsplash photos, custom logo if she has a better file.",
+      "Google Business Profile matching the Edmond NAP, GA4 ID, Resend confirmation emails, Square payment link, replace remaining Unsplash photos, custom logo if she has a better file.",
   },
 ]
 
@@ -157,6 +159,11 @@ export default function ReviewPage() {
               <li>• Legal name {siteConfig.legalName} — confirm or correct</li>
             </ul>
           </div>
+        </Container>
+      </section>
+      <section className="py-12 sm:py-16" id="add-a-class">
+        <Container className="max-w-3xl">
+          <AddClassFromPhoneGuide />
         </Container>
       </section>
       <section className="bg-accent/40 py-12 sm:py-16">

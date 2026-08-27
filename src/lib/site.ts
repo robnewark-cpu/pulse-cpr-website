@@ -47,8 +47,8 @@ export const siteConfig = {
       "https://www.facebook.com/profile.php?id=61572683277410&sk=reviews",
   },
   payments: {
-    processor: "Aegis Pay",
-    url: process.env.NEXT_PUBLIC_AEGIS_PAY_URL ?? "",
+    processor: "Square",
+    url: process.env.NEXT_PUBLIC_SQUARE_PAY_URL ?? "",
   },
 } as const
 
@@ -369,12 +369,12 @@ export const faqs = [
   {
     question: "How do I book a CPR class in Oklahoma?",
     answer:
-      "Use the booking form at pulsecprok.com/book, call (405) 763-6811, or email contact@pulsecprok.com. Request an on-site quote for groups of six or more. Class payments are processed by Aegis Pay.",
+      "Use the booking form at pulsecprok.com/book, call (405) 763-6811, or email contact@pulsecprok.com. Request an on-site quote for groups of six or more. Class payments are processed by Square.",
   },
   {
     question: "How do I pay for a class?",
     answer:
-      "Pulse CPR processes class payments through Aegis Pay. After you request a seat, complete payment with Aegis Pay to confirm. Pulse CPR does not process cards on this website.",
+      "Pulse CPR processes class payments through Square. After you request a seat, complete payment with Square to confirm. Pulse CPR does not process cards on this website.",
   },
 ] as const
 
