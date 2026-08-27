@@ -47,6 +47,8 @@ export function Header() {
     }
   }, [coursesOpen])
 
+  if (pathname.startsWith("/admin")) return null
+
   return (
     <header className="sticky top-0 z-50 border-b border-border/80 bg-white/95 shadow-sm backdrop-blur-md">
       <div className="hidden border-b border-navy/10 bg-navy text-white md:block">
