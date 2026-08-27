@@ -23,9 +23,14 @@ Open [http://localhost:3000](http://localhost:3000).
 ## Scripts
 
 - `npm run dev` — development server
-- `npm run build` — production build
-- `npm run start` — serve the production build
+- `npm run build` — OpenNext production build for Cloudflare Workers
+- `npm run build:next` — Next.js production build only
+- `npm run start` — serve the Next.js production build
 - `npm run lint` — ESLint
+- `npm run preview` — OpenNext build, then run locally in the Workers runtime
+- `npm run deploy` — OpenNext build and deploy to Cloudflare Workers
+
+The site runs on **Cloudflare Workers** via `@opennextjs/cloudflare`. `npm run build` produces `.open-next/worker.js` so Workers Builds can deploy with the default `npm run build` + `npx wrangler deploy` commands. OpenNext itself runs `npx next build` via `buildCommand` in `open-next.config.ts`.
 
 ## Environment
 

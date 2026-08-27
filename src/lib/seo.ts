@@ -3,6 +3,13 @@ import { defaultInstructor, instructors, siteConfig, testimonials } from "@/lib/
 import type { ClassRecord } from "@/lib/tms/types"
 import { formatTimeRange } from "@/lib/tms/format"
 
+export const ogImage = {
+  url: `${siteConfig.url}/og-image.jpg`,
+  width: 1200,
+  height: 630,
+  alt: "Pulse CPR Oklahoma",
+} as const
+
 export function createMetadata({
   title,
   description,
@@ -15,10 +22,15 @@ export function createMetadata({
   keywords?: string[]
 }): Metadata {
   const url = new URL(path, siteConfig.url).toString()
+  const isHome = path === "/"
   const fullTitle =
     title === siteConfig.name
       ? `${siteConfig.name} | CPR, BLS, AED & First Aid Training in Oklahoma`
       : `${title} | ${siteConfig.name}`
+  const ogTitle = isHome
+    ? "Pulse CPR | CPR, BLS, AED & First Aid Training in Oklahoma"
+    : fullTitle
+  const ogDescription = isHome ? "Pulse CPR — Learn It. Know It. Save A Life." : description
 
   return {
     title: { absolute: fullTitle },
@@ -32,26 +44,19 @@ export function createMetadata({
       ICBM: `${siteConfig.geo.latitude}, ${siteConfig.geo.longitude}`,
     },
     openGraph: {
-      title: fullTitle,
-      description,
+      title: ogTitle,
+      description: ogDescription,
       url,
       siteName: siteConfig.name,
       locale: "en_US",
       type: "website",
-      images: [
-        {
-          url: "/og-image.svg",
-          width: 1200,
-          height: 630,
-          alt: `${siteConfig.name} — CPR, BLS, AED, and First Aid training in Oklahoma`,
-        },
-      ],
+      images: [ogImage],
     },
     twitter: {
       card: "summary_large_image",
-      title: fullTitle,
-      description,
-      images: ["/og-image.svg"],
+      title: ogTitle,
+      description: ogDescription,
+      images: [ogImage.url],
     },
   }
 }
@@ -93,7 +98,7 @@ export function localBusinessJsonLd() {
     url: siteConfig.url,
     telephone: siteConfig.phone,
     email: siteConfig.email,
-    image: `${siteConfig.url}/og-image.svg`,
+    image: ogImage.url,
     logo: `${siteConfig.url}/logo.svg`,
     description: siteConfig.description,
     priceRange: "$$",
@@ -380,7 +385,7 @@ export function articleJsonLd({
     url,
     mainEntityOfPage: url,
     inLanguage: "en-US",
-    image: `${siteConfig.url}/og-image.svg`,
+    image: ogImage.url,
     author: {
       "@type": "Organization",
       name: siteConfig.name,
