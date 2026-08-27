@@ -23,6 +23,7 @@ const footerNav = [
       { href: "/class-calendar", label: "Class Calendar" },
       { href: "/resources", label: "Resources" },
       { href: "/testimonials", label: "Testimonials" },
+      { href: "/oklahoma-cpr-training", label: "Oklahoma service area" },
       { href: "/contact", label: "Contact" },
     ],
   },

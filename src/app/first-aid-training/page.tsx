@@ -5,6 +5,7 @@ export const metadata = createMetadata({
   title: "First Aid Training in Oklahoma",
   description:
     "Workplace First Aid certification in Oklahoma City and on-site. Bleeding control, medical emergencies, and injury care for Oklahoma employers.",
+  keywords: ["First Aid certification Oklahoma", "workplace first aid OKC", "OSHA first aid class Oklahoma"],
   path: "/first-aid-training",
 })
 

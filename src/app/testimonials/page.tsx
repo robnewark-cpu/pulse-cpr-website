@@ -3,7 +3,7 @@ import { TestimonialCarousel } from "@/components/sections/testimonial-carousel"
 import { CtaBanner } from "@/components/sections/cta-banner"
 import { Container } from "@/components/layout/container"
 import { JsonLd } from "@/components/seo/json-ld"
-import { breadcrumbJsonLd, createMetadata } from "@/lib/seo"
+import { breadcrumbJsonLd, createMetadata, reviewJsonLd } from "@/lib/seo"
 import { siteConfig, testimonials } from "@/lib/site"
 import { buttonVariants } from "@/components/ui/button-variants"
 import { cn } from "@/lib/utils"
@@ -36,23 +36,7 @@ export default function TestimonialsPage() {
               bestRating: "5",
               worstRating: "1",
             },
-            review: testimonials.map((item) => ({
-              "@type": "Review",
-              author: { "@type": "Person", name: item.name },
-              datePublished: item.date,
-              reviewBody: item.quote,
-              url: siteConfig.social.facebookReviews,
-              publisher: {
-                "@type": "Organization",
-                name: "Facebook",
-                url: "https://www.facebook.com",
-              },
-              reviewRating: {
-                "@type": "Rating",
-                ratingValue: "5",
-                bestRating: "5",
-              },
-            })),
+            review: reviewJsonLd(),
           },
         ]}
       />

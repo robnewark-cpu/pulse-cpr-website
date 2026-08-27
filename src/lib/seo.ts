@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { siteConfig } from "@/lib/site"
+import { classes, siteConfig, testimonials } from "@/lib/site"
 
 export function createMetadata({
   title,
@@ -23,6 +23,12 @@ export function createMetadata({
     description,
     keywords,
     alternates: { canonical: url },
+    other: {
+      "geo.region": "US-OK",
+      "geo.placename": `${siteConfig.address.city}, ${siteConfig.address.region}`,
+      "geo.position": `${siteConfig.geo.latitude};${siteConfig.geo.longitude}`,
+      ICBM: `${siteConfig.geo.latitude}, ${siteConfig.geo.longitude}`,
+    },
     openGraph: {
       title: fullTitle,
       description,
@@ -43,8 +49,36 @@ export function createMetadata({
       card: "summary_large_image",
       title: fullTitle,
       description,
+      images: ["/og-image.svg"],
     },
   }
+}
+
+export function toIsoDate(value: string) {
+  const parsed = new Date(value)
+  if (Number.isNaN(parsed.getTime())) return value
+  return parsed.toISOString().slice(0, 10)
+}
+
+export function reviewJsonLd() {
+  return testimonials.map((item) => ({
+    "@type": "Review",
+    author: { "@type": "Person", name: item.name },
+    datePublished: toIsoDate(item.date),
+    reviewBody: item.quote,
+    url: siteConfig.social.facebookReviews,
+    publisher: {
+      "@type": "Organization",
+      name: "Facebook",
+      url: "https://www.facebook.com",
+    },
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: "5",
+      bestRating: "5",
+      worstRating: "1",
+    },
+  }))
 }
 
 export function localBusinessJsonLd() {
@@ -104,6 +138,31 @@ export function localBusinessJsonLd() {
       worstRating: "1",
     },
     sameAs: [siteConfig.social.facebook, siteConfig.social.facebookReviews],
+    knowsAbout: [
+      "CPR certification",
+      "AED training",
+      "First Aid",
+      "BLS Provider",
+      "ACLS",
+      "PALS",
+      "Oklahoma workplace safety training",
+    ],
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: siteConfig.phone,
+        email: siteConfig.email,
+        contactType: "customer service",
+        areaServed: "US-OK",
+        availableLanguage: ["English"],
+      },
+    ],
+    potentialAction: {
+      "@type": "ReserveAction",
+      name: "Book a Pulse CPR class",
+      target: new URL("/book", siteConfig.url).toString(),
+    },
+    review: reviewJsonLd(),
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Lifesaving certification courses",
@@ -182,19 +241,186 @@ export function courseJsonLd({
       category: "Paid",
       availability: "https://schema.org/InStock",
       url: new URL("/book", siteConfig.url).toString(),
+      priceCurrency: "USD",
+      areaServed: {
+        "@type": "State",
+        name: "Oklahoma",
+      },
     },
+    inLanguage: "en-US",
+    educationalLevel: "Beginner to professional",
+    teaches: name,
+    isAccessibleForFree: false,
     hasCourseInstance: {
       "@type": "CourseInstance",
       courseMode: ["onsite", "blended"],
+      courseWorkload: "PT2H",
       location: {
         "@type": "Place",
-        name: `${siteConfig.name} Oklahoma City classroom`,
+        name: `${siteConfig.name} Oklahoma City classroom and on-site Oklahoma locations`,
         address: {
           "@type": "PostalAddress",
           addressLocality: siteConfig.address.city,
           addressRegion: siteConfig.address.region,
+          addressCountry: siteConfig.address.country,
+        },
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: siteConfig.geo.latitude,
+          longitude: siteConfig.geo.longitude,
         },
       },
     },
+  }
+}
+
+export function websiteJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${siteConfig.url}/#website`,
+    name: siteConfig.name,
+    alternateName: ["Pulse.CPR", "Pulse CPR Oklahoma"],
+    url: siteConfig.url,
+    description: siteConfig.description,
+    inLanguage: "en-US",
+    publisher: { "@id": `${siteConfig.url}/#business` },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", "h2", "[data-speakable='true']"],
+    },
+  }
+}
+
+export function howToGetCertifiedJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How to get CPR certified in Oklahoma with Pulse CPR",
+    description:
+      "Book a Pulse CPR class in Oklahoma City or request on-site training, complete skills practice, and receive a two-year eCard.",
+    totalTime: "PT4H",
+    estimatedCost: {
+      "@type": "MonetaryAmount",
+      currency: "USD",
+      value: "75",
+    },
+    step: [
+      {
+        "@type": "HowToStep",
+        position: 1,
+        name: "Choose the right course",
+        text: "Heartsaver CPR/AED/First Aid is for workplaces, teachers, and community responders. BLS, ACLS, and PALS are for healthcare providers.",
+        url: `${siteConfig.url}/resources/bls-vs-heartsaver`,
+      },
+      {
+        "@type": "HowToStep",
+        position: 2,
+        name: "Book a seat or on-site date",
+        text: "Submit the online booking form, call Pulse CPR, or request a corporate quote for six or more students.",
+        url: new URL("/book", siteConfig.url).toString(),
+      },
+      {
+        "@type": "HowToStep",
+        position: 3,
+        name: "Complete class and skills testing",
+        text: "Attend the Oklahoma City classroom or an on-site session. Practice CPR, AED, and first aid skills with instructor coaching.",
+      },
+      {
+        "@type": "HowToStep",
+        position: 4,
+        name: "Receive your eCard",
+        text: "After you pass skills testing, Pulse CPR processes a nationally recognized eCard, typically the same business day. Cards are valid for two years.",
+      },
+    ],
+  }
+}
+
+export function articleJsonLd({
+  title,
+  description,
+  path,
+  datePublished,
+}: {
+  title: string
+  description: string
+  path: string
+  datePublished: string
+}) {
+  const url = new URL(path, siteConfig.url).toString()
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified: datePublished,
+    url,
+    mainEntityOfPage: url,
+    inLanguage: "en-US",
+    image: `${siteConfig.url}/og-image.svg`,
+    author: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteConfig.url}/logo.svg`,
+      },
+    },
+    about: {
+      "@type": "Thing",
+      name: "CPR and first aid training in Oklahoma",
+    },
+  }
+}
+
+export function classEventJsonLd() {
+  return classes.map((session) => ({
+    "@context": "https://schema.org",
+    "@type": "EducationEvent",
+    name: `${session.title} — Pulse CPR`,
+    description: `${session.title} with Pulse CPR. ${session.time} at ${session.location}.`,
+    startDate: session.date,
+    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+    eventStatus: "https://schema.org/EventScheduled",
+    location: {
+      "@type": "Place",
+      name: session.location,
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: siteConfig.address.city,
+        addressRegion: siteConfig.address.region,
+        addressCountry: siteConfig.address.country,
+      },
+    },
+    organizer: { "@id": `${siteConfig.url}/#business` },
+    performer: { "@id": `${siteConfig.url}/#business` },
+    offers: {
+      "@type": "Offer",
+      url: new URL("/book", siteConfig.url).toString(),
+      price: session.price.replace(/[^0-9.]/g, "") || undefined,
+      priceCurrency: "USD",
+      availability:
+        session.seats > 0
+          ? "https://schema.org/InStock"
+          : "https://schema.org/SoldOut",
+      validFrom: "2026-08-01",
+    },
+    remainingAttendeeCapacity: session.seats,
+  }))
+}
+
+export function contactPageJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    name: "Contact Pulse CPR",
+    url: new URL("/contact", siteConfig.url).toString(),
+    mainEntity: { "@id": `${siteConfig.url}/#business` },
   }
 }

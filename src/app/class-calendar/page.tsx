@@ -3,7 +3,7 @@ import { ClassCalendar } from "@/components/calendar/class-calendar"
 import { CtaBanner } from "@/components/sections/cta-banner"
 import { Container } from "@/components/layout/container"
 import { JsonLd } from "@/components/seo/json-ld"
-import { breadcrumbJsonLd, createMetadata } from "@/lib/seo"
+import { breadcrumbJsonLd, classEventJsonLd, createMetadata } from "@/lib/seo"
 
 export const metadata = createMetadata({
   title: "Class Calendar",
@@ -16,10 +16,13 @@ export default function ClassCalendarPage() {
   return (
     <>
       <JsonLd
-        data={breadcrumbJsonLd([
-          { name: "Home", path: "/" },
-          { name: "Class Calendar", path: "/class-calendar" },
-        ])}
+        data={[
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Class Calendar", path: "/class-calendar" },
+          ]),
+          ...classEventJsonLd(),
+        ]}
       />
       <PageHero
         eyebrow="Oklahoma City classroom"

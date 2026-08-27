@@ -5,6 +5,7 @@ export const metadata = createMetadata({
   title: "AED Training in Oklahoma",
   description:
     "AED training for Oklahoma offices, gyms, churches, and public venues. Learn pad placement, prompts, and device readiness with Pulse CPR.",
+  keywords: ["AED training Oklahoma", "AED class Oklahoma City", "defibrillator training OKC"],
   path: "/aed-training",
 })
 

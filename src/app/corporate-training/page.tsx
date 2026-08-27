@@ -10,6 +10,11 @@ export const metadata = createMetadata({
   title: "Corporate CPR Training in Oklahoma",
   description:
     "On-site CPR, AED, First Aid, and BLS training for Oklahoma businesses, schools, healthcare facilities, and government agencies. Request a group quote.",
+  keywords: [
+    "on-site CPR training Oklahoma",
+    "corporate CPR class Oklahoma City",
+    "group BLS training Oklahoma",
+  ],
   path: "/corporate-training",
 })
 
