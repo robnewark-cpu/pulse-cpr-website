@@ -20,7 +20,7 @@ export default function HealthcareCoursesPage() {
       imageAlt="Surgical and clinical team collaborating in a professional healthcare setting"
       audience="Licensed clinicians"
       duration="4 hours"
-      price="From $95"
+      price="$95"
       outcomes={[
         "Perform high-performance BLS with closed-loop communication.",
         "Apply current ECC algorithms for adult and pediatric emergencies.",
