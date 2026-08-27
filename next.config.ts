@@ -1,7 +1,10 @@
+import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare"
 import type { NextConfig } from "next"
 
 const nextConfig: NextConfig = {
   images: {
+    // Serve original files. Cloudflare Images is not enabled on this Worker.
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
@@ -26,3 +29,5 @@ const nextConfig: NextConfig = {
 }
 
 export default nextConfig
+
+initOpenNextCloudflareForDev()

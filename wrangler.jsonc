@@ -1,0 +1,21 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "pulse-cpr-website",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-08-27",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS",
+  },
+  "services": [
+    {
+      // Self-reference used by OpenNext caching. Dummy cache does not need R2 or KV.
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "pulse-cpr-website",
+    },
+  ],
+  "observability": {
+    "enabled": true,
+  },
+}
