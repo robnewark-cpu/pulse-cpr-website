@@ -32,7 +32,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
+  metadataBase: new URL(HOME_OG_URL),
   title: {
     default: `${siteConfig.name} | CPR, BLS, AED & First Aid Training in Oklahoma`,
     template: `%s | ${siteConfig.name}`,
