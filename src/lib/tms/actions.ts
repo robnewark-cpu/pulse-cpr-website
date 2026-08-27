@@ -6,7 +6,6 @@ import { z } from "zod"
 import { createSupabaseServerClient } from "@/lib/supabase/server"
 import { sendClassCancellation, sendClassUpdate, sendRegistrationConfirmation } from "@/lib/tms/email"
 import { fromDatetimeLocal } from "@/lib/tms/format"
-import { deleteGoogleEvent, syncClassToGoogle } from "@/lib/tms/google-calendar"
 import {
   createClassRecord,
   currentStaff,
@@ -109,10 +108,6 @@ export async function saveClass(
     const saved = classId
       ? await updateClassRecord(classId, payload)
       : await createClassRecord(payload, staff.id)
-    const eventId = await syncClassToGoogle(saved)
-    if (eventId !== saved.google_event_id) {
-      await updateClassRecord(saved.id, { google_event_id: eventId })
-    }
     if (classId) {
       const roster = await listRegistrations(saved.id)
       await sendClassUpdate(saved, roster).catch((error) => console.error(error))
@@ -136,7 +131,6 @@ export async function cancelClass(classId: string): Promise<ActionResult> {
     if (!session) return { status: "error", message: "Class not found." }
     const roster = await listRegistrations(classId)
     const saved = await updateClassRecord(classId, { status: "cancelled" })
-    await deleteGoogleEvent(saved.google_event_id)
     await sendClassCancellation(saved, roster).catch((error) => console.error(error))
     revalidateClasses()
     revalidatePath(`/admin/classes/${classId}`)
@@ -152,8 +146,6 @@ export async function cancelClass(classId: string): Promise<ActionResult> {
 export async function duplicateClass(classId: string) {
   const staff = await requireStaff()
   const copy = await duplicateClassRecord(classId, staff.id)
-  const eventId = await syncClassToGoogle(copy)
-  if (eventId) await updateClassRecord(copy.id, { google_event_id: eventId })
   revalidateClasses()
   redirect(`/admin/classes/${copy.id}`)
 }

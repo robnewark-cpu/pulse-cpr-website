@@ -37,7 +37,6 @@ Copy `.env.example` to `.env.local`:
 - `NEXT_PUBLIC_SUPABASE_URL` / `NEXT_PUBLIC_SUPABASE_ANON_KEY` — class manager
 - `SUPABASE_SERVICE_ROLE_KEY` — optional; keep on the server only
 - `RESEND_API_KEY` / `EMAIL_FROM` — registration and cancellation emails
-- `GOOGLE_CALENDAR_ID` + OAuth refresh token — optional Google Calendar sync
 
 Without Supabase keys, the public calendar still shows sample Edmond dates. Instructor login at `/admin` stays offline until keys are added.
 
@@ -47,8 +46,6 @@ Without Supabase keys, the public calendar still shows sample Edmond dates. Inst
 2. Run `supabase/schema.sql` in the SQL editor (tables, RLS, first-user-is-staff trigger, seed classes).
 3. Add the Supabase URL and anon key to the host.
 4. Open `/admin/login` and create the first instructor account (phone-friendly).
-5. Use **New class** to add a date. Students register from `/class-calendar`.
-
-Optional Google Calendar: create an OAuth client, grant the instructor calendar, store the refresh token. Classes then insert/update/delete events automatically.
+5. Use **New class** to add a date. Students see it on Pulse CPR’s class calendar at `/class-calendar`.
 
 Optional email: add a Resend API key. Students get a confirmation; cancelled classes notify the roster.

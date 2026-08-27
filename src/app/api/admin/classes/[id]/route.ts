@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server"
 import { cancelClass } from "@/lib/tms/actions"
 import { currentStaff, getClass, updateClassRecord } from "@/lib/tms/queries"
-import { syncClassToGoogle } from "@/lib/tms/google-calendar"
 
 export async function GET(
   _request: Request,
@@ -24,11 +23,7 @@ export async function PATCH(
   const { id } = await context.params
   const body = await request.json()
   const saved = await updateClassRecord(id, body)
-  const eventId = await syncClassToGoogle(saved)
-  const withEvent = eventId !== saved.google_event_id
-    ? await updateClassRecord(id, { google_event_id: eventId })
-    : saved
-  return NextResponse.json({ class: withEvent })
+  return NextResponse.json({ class: saved })
 }
 
 export async function DELETE(

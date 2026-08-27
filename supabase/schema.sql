@@ -28,7 +28,7 @@ create table if not exists public.classes (
   status text not null default 'scheduled' check (
     status in ('scheduled', 'cancelled', 'completed')
   ),
-  google_event_id text,
+  google_event_id text, -- unused leftover column; classes live in this table, not Google Calendar
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now(),
   created_by uuid references auth.users (id)

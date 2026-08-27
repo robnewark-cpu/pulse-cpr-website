@@ -40,7 +40,6 @@ export function fallbackClasses(): ClassRecord[] {
       seats_remaining: session.seats,
       registration_deadline: `${session.date}T18:00:00-05:00`,
       status: "scheduled",
-      google_event_id: null,
       created_at: now,
       updated_at: now,
     }

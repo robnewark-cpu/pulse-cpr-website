@@ -27,7 +27,6 @@ function mapClass(row: Record<string, unknown>): ClassRecord {
     seats_remaining: Number(row.seats_remaining ?? 0),
     registration_deadline: row.registration_deadline ? String(row.registration_deadline) : null,
     status: row.status as ClassStatus,
-    google_event_id: row.google_event_id ? String(row.google_event_id) : null,
     created_at: String(row.created_at),
     updated_at: String(row.updated_at),
   }
@@ -105,7 +104,7 @@ export async function createClassRecord(input: ClassInput, userId?: string) {
   return mapClass(data as Record<string, unknown>)
 }
 
-export async function updateClassRecord(id: string, input: Partial<ClassInput> & { status?: ClassStatus; google_event_id?: string | null }) {
+export async function updateClassRecord(id: string, input: Partial<ClassInput> & { status?: ClassStatus }) {
   const supabase = await createSupabaseServerClient()
   const { data, error } = await supabase
     .from("classes")
