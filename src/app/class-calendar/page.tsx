@@ -33,7 +33,7 @@ export default async function ClassCalendarPage() {
       <PageHero
         eyebrow="Edmond classroom"
         title="Upcoming certification dates"
-        description="Search, filter by course, and register while seats remain. Need a private date at your facility? Request a corporate session instead of a public class."
+        description="This is Pulse CPR’s class calendar — dates added in the instructor class manager, shown here for students. Pick a day, filter by course, and register while seats remain."
         primaryCta={{ href: "/book", label: "Request a private date" }}
         secondaryCta={{ href: "/corporate-training", label: "On-site training" }}
       />

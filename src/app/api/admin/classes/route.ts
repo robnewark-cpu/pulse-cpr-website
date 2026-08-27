@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server"
-import { createClassRecord, currentStaff, listAdminClasses, updateClassRecord } from "@/lib/tms/queries"
+import { createClassRecord, currentStaff, listAdminClasses } from "@/lib/tms/queries"
 import { COURSE_TYPES } from "@/lib/tms/types"
-import { syncClassToGoogle } from "@/lib/tms/google-calendar"
 
 export async function GET() {
   const staff = await currentStaff()
@@ -33,7 +32,5 @@ export async function POST(request: Request) {
     },
     staff.id
   )
-  const eventId = await syncClassToGoogle(saved)
-  const withEvent = eventId ? await updateClassRecord(saved.id, { google_event_id: eventId }) : saved
-  return NextResponse.json({ class: withEvent }, { status: 201 })
+  return NextResponse.json({ class: saved }, { status: 201 })
 }

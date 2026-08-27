@@ -35,7 +35,6 @@ export type ClassRecord = {
   seats_remaining: number
   registration_deadline: string | null
   status: ClassStatus
-  google_event_id: string | null
   created_at: string
   updated_at: string
 }
