@@ -8,7 +8,15 @@ import { DraftBanner } from "@/components/layout/draft-banner"
 import { SkipLink } from "@/components/layout/skip-link"
 import { JsonLd } from "@/components/seo/json-ld"
 import { Toaster } from "@/components/ui/sonner"
-import { localBusinessJsonLd, ogImage, websiteJsonLd } from "@/lib/seo"
+import {
+  HOME_OG_DESCRIPTION,
+  HOME_OG_TITLE,
+  HOME_OG_URL,
+  HOME_TWITTER_DESCRIPTION,
+  SHARE_IMAGE_URL,
+  localBusinessJsonLd,
+  websiteJsonLd,
+} from "@/lib/seo"
 import { siteConfig } from "@/lib/site"
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -62,31 +70,33 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: siteConfig.url,
+    url: HOME_OG_URL,
     siteName: siteConfig.name,
-    title: "Pulse CPR | CPR, BLS, AED & First Aid Training in Oklahoma",
-    description: "Pulse CPR — Learn It. Know It. Save A Life.",
+    title: HOME_OG_TITLE,
+    description: HOME_OG_DESCRIPTION,
     images: [
       {
-        url: ogImage.url,
-        width: ogImage.width,
-        height: ogImage.height,
-        alt: ogImage.alt,
+        url: SHARE_IMAGE_URL,
+        secureUrl: SHARE_IMAGE_URL,
+        width: 1200,
+        height: 630,
+        alt: "Pulse CPR Oklahoma",
+        type: "image/jpeg",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pulse CPR | CPR, BLS, AED & First Aid Training in Oklahoma",
-    description: "Pulse CPR — Learn It. Know It. Save A Life.",
-    images: [ogImage.url],
+    title: HOME_OG_TITLE,
+    description: HOME_TWITTER_DESCRIPTION,
+    images: [SHARE_IMAGE_URL],
   },
   icons: {
     icon: [{ url: "/logo.svg", type: "image/svg+xml" }],
     apple: [{ url: "/logo.svg" }],
   },
   alternates: {
-    canonical: siteConfig.url,
+    canonical: HOME_OG_URL,
     types: {
       "text/plain": [
         { url: "/llms.txt", title: "llms.txt" },

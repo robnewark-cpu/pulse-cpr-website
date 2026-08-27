@@ -3,11 +3,21 @@ import { defaultInstructor, instructors, siteConfig, testimonials } from "@/lib/
 import type { ClassRecord } from "@/lib/tms/types"
 import { formatTimeRange } from "@/lib/tms/format"
 
+export const SHARE_IMAGE_URL = "https://pulsecprok.com/og-image.jpg"
+export const HOME_OG_URL = "https://pulsecprok.com/"
+export const HOME_OG_TITLE =
+  "Pulse CPR | CPR, BLS, AED & First Aid Training in Oklahoma"
+export const HOME_OG_DESCRIPTION =
+  "Pulse CPR — Learn It. Know It. Save A Life. American Heart Association and American Red Cross CPR, AED, First Aid, and BLS certification from Edmond, Oklahoma."
+export const HOME_TWITTER_DESCRIPTION = "Pulse CPR — Learn It. Know It. Save A Life."
+
 export const ogImage = {
-  url: `${siteConfig.url}/og-image.jpg`,
+  url: SHARE_IMAGE_URL,
+  secureUrl: SHARE_IMAGE_URL,
   width: 1200,
   height: 630,
   alt: "Pulse CPR Oklahoma",
+  type: "image/jpeg",
 } as const
 
 export function createMetadata({
@@ -27,16 +37,16 @@ export function createMetadata({
     title === siteConfig.name
       ? `${siteConfig.name} | CPR, BLS, AED & First Aid Training in Oklahoma`
       : `${title} | ${siteConfig.name}`
-  const ogTitle = isHome
-    ? "Pulse CPR | CPR, BLS, AED & First Aid Training in Oklahoma"
-    : fullTitle
-  const ogDescription = isHome ? "Pulse CPR — Learn It. Know It. Save A Life." : description
+  const ogTitle = isHome ? HOME_OG_TITLE : fullTitle
+  const ogDescription = isHome ? HOME_OG_DESCRIPTION : description
+  const twitterDescription = isHome ? HOME_TWITTER_DESCRIPTION : description
+  const ogUrl = isHome ? HOME_OG_URL : url
 
   return {
     title: { absolute: fullTitle },
     description,
     keywords,
-    alternates: { canonical: url },
+    alternates: { canonical: ogUrl },
     other: {
       "geo.region": "US-OK",
       "geo.placename": `${siteConfig.address.city}, ${siteConfig.address.region}`,
@@ -46,7 +56,7 @@ export function createMetadata({
     openGraph: {
       title: ogTitle,
       description: ogDescription,
-      url,
+      url: ogUrl,
       siteName: siteConfig.name,
       locale: "en_US",
       type: "website",
@@ -55,8 +65,8 @@ export function createMetadata({
     twitter: {
       card: "summary_large_image",
       title: ogTitle,
-      description: ogDescription,
-      images: [ogImage.url],
+      description: twitterDescription,
+      images: [SHARE_IMAGE_URL],
     },
   }
 }
