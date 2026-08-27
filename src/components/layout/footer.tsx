@@ -33,7 +33,7 @@ export function Footer() {
     <footer className="border-t bg-navy text-white">
       <Container className="grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-4">
         <div className="lg:col-span-1">
-          <Logo className="[&_span]:text-white [&_span:last-child]:text-white/70" />
+          <Logo inverted />
           <p className="mt-4 max-w-xs text-sm leading-6 text-white/75">
             Professional CPR, BLS, AED, and First Aid certification for Oklahoma
             workplaces, schools, and healthcare teams.

@@ -17,11 +17,11 @@ export function LeadCaptureForm({ compact = false }: { compact?: boolean }) {
   return (
     <form action={action} className="grid gap-3" noValidate>
       <Field label="Full name" name="name" error={state.fieldErrors?.name}>
-        <input id="lead-name" name="name" required className={fieldClassName} autoComplete="name" />
+        <input id="name" name="name" required className={fieldClassName} autoComplete="name" />
       </Field>
       <Field label="Email" name="email" error={state.fieldErrors?.email}>
         <input
-          id="lead-email"
+          id="email"
           name="email"
           type="email"
           required
@@ -30,10 +30,10 @@ export function LeadCaptureForm({ compact = false }: { compact?: boolean }) {
         />
       </Field>
       <Field label="Phone" name="phone" error={state.fieldErrors?.phone}>
-        <input id="lead-phone" name="phone" type="tel" required className={fieldClassName} autoComplete="tel" />
+        <input id="phone" name="phone" type="tel" required className={fieldClassName} autoComplete="tel" />
       </Field>
       <Field label="Course" name="course" error={state.fieldErrors?.course}>
-        <select id="lead-course" name="course" required defaultValue="" className={selectClassName}>
+        <select id="course" name="course" required defaultValue="" className={selectClassName}>
           <option value="" disabled>
             What do you need?
           </option>

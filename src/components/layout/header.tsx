@@ -2,14 +2,13 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { useState } from "react"
+import { useEffect, useId, useRef, useState } from "react"
 import { ChevronDown, Menu, Phone } from "lucide-react"
 import { Logo } from "@/components/brand/logo"
 import { Button } from "@/components/ui/button"
 import { buttonVariants } from "@/components/ui/button-variants"
 import {
   Sheet,
-  SheetClose,
   SheetContent,
   SheetHeader,
   SheetTitle,
@@ -22,6 +21,31 @@ export function Header() {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
   const [coursesOpen, setCoursesOpen] = useState(false)
+  const menuId = useId()
+  const coursesRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    setCoursesOpen(false)
+    setOpen(false)
+  }, [pathname])
+
+  useEffect(() => {
+    if (!coursesOpen) return
+    function onPointerDown(event: MouseEvent) {
+      if (!coursesRef.current?.contains(event.target as Node)) {
+        setCoursesOpen(false)
+      }
+    }
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") setCoursesOpen(false)
+    }
+    document.addEventListener("mousedown", onPointerDown)
+    document.addEventListener("keydown", onKeyDown)
+    return () => {
+      document.removeEventListener("mousedown", onPointerDown)
+      document.removeEventListener("keydown", onKeyDown)
+    }
+  }, [coursesOpen])
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/80 bg-white/95 shadow-sm backdrop-blur-md">
@@ -44,7 +68,7 @@ export function Header() {
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
           {navItems.map((item) =>
             "children" in item && item.children ? (
-              <div key={item.label} className="relative">
+              <div key={item.label} className="relative" ref={coursesRef}>
                 <button
                   type="button"
                   className={cn(
@@ -53,17 +77,16 @@ export function Header() {
                       "text-navy"
                   )}
                   aria-expanded={coursesOpen}
-                  aria-haspopup="true"
+                  aria-haspopup="menu"
+                  aria-controls={menuId}
                   onClick={() => setCoursesOpen((current) => !current)}
-                  onBlur={() => {
-                    window.setTimeout(() => setCoursesOpen(false), 150)
-                  }}
                 >
                   {item.label}
                   <ChevronDown className="size-3.5" aria-hidden="true" />
                 </button>
                 {coursesOpen ? (
                   <div
+                    id={menuId}
                     role="menu"
                     className="absolute top-full left-0 z-50 mt-1 min-w-64 rounded-xl border bg-white p-2 shadow-lg"
                   >
@@ -122,35 +145,36 @@ export function Header() {
                 </SheetTitle>
               </SheetHeader>
               <nav className="flex flex-col gap-1 px-4 pb-8" aria-label="Mobile">
-                {navItems.flatMap((item) =>
-                  "children" in item && item.children
-                    ? item.children.map((child) => (
-                        <SheetClose
-                          key={child.href}
-                          render={
-                            <Link
-                              href={child.href}
-                              className="rounded-lg px-3 py-2.5 text-base font-medium text-navy hover:bg-accent"
-                            />
-                          }
-                        >
-                          {child.label}
-                        </SheetClose>
-                      ))
-                    : [
-                        <SheetClose
-                          key={item.href}
-                          render={
-                            <Link
-                              href={item.href}
-                              className="rounded-lg px-3 py-2.5 text-base font-medium text-navy hover:bg-accent"
-                            />
-                          }
-                        >
-                          {item.label}
-                        </SheetClose>,
-                      ]
-                )}
+                <p className="px-3 pt-2 text-xs font-semibold tracking-[0.14em] text-muted-foreground uppercase">
+                  Explore
+                </p>
+                {navItems
+                  .filter((item) => !("children" in item && item.children))
+                  .map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="rounded-lg px-3 py-2.5 text-base font-medium text-navy hover:bg-accent"
+                      onClick={() => setOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                <p className="mt-3 px-3 text-xs font-semibold tracking-[0.14em] text-muted-foreground uppercase">
+                  Courses
+                </p>
+                {navItems
+                  .flatMap((item) => ("children" in item && item.children ? [...item.children] : []))
+                  .map((child) => (
+                    <Link
+                      key={child.href}
+                      href={child.href}
+                      className="rounded-lg px-3 py-2.5 text-base font-medium text-navy hover:bg-accent"
+                      onClick={() => setOpen(false)}
+                    >
+                      {child.label}
+                    </Link>
+                  ))}
                 <Button
                   className="mt-4 h-12"
                   size="xl"
