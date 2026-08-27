@@ -44,7 +44,7 @@ export default function AboutPage() {
             <ul className="mt-4 space-y-3 text-sm leading-6 text-navy/85">
               <li>• Current AHA science, taught by an American Heart Association Instructor.</li>
               <li>• High manikin-to-student ratios so every person gets measured practice.</li>
-              <li>• Same-day nationally recognized eCards for HR and credentialing files.</li>
+              <li>• Nationally recognized certification cards for HR and credentialing files.</li>
               <li>• Corporate reporting that names who trained, when, and when they renew.</li>
             </ul>
           </div>

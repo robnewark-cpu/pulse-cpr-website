@@ -12,7 +12,7 @@ export const dynamic = "force-dynamic"
 export const metadata = createMetadata({
   title: "Class Calendar",
   description:
-    "Upcoming Pulse CPR classes in Edmond: Heartsaver CPR, First Aid, AED, BLS, ACLS, and PALS. Register online while seats remain.",
+    "Upcoming Pulse CPR classes in Edmond: Heartsaver CPR, First Aid, AED, and BLS. Register online while seats remain.",
   path: "/class-calendar",
 })
 

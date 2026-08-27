@@ -73,7 +73,7 @@ export default function OklahomaTrainingPage() {
           <div data-speakable="true">
             <h2 className="text-2xl font-bold">Where Pulse CPR trains</h2>
             <p className="mt-4 text-muted-foreground leading-7">
-              Pulse CPR (Pulse.CPR on Facebook) is an Oklahoma training company. Students can attend a public class at 1019 Waterwood Pkwy, Ste C, Edmond, or request on-site CPR, AED, First Aid, BLS, ACLS, or PALS at a workplace, school, clinic, or childcare center.
+              Pulse CPR (Pulse.CPR on Facebook) is an Oklahoma training company. Students can attend a public class at 1019 Waterwood Pkwy, Ste C, Edmond, or request on-site CPR, AED, First Aid, or BLS at a workplace, school, clinic, or childcare center.
             </p>
             <p className="mt-4 text-muted-foreground leading-7">
               Coordinates for the Edmond classroom: {siteConfig.geo.latitude},{" "}
@@ -99,7 +99,7 @@ export default function OklahomaTrainingPage() {
             {[
               {
                 city: "Edmond classroom",
-                body: "Public Heartsaver, First Aid, AED, BLS, ACLS, and PALS classes meet at 1019 Waterwood Pkwy, Ste C, Edmond, OK 73034. Same-day eCards are processed after skills testing.",
+                body: "Public Heartsaver, First Aid, AED, and BLS classes meet at 1019 Waterwood Pkwy, Ste C, Edmond, OK 73034.",
               },
               {
                 city: "Oklahoma City metro",

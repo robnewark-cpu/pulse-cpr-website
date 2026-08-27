@@ -66,7 +66,7 @@ export function ContactForm() {
             <option value="class">Public class question</option>
             <option value="corporate">Corporate training</option>
             <option value="healthcare">Healthcare provider cards</option>
-            <option value="billing">Billing or eCards</option>
+            <option value="billing">Billing or certification cards</option>
             <option value="other">Something else</option>
           </select>
         </Field>

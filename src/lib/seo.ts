@@ -167,8 +167,6 @@ export function localBusinessJsonLd() {
       "AED training",
       "First Aid",
       "BLS Provider",
-      "ACLS",
-      "PALS",
       "Oklahoma workplace safety training",
     ],
     contactPoint: [
@@ -195,8 +193,6 @@ export function localBusinessJsonLd() {
         "First Aid Training",
         "AED Training",
         "BLS Provider",
-        "ACLS",
-        "PALS",
         "Corporate on-site training",
       ].map((name) => ({
         "@type": "Offer",
@@ -322,7 +318,7 @@ export function howToGetCertifiedJsonLd() {
     "@type": "HowTo",
     name: "How to get CPR certified in Oklahoma with Pulse CPR",
     description:
-      "Book a Pulse CPR class in Edmond or request on-site training, complete skills practice, and receive a two-year eCard.",
+      "Book a Pulse CPR class in Edmond or request on-site training, complete skills practice, and receive a two-year certification card.",
     totalTime: "PT4H",
     estimatedCost: {
       "@type": "MonetaryAmount",
@@ -334,7 +330,7 @@ export function howToGetCertifiedJsonLd() {
         "@type": "HowToStep",
         position: 1,
         name: "Choose the right course",
-        text: "Heartsaver CPR/AED/First Aid is for workplaces, teachers, and community responders. BLS, ACLS, and PALS are for healthcare providers.",
+        text: "Heartsaver CPR/AED/First Aid is for workplaces, teachers, and community responders. BLS is for healthcare providers.",
         url: `${siteConfig.url}/resources/bls-vs-heartsaver`,
       },
       {
@@ -353,8 +349,8 @@ export function howToGetCertifiedJsonLd() {
       {
         "@type": "HowToStep",
         position: 4,
-        name: "Receive your eCard",
-        text: "After you pass skills testing, Pulse CPR processes a nationally recognized eCard, typically the same business day. Cards are valid for two years.",
+        name: "Receive your certification card",
+        text: "After you pass skills testing, Pulse CPR issues a nationally recognized certification card. Cards are typically valid for two years.",
       },
     ],
   }

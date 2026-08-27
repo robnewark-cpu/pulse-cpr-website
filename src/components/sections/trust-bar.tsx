@@ -4,7 +4,7 @@ import { stats } from "@/lib/site"
 
 const trust = [
   { icon: ShieldCheck, label: "Guideline-based instruction" },
-  { icon: BadgeCheck, label: "Same-day eCards" },
+  { icon: BadgeCheck, label: "Nationally recognized cards" },
   { icon: MapPinned, label: "On-site across Oklahoma" },
   { icon: Clock3, label: "Evening & weekend seats" },
 ]

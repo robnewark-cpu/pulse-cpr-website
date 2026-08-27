@@ -94,7 +94,7 @@ export const courses = [
       "Adult, child, and infant CPR",
       "Choking relief for all ages",
       "Hands-on manikin practice",
-      "Same-day eCard processing",
+      "Nationally recognized certification card",
     ],
   },
   {
@@ -140,19 +140,19 @@ export const courses = [
   {
     slug: "healthcare-provider-courses",
     title: "Healthcare Provider Courses",
-    shortTitle: "BLS / ACLS / PALS",
+    shortTitle: "BLS Provider",
     audience: "Nurses, EMTs, dentists, and clinical teams",
-    duration: "4–16 hours",
+    duration: "4 hours",
     price: "From $95",
     renewal: "Valid 2 years",
     summary:
-      "BLS Provider, ACLS, and PALS for licensed clinicians who need current cards for credentialing, privileging, or onboarding.",
+      "BLS Provider for licensed clinicians who need current cards for credentialing, privileging, or onboarding.",
     href: "/healthcare-provider-courses",
     image:
       "https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=1400&q=80",
     highlights: [
       "BLS Provider with high-performance CPR",
-      "ACLS and PALS renewal options",
+      "Initial and renewal tracks",
       "Skills testing with current algorithms",
       "Hospital and clinic group sessions",
     ],
@@ -283,9 +283,9 @@ export const faqs = [
       "Most Heartsaver CPR, First Aid, AED, and BLS Provider cards are valid for two years. We recommend scheduling renewal 30–45 days before expiration so your team never has a gap.",
   },
   {
-    question: "Do I receive a card the same day?",
+    question: "When do I receive my certification card?",
     answer:
-      "Yes. After you complete skills testing, we process nationally recognized eCards, typically the same business day. Printable receipts are available immediately for employers who need proof of attendance.",
+      "After you complete skills testing, Pulse CPR issues a nationally recognized certification card. Timing depends on the card issuer. Ask when you book if you have a credentialing deadline.",
   },
   {
     question: "Can you train our staff on-site?",
@@ -300,7 +300,7 @@ export const faqs = [
   {
     question: "Is this training aligned with current guidelines?",
     answer:
-      "Yes. Pulse CPR instruction follows current American Heart Association and Emergency Cardiovascular Care science. Healthcare provider courses use the latest BLS, ACLS, and PALS algorithms.",
+      "Yes. Pulse CPR instruction follows current American Heart Association and Emergency Cardiovascular Care science. Healthcare provider courses use the latest BLS algorithms.",
   },
   {
     question: "Do you offer evening or weekend classes?",
@@ -401,16 +401,6 @@ export const classes = [
     price: "$119",
   },
   {
-    id: "pals-1003",
-    title: "PALS Provider",
-    category: "Healthcare",
-    date: "2026-10-03",
-    time: "8:00 AM – 4:00 PM",
-    location: "Edmond classroom",
-    seats: 5,
-    price: "$195",
-  },
-  {
     id: "cpr-1007",
     title: "Heartsaver CPR/AED",
     category: "CPR",
@@ -419,16 +409,6 @@ export const classes = [
     location: "Edmond classroom",
     seats: 9,
     price: "$75",
-  },
-  {
-    id: "acls-1017",
-    title: "ACLS Provider",
-    category: "Healthcare",
-    date: "2026-10-17",
-    time: "8:00 AM – 4:30 PM",
-    location: "Edmond classroom",
-    seats: 6,
-    price: "$195",
   },
   {
     id: "fa-1024",
@@ -512,7 +492,7 @@ export const resources = [
     slug: "what-to-expect-in-a-bls-class",
     title: "What to expect in a Pulse CPR BLS class",
     excerpt:
-      "From prework to high-performance CPR and eCards: a walkthrough so first-time healthcare students know exactly how the morning will go.",
+      "From prework to high-performance CPR: a walkthrough so first-time healthcare students know exactly how the morning will go.",
     category: "Healthcare",
     readTime: "4 min",
     date: "2026-05-14",
@@ -524,8 +504,6 @@ export const courseSelectOptions = [
   { value: "first-aid", label: "First Aid Training" },
   { value: "aed", label: "AED Training" },
   { value: "bls", label: "BLS for Healthcare Providers" },
-  { value: "acls", label: "ACLS" },
-  { value: "pals", label: "PALS" },
   { value: "corporate", label: "Corporate / group training" },
   { value: "unsure", label: "Not sure — help me choose" },
 ] as const

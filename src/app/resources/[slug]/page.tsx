@@ -36,7 +36,7 @@ const bodies: Record<string, string[]> = {
   "what-to-expect-in-a-bls-class": [
     "Plan on focused prework, then a morning of skills: compressions on measured manikins, AED practice, bag-mask, and two-rescuer cycles.",
     "Wear clothes you can move in. Bring an ID. Eat before you arrive—high-quality CPR is physical.",
-    "When you pass, we process the provider eCard the same business day so credentialing is not waiting on mail.",
+    "When you pass, Pulse CPR issues a nationally recognized provider certification card for your credentialing file.",
   ],
 }
 

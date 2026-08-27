@@ -56,8 +56,7 @@ export default function HomePage() {
             </h1>
             <p className="mt-5 max-w-xl text-base leading-7 text-white/80 sm:text-lg">
               Pulse CPR trains workplaces, schools, and healthcare teams across
-              Oklahoma. Guideline-based instruction, hands-on practice, and
-              cards processed the same day.
+              Oklahoma. Guideline-based instruction and hands-on practice you can use when seconds matter.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
@@ -92,7 +91,7 @@ export default function HomePage() {
               </div>
               <div>
                 <dt className="text-xs tracking-wide text-white/60 uppercase">Cards</dt>
-                <dd className="mt-1 text-sm font-medium">Same-day eCards</dd>
+                <dd className="mt-1 text-sm font-medium">Nationally recognized cards</dd>
               </div>
             </dl>
           </FadeIn>
@@ -122,7 +121,7 @@ export default function HomePage() {
                 Entity
               </dt>
               <dd className="mt-2 text-sm leading-6 text-navy">
-                Pulse CPR / Pulse.CPR. Oklahoma CPR, AED, First Aid, BLS, ACLS, and PALS training.
+                Pulse CPR / Pulse.CPR. Oklahoma CPR, AED, First Aid, and BLS training.
               </dd>
             </div>
             <div>
@@ -150,7 +149,7 @@ export default function HomePage() {
                 Book
               </dt>
               <dd className="mt-2 text-sm leading-6 text-navy">
-                Online at /book, or group quotes for six or more students. eCards typically same business day.
+                Online at /book, or group quotes for six or more students.
               </dd>
             </div>
           </dl>

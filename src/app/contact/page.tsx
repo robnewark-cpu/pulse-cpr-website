@@ -9,7 +9,7 @@ import { siteConfig } from "@/lib/site"
 export const metadata = createMetadata({
   title: "Contact Pulse CPR",
   description:
-    "Contact Pulse CPR in Edmond for class questions, eCards, and corporate scheduling. Call (405) 763-6811, email contact@pulsecprok.com, or send a message.",
+    "Contact Pulse CPR in Edmond for class questions, certification cards, and corporate scheduling. Call (405) 763-6811, email contact@pulsecprok.com, or send a message.",
   path: "/contact",
 })
 

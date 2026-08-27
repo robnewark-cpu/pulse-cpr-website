@@ -8,7 +8,7 @@ import { courseSelectOptions } from "@/lib/site"
 export const metadata = createMetadata({
   title: "Book a CPR Class",
   description:
-    "Request a Pulse CPR class seat or on-site session in Oklahoma. We confirm availability and eCard processing details within one business day.",
+    "Request a Pulse CPR class seat or on-site session in Oklahoma. We confirm availability within one business day.",
   path: "/book",
 })
 
