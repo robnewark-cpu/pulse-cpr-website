@@ -203,8 +203,8 @@ export default function HomePage() {
                 },
                 {
                   icon: Stethoscope,
-                  title: "Healthcare-ready faculty",
-                  body: "ER nurses, paramedics, and PAs teach BLS, ACLS, and PALS to the standard hospitals expect.",
+                  title: "Taught by Christine Oldenburg",
+                  body: "Pulse CPR classes are taught by Christine in Edmond and on-site across Oklahoma. Full credentials will be posted once her resume is on file.",
                 },
               ].map((item) => (
                 <li key={item.title} className="flex gap-4">
@@ -217,7 +217,7 @@ export default function HomePage() {
               ))}
             </ul>
             <Link href="/about" className={cn(buttonVariants({ variant: "outline", size: "xl" }), "mt-8")}>
-              Meet the instructors
+              Meet Christine
             </Link>
           </FadeIn>
         </Container>
@@ -226,9 +226,9 @@ export default function HomePage() {
         <Container>
           <div className="mb-10">
             <p className="text-sm font-semibold tracking-[0.16em] text-primary uppercase">
-              Faculty
+              Instructor
             </p>
-            <h2 className="mt-2 text-3xl font-bold">Instructors who still work the floor</h2>
+            <h2 className="mt-2 text-3xl font-bold">Train with Christine Oldenburg</h2>
           </div>
           <InstructorGrid />
         </Container>

@@ -24,7 +24,7 @@ export default function ResourcesPage() {
       <PageHero
         eyebrow="Guides"
         title="Clear resources for HR, educators, and clinicians"
-        description="Practical articles from Pulse CPR faculty. No scare tactics—just what Oklahoma teams need to keep cards current and AEDs ready."
+        description="Practical articles from Pulse CPR. No scare tactics—just what Oklahoma teams need to keep cards current and AEDs ready."
       />
       <section className="py-12 sm:py-16">
         <Container className="grid gap-5 md:grid-cols-2">

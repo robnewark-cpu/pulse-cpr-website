@@ -1,4 +1,5 @@
 import { ClassForm } from "@/components/admin/class-form"
+import { defaultInstructor } from "@/lib/site"
 import { defaultClassroom } from "@/lib/tms/fallback"
 
 export const metadata = {
@@ -13,7 +14,7 @@ export default function NewClassPage() {
       <p className="mt-1 mb-6 text-sm text-muted-foreground">
         Fill the date, time, and seats. Students can register as soon as you save.
       </p>
-      <ClassForm defaults={{ instructor: "Christine", location: defaultClassroom() }} />
+      <ClassForm defaults={{ instructor: defaultInstructor, location: defaultClassroom() }} />
     </div>
   )
 }

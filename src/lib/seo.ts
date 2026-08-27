@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { siteConfig, testimonials } from "@/lib/site"
+import { defaultInstructor, siteConfig, testimonials } from "@/lib/site"
 import type { ClassRecord } from "@/lib/tms/types"
 import { formatTimeRange } from "@/lib/tms/format"
 
@@ -140,6 +140,12 @@ export function localBusinessJsonLd() {
       worstRating: "1",
     },
     sameAs: [siteConfig.social.facebook, siteConfig.social.facebookReviews],
+    employee: {
+      "@type": "Person",
+      name: defaultInstructor,
+      jobTitle: "Instructor",
+      worksFor: { "@id": `${siteConfig.url}/#business` },
+    },
     knowsAbout: [
       "CPR certification",
       "AED training",

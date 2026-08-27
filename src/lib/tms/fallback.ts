@@ -1,4 +1,4 @@
-import { classes, siteConfig } from "@/lib/site"
+import { classes, defaultInstructor, siteConfig } from "@/lib/site"
 import type { ClassRecord, CourseType } from "@/lib/tms/types"
 
 function parseClock(value: string) {
@@ -32,7 +32,7 @@ export function fallbackClasses(): ClassRecord[] {
       class_date: session.date,
       start_time: start,
       end_time: end,
-      instructor: "Christine",
+      instructor: defaultInstructor,
       location: session.location,
       description: `${session.title} at Pulse CPR.`,
       price,

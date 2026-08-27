@@ -90,7 +90,7 @@ export default async function ResourceArticlePage({
       <article className="py-12 sm:py-16">
         <Container className="max-w-3xl">
           <p className="text-sm text-muted-foreground">
-            Published {article.date} · {siteConfig.name} faculty
+            Published {article.date} · {siteConfig.name}
           </p>
           <div className="mt-8 space-y-5 text-base leading-7 text-navy/85">
             {paragraphs.map((paragraph) => (

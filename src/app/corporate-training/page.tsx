@@ -49,7 +49,7 @@ export default function CorporateTrainingPage() {
       <PageHero
         eyebrow="On-site across Oklahoma"
         title="Corporate training that comes to your roster, not the other way around."
-        description={`Pulse CPR brings instructors, manikins, and AED trainers to your location. Serving ${siteConfig.serviceArea.slice(0, 5).join(", ")}, and statewide Oklahoma.`}
+        description={`Pulse CPR brings the instructor, manikins, and AED trainers to your location. Serving ${siteConfig.serviceArea.slice(0, 5).join(", ")}, and statewide Oklahoma.`}
         primaryCta={{ href: "#quote", label: "Request a quote" }}
         secondaryCta={{ href: "/class-calendar", label: "See public classes" }}
       />

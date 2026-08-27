@@ -15,7 +15,7 @@ export default function HealthcareCoursesPage() {
       path="/healthcare-provider-courses"
       eyebrow="Clinical certification"
       title="BLS, ACLS, and PALS for healthcare providers"
-      description="Pulse CPR faculty teach healthcare provider courses to the standard Oklahoma hospitals, clinics, and credentialing offices expect. Choose initial or renewal tracks, including group sessions at your facility."
+      description="Christine Oldenburg teaches Pulse CPR healthcare provider courses to the standard Oklahoma hospitals, clinics, and credentialing offices expect. Choose initial or renewal tracks, including group sessions at your facility."
       image="https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=1600&q=80"
       imageAlt="Surgical and clinical team collaborating in a professional healthcare setting"
       audience="Licensed clinicians"

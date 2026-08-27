@@ -18,7 +18,7 @@ create table if not exists public.classes (
   class_date date not null,
   start_time time not null,
   end_time time not null,
-  instructor text not null default 'Christine',
+  instructor text not null default 'Christine Oldenburg',
   location text not null,
   description text not null default '',
   price numeric(10, 2) not null default 0,
@@ -280,73 +280,73 @@ insert into public.classes (
 select * from (
   values
   (
-    'BLS Provider', 'Healthcare', '2026-09-06'::date, '08:00'::time, '12:30'::time, 'Christine',
+    'BLS Provider', 'Healthcare', '2026-09-06'::date, '08:00'::time, '12:30'::time, 'Christine Oldenburg',
     '1019 Waterwood Pkwy, Ste C, Edmond, OK 73034',
     'BLS Provider for healthcare teams. Skills testing and same-day eCard processing.',
     95::numeric, 6, '2026-09-05 18:00:00-05'::timestamptz, 'scheduled'
   ),
   (
-    'Heartsaver CPR/AED', 'CPR', '2026-09-08'::date, '17:30'::time, '21:00'::time, 'Christine',
+    'Heartsaver CPR/AED', 'CPR', '2026-09-08'::date, '17:30'::time, '21:00'::time, 'Christine Oldenburg',
     '1019 Waterwood Pkwy, Ste C, Edmond, OK 73034',
     'Adult, child, and infant CPR with AED practice for workplaces and community responders.',
     75::numeric, 8, '2026-09-07 18:00:00-05'::timestamptz, 'scheduled'
   ),
   (
-    'First Aid Certification', 'First Aid', '2026-09-12'::date, '09:00'::time, '12:00'::time, 'Christine',
+    'First Aid Certification', 'First Aid', '2026-09-12'::date, '09:00'::time, '12:00'::time, 'Christine Oldenburg',
     '1019 Waterwood Pkwy, Ste C, Edmond, OK 73034',
     'Workplace first aid: bleeding control, injury assessment, and medical emergencies.',
     69::numeric, 10, '2026-09-11 18:00:00-05'::timestamptz, 'scheduled'
   ),
   (
-    'AED Skills Workshop', 'AED', '2026-09-16'::date, '18:00'::time, '20:00'::time, 'Christine',
+    'AED Skills Workshop', 'AED', '2026-09-16'::date, '18:00'::time, '20:00'::time, 'Christine Oldenburg',
     '1019 Waterwood Pkwy, Ste C, Edmond, OK 73034',
     'Pad placement, prompts, and readiness checks for the AED on your wall.',
     59::numeric, 12, '2026-09-15 18:00:00-05'::timestamptz, 'scheduled'
   ),
   (
-    'BLS Provider Renewal', 'Healthcare', '2026-09-20'::date, '08:00'::time, '11:30'::time, 'Christine',
+    'BLS Provider Renewal', 'Healthcare', '2026-09-20'::date, '08:00'::time, '11:30'::time, 'Christine Oldenburg',
     '1019 Waterwood Pkwy, Ste C, Edmond, OK 73034',
     'Renewal track for current BLS providers.',
     85::numeric, 4, '2026-09-19 18:00:00-05'::timestamptz, 'scheduled'
   ),
   (
-    'Heartsaver CPR/AED/First Aid', 'CPR', '2026-09-26'::date, '09:00'::time, '15:00'::time, 'Christine',
+    'Heartsaver CPR/AED/First Aid', 'CPR', '2026-09-26'::date, '09:00'::time, '15:00'::time, 'Christine Oldenburg',
     '1019 Waterwood Pkwy, Ste C, Edmond, OK 73034',
     'Combined workplace package: CPR, AED, and First Aid in one day.',
     119::numeric, 7, '2026-09-25 18:00:00-05'::timestamptz, 'scheduled'
   ),
   (
-    'PALS Provider', 'Healthcare', '2026-10-03'::date, '08:00'::time, '16:00'::time, 'Christine',
+    'PALS Provider', 'Healthcare', '2026-10-03'::date, '08:00'::time, '16:00'::time, 'Christine Oldenburg',
     '1019 Waterwood Pkwy, Ste C, Edmond, OK 73034',
     'Pediatric Advanced Life Support for licensed clinicians.',
     195::numeric, 5, '2026-10-02 18:00:00-05'::timestamptz, 'scheduled'
   ),
   (
-    'Heartsaver CPR/AED', 'CPR', '2026-10-07'::date, '17:30'::time, '21:00'::time, 'Christine',
+    'Heartsaver CPR/AED', 'CPR', '2026-10-07'::date, '17:30'::time, '21:00'::time, 'Christine Oldenburg',
     '1019 Waterwood Pkwy, Ste C, Edmond, OK 73034',
     'Evening Heartsaver CPR/AED public class.',
     75::numeric, 9, '2026-10-06 18:00:00-05'::timestamptz, 'scheduled'
   ),
   (
-    'ACLS Provider', 'Healthcare', '2026-10-17'::date, '08:00'::time, '16:30'::time, 'Christine',
+    'ACLS Provider', 'Healthcare', '2026-10-17'::date, '08:00'::time, '16:30'::time, 'Christine Oldenburg',
     '1019 Waterwood Pkwy, Ste C, Edmond, OK 73034',
     'ACLS Provider for nurses, paramedics, and clinical teams.',
     195::numeric, 6, '2026-10-16 18:00:00-05'::timestamptz, 'scheduled'
   ),
   (
-    'Pediatric First Aid & CPR', 'First Aid', '2026-10-24'::date, '09:00'::time, '14:00'::time, 'Christine',
+    'Pediatric First Aid & CPR', 'First Aid', '2026-10-24'::date, '09:00'::time, '14:00'::time, 'Christine Oldenburg',
     '1019 Waterwood Pkwy, Ste C, Edmond, OK 73034',
     'Pediatric first aid and CPR for teachers and childcare teams.',
     99::numeric, 8, '2026-10-23 18:00:00-05'::timestamptz, 'scheduled'
   ),
   (
-    'On-site Corporate Session', 'Corporate', '2026-10-30'::date, '09:00'::time, '13:00'::time, 'Christine',
+    'On-site Corporate Session', 'Corporate', '2026-10-30'::date, '09:00'::time, '13:00'::time, 'Christine Oldenburg',
     'Your Oklahoma workplace',
     'Private group session. Request a quote for six or more students.',
     0::numeric, 24, '2026-10-29 18:00:00-05'::timestamptz, 'scheduled'
   ),
   (
-    'BLS Provider', 'Healthcare', '2026-11-07'::date, '08:00'::time, '12:30'::time, 'Christine',
+    'BLS Provider', 'Healthcare', '2026-11-07'::date, '08:00'::time, '12:30'::time, 'Christine Oldenburg',
     '1019 Waterwood Pkwy, Ste C, Edmond, OK 73034',
     'BLS Provider public class.',
     95::numeric, 8, '2026-11-06 18:00:00-05'::timestamptz, 'scheduled'
