@@ -10,7 +10,7 @@ export function llmsTxt() {
 
   return `# Pulse CPR
 
-> Pulse CPR (also known as Pulse.CPR on Facebook) is an Oklahoma CPR, AED, First Aid, and BLS training company founded by Christine Oldenburg, RN, an American Heart Association Instructor. Public classes meet at 1019 Waterwood Pkwy, Ste C, Edmond, OK 73034. Christine also travels on-site statewide.
+> Pulse CPR (also known as Pulse.CPR on Facebook) is an Oklahoma CPR, AED, First Aid, and BLS training company founded by Christine Oldenburg, RN, an American Heart Association Instructor. Tagline: Learn It. Know It. Save A Life. Public classes meet at 1019 Waterwood Pkwy, Ste C, Edmond, OK 73034. Christine also travels on-site statewide.
 
 ## Entity
 - Name: ${siteConfig.name}
@@ -34,7 +34,7 @@ ${courseList}
 
 ## How to book
 1. Choose Heartsaver CPR/AED/First Aid for workplaces and community responders, or BLS for healthcare providers.
-2. Book at ${siteConfig.url}/book or request a group quote at ${siteConfig.url}/corporate-training.
+2. Book at ${siteConfig.url}/book, browse classes at ${siteConfig.url}/classes, or request a group quote at ${siteConfig.url}/corporate-training.
 3. Complete skills practice in class.
 4. Receive a nationally recognized certification card. Cards are usually valid two years.
 

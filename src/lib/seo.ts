@@ -145,12 +145,14 @@ export function localBusinessJsonLd() {
       name: defaultInstructor,
       honorificSuffix: "RN",
       jobTitle: instructors[0].role,
+      image: instructors[0].image ? `${siteConfig.url}${instructors[0].image}` : undefined,
     },
     employee: {
       "@type": "Person",
       name: defaultInstructor,
       honorificSuffix: "RN",
       jobTitle: instructors[0].role,
+      image: instructors[0].image ? `${siteConfig.url}${instructors[0].image}` : undefined,
       description: instructors[0].shortBio,
       alumniOf: {
         "@type": "CollegeOrUniversity",

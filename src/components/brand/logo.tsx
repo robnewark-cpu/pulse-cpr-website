@@ -17,15 +17,15 @@ export function Logo({
         aria-hidden="true"
         focusable="false"
       >
-        <rect width="40" height="40" rx="10" fill={inverted ? "#FFFFFF" : "#0F2744"} />
+        <rect width="40" height="40" rx="10" fill={inverted ? "#FFFFFF" : "#0B1F3A"} />
         <path
           d="M20 29s-7.2-4.4-9.4-8.2C8.7 18 9.4 14.6 12.3 13.5c1.8-.7 3.7.1 4.7 1.6L20 18.4l3-3.3c1-1.5 2.9-2.3 4.7-1.6 2.9 1.1 3.6 4.5 1.7 7.3C27.2 24.6 20 29 20 29z"
-          fill="#C41E3A"
+          fill="#D62828"
         />
         <path
           d="M6 21h5l2.2-5 3.1 10 2.4-5H34"
           fill="none"
-          stroke={inverted ? "#0F2744" : "#F8FAFC"}
+          stroke={inverted ? "#0B1F3A" : "#F8FAFC"}
           strokeWidth="1.8"
           strokeLinecap="round"
           strokeLinejoin="round"

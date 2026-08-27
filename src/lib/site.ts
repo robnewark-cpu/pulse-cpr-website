@@ -1,9 +1,9 @@
 export const siteConfig = {
   name: "Pulse CPR",
   legalName: "Pulse CPR Oklahoma, LLC",
-  tagline: "Lifesaving skills. Oklahoma-ready teams.",
+  tagline: "Learn It. Know It. Save A Life.",
   description:
-    "Pulse CPR delivers professional CPR, BLS, AED, and First Aid certification from Edmond, Oklahoma, and on-site across the state. Book a public class or request workplace training for schools, clinics, and companies.",
+    "Pulse CPR — Learn It. Know It. Save A Life. American Heart Association and American Red Cross CPR, AED, First Aid, and BLS certification from Edmond, Oklahoma, and on-site across the state.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://pulsecprok.com",
   phone: "(405) 763-6811",
   phoneHref: "tel:+14057636811",
@@ -50,22 +50,10 @@ export const siteConfig = {
 
 export const navItems = [
   { href: "/", label: "Home" },
-  {
-    href: "/cpr-certification",
-    label: "Courses",
-    children: [
-      { href: "/cpr-certification", label: "CPR Certification" },
-      { href: "/first-aid-training", label: "First Aid Training" },
-      { href: "/aed-training", label: "AED Training" },
-      { href: "/healthcare-provider-courses", label: "Healthcare Provider Courses" },
-      { href: "/corporate-training", label: "Corporate Training" },
-    ],
-  },
-  { href: "/class-calendar", label: "Class Calendar" },
-  { href: "/resources", label: "Resources" },
-  { href: "/oklahoma-cpr-training", label: "Oklahoma" },
-  { href: "/testimonials", label: "Testimonials" },
+  { href: "/classes", label: "Classes" },
   { href: "/about", label: "About" },
+  { href: "/corporate-training", label: "Corporate Training" },
+  { href: "/class-calendar", label: "Schedule" },
   { href: "/contact", label: "Contact" },
 ] as const
 
@@ -200,7 +188,49 @@ export const instructors = [
       "In addition to her bedside nursing experience, Christine served as an Adjunct Instructor RN for Moore Norman Technology Center, where she helped develop, teach, and implement state-approved healthcare training programs. Her experience as both a clinician and educator allows her to present lifesaving skills in a clear, practical, and engaging way for students of all experience levels.",
       "Through Pulse CPR, Christine is committed to empowering individuals, families, healthcare professionals, businesses, schools, churches, and community organizations with the skills and confidence needed to respond during emergencies when every second matters.",
     ],
-    image: "",
+    image: "/images/christine-oldenburg.jpg",
+  },
+] as const
+
+export const instructorPhoto = {
+  src: "/images/christine-oldenburg.jpg",
+  alt: "Christine Oldenburg, RN, Pulse CPR instructor wearing the Pulse CPR instructor top",
+  width: 444,
+  height: 628,
+} as const
+
+export const homeClassCards = [
+  {
+    title: "Adult CPR",
+    href: "/cpr-certification",
+    description: "Hands-on adult CPR so you can recognize cardiac arrest and start compressions with confidence.",
+    image:
+      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "Clinical training setting used for adult CPR practice",
+  },
+  {
+    title: "Pediatric & Infant CPR",
+    href: "/cpr-certification",
+    description: "Age-specific CPR and choking response for children and infants in homes, schools, and childcare.",
+    image:
+      "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "Infant receiving attentive care during a pediatric health visit",
+  },
+  {
+    title: "AED Training",
+    href: "/aed-training",
+    description: "Learn to retrieve, place, and use an AED quickly when every second of a cardiac emergency counts.",
+    image:
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "Emergency medical equipment used in AED and resuscitation training",
+  },
+  {
+    title: "First Aid",
+    href: "/first-aid-training",
+    description: "Practical first aid for bleeding, burns, and sudden illness until professional help arrives.",
+    image:
+      "https://images.unsplash.com/photo-1584433144859-1fc3ab64a957?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "First aid supplies prepared for emergency response training",
   },
 ] as const
 

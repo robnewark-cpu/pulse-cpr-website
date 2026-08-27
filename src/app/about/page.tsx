@@ -1,4 +1,5 @@
 import { PageHero } from "@/components/sections/page-hero"
+import { InstructorPortrait } from "@/components/brand/instructor-portrait"
 import { InstructorGrid } from "@/components/sections/instructor-grid"
 import { WhyTrainWithPulse } from "@/components/sections/why-train-with-pulse"
 import { CtaBanner } from "@/components/sections/cta-banner"
@@ -31,7 +32,11 @@ export default function AboutPage() {
         secondaryCta={{ href: "/contact", label: "Contact us" }}
       />
       <section className="py-14 sm:py-20">
-        <Container className="grid gap-10 lg:grid-cols-2">
+        <Container className="grid gap-10 lg:grid-cols-[18rem_1fr_1fr]">
+          <InstructorPortrait
+            className="aspect-[4/5] w-full overflow-hidden rounded-2xl shadow-sm ring-1 ring-navy/10 lg:max-w-none"
+            sizes="(max-width: 1024px) 100vw, 288px"
+          />
           <div>
             <h2 className="text-2xl font-bold">Mission</h2>
             <p className="mt-4 text-muted-foreground leading-7">{aboutMission}</p>

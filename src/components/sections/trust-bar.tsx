@@ -1,30 +1,24 @@
-import { ShieldCheck, Clock3, MapPinned, BadgeCheck } from "lucide-react"
+import { Award, CalendarCheck, MapPinned, Users } from "lucide-react"
 import { Container } from "@/components/layout/container"
-import { stats } from "@/lib/site"
 
-const trust = [
-  { icon: ShieldCheck, label: "Guideline-based instruction" },
-  { icon: BadgeCheck, label: "Nationally recognized cards" },
-  { icon: MapPinned, label: "On-site across Oklahoma" },
-  { icon: Clock3, label: "Evening & weekend seats" },
+const items = [
+  { icon: Award, label: "AHA & Red Cross Certified" },
+  { icon: MapPinned, label: "Proudly Serving Oklahoma" },
+  { icon: Users, label: "Classes For All Skill Levels" },
+  { icon: CalendarCheck, label: "Flexible Scheduling Available" },
 ]
 
 export function TrustBar() {
   return (
-    <section className="border-y bg-navy text-white">
-      <Container className="grid grid-cols-2 gap-6 py-8 lg:grid-cols-4">
-        {stats.map((item) => (
-          <div key={item.label}>
-            <p className="text-2xl font-bold sm:text-3xl">{item.value}</p>
-            <p className="mt-1 text-sm text-white/70">{item.label}</p>
-          </div>
-        ))}
-      </Container>
-      <Container className="grid gap-3 border-t border-white/10 py-5 sm:grid-cols-2 lg:grid-cols-4">
-        {trust.map((item) => (
-          <p key={item.label} className="inline-flex items-center gap-2 text-sm text-white/85">
-            <item.icon className="size-4 text-primary" aria-hidden="true" />
-            {item.label}
+    <section className="bg-navy text-white" aria-label="Trust indicators">
+      <Container className="grid grid-cols-2 gap-6 py-8 lg:grid-cols-4 lg:py-10">
+        {items.map((item) => (
+          <p
+            key={item.label}
+            className="flex flex-col items-start gap-3 text-sm font-semibold sm:flex-row sm:items-center sm:text-[0.95rem]"
+          >
+            <item.icon className="size-6 shrink-0 text-white" aria-hidden="true" />
+            <span>{item.label}</span>
           </p>
         ))}
       </Container>

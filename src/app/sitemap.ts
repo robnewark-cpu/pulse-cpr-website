@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     [
       { path: "/", priority: 1, changeFrequency: "weekly" },
       { path: "/oklahoma-cpr-training", priority: 0.9, changeFrequency: "weekly" },
+      { path: "/classes", priority: 0.9, changeFrequency: "weekly" },
       { path: "/cpr-certification", priority: 0.85, changeFrequency: "monthly" },
       { path: "/first-aid-training", priority: 0.8, changeFrequency: "monthly" },
       { path: "/aed-training", priority: 0.8, changeFrequency: "monthly" },
