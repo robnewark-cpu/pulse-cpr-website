@@ -37,7 +37,7 @@ export const fieldClassName =
 
 export const selectClassName = `${fieldClassName} bg-white`
 
-export function FormStatus({ state }: { state: FormState }) {
+export function FormStatus({ state }: { state: { status: string; message: string } }) {
   if (state.status === "idle") return null
   return (
     <p

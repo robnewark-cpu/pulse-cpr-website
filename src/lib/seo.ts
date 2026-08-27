@@ -1,5 +1,7 @@
 import type { Metadata } from "next"
-import { classes, siteConfig, testimonials } from "@/lib/site"
+import { siteConfig, testimonials } from "@/lib/site"
+import type { ClassRecord } from "@/lib/tms/types"
+import { formatTimeRange } from "@/lib/tms/format"
 
 export function createMetadata({
   title,
@@ -379,15 +381,20 @@ export function articleJsonLd({
   }
 }
 
-export function classEventJsonLd() {
-  return classes.map((session) => ({
+export function classEventJsonLd(sessions: ClassRecord[]) {
+  return sessions
+    .filter((session) => session.status === "scheduled")
+    .map((session) => ({
     "@context": "https://schema.org",
     "@type": "EducationEvent",
-    name: `${session.title} — Pulse CPR`,
-    description: `${session.title} with Pulse CPR. ${session.time} at ${session.location}.`,
-    startDate: session.date,
+    name: `${session.name} — Pulse CPR`,
+    description: `${session.name} with Pulse CPR. ${formatTimeRange(session.start_time, session.end_time)} at ${session.location}.`,
+    startDate: `${session.class_date}T${session.start_time.slice(0, 8)}`,
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-    eventStatus: "https://schema.org/EventScheduled",
+    eventStatus:
+      session.status === "cancelled"
+        ? "https://schema.org/EventCancelled"
+        : "https://schema.org/EventScheduled",
     location: {
       "@type": "Place",
       name: session.location,
@@ -402,16 +409,15 @@ export function classEventJsonLd() {
     performer: { "@id": `${siteConfig.url}/#business` },
     offers: {
       "@type": "Offer",
-      url: new URL("/book", siteConfig.url).toString(),
-      price: session.price.replace(/[^0-9.]/g, "") || undefined,
+      url: new URL(`/register/${session.id}`, siteConfig.url).toString(),
+      price: session.price || undefined,
       priceCurrency: "USD",
       availability:
-        session.seats > 0
+        session.seats_remaining > 0
           ? "https://schema.org/InStock"
           : "https://schema.org/SoldOut",
-      validFrom: "2026-08-01",
     },
-    remainingAttendeeCapacity: session.seats,
+    remainingAttendeeCapacity: session.seats_remaining,
   }))
 }
 

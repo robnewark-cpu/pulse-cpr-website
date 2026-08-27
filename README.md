@@ -9,6 +9,7 @@ Production website for Pulse CPR Oklahoma — professional CPR, BLS, AED, and Fi
 - Tailwind CSS v4
 - Framer Motion
 - shadcn/ui
+- Supabase (class calendar and instructor admin)
 
 ## Local development
 
@@ -33,5 +34,21 @@ Copy `.env.example` to `.env.local`:
 - `NEXT_PUBLIC_SITE_URL` — canonical site URL for SEO
 - `NEXT_PUBLIC_GA_ID` — optional Google Analytics measurement ID
 - `FORM_WEBHOOK_URL` — optional POST endpoint for lead, booking, quote, and newsletter forms
+- `NEXT_PUBLIC_SUPABASE_URL` / `NEXT_PUBLIC_SUPABASE_ANON_KEY` — class manager
+- `SUPABASE_SERVICE_ROLE_KEY` — optional; keep on the server only
+- `RESEND_API_KEY` / `EMAIL_FROM` — registration and cancellation emails
+- `GOOGLE_CALENDAR_ID` + OAuth refresh token — optional Google Calendar sync
 
-Without `FORM_WEBHOOK_URL`, submissions are validated and logged on the server so the site can be reviewed end-to-end.
+Without Supabase keys, the public calendar still shows sample Edmond dates. Instructor login at `/admin` stays offline until keys are added.
+
+## Training management
+
+1. Create a Supabase project.
+2. Run `supabase/schema.sql` in the SQL editor (tables, RLS, first-user-is-staff trigger, seed classes).
+3. Add the Supabase URL and anon key to the host.
+4. Open `/admin/login` and create the first instructor account (phone-friendly).
+5. Use **New class** to add a date. Students register from `/class-calendar`.
+
+Optional Google Calendar: create an OAuth client, grant the instructor calendar, store the refresh token. Classes then insert/update/delete events automatically.
+
+Optional email: add a Resend API key. Students get a confirmation; cancelled classes notify the roster.

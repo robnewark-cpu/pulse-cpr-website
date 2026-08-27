@@ -1,4 +1,7 @@
+"use client"
+
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { Mail, MapPin, Phone } from "lucide-react"
 import { Logo } from "@/components/brand/logo"
 import { Container } from "@/components/layout/container"
@@ -30,6 +33,9 @@ const footerNav = [
 ]
 
 export function Footer() {
+  const pathname = usePathname()
+  if (pathname.startsWith("/admin")) return null
+
   return (
     <footer className="border-t bg-navy text-white">
       <Container className="grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-4">
