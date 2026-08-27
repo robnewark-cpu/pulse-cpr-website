@@ -2,35 +2,29 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Mail, MapPin, Phone } from "lucide-react"
+import { Mail, Phone } from "lucide-react"
 import { Logo } from "@/components/brand/logo"
 import { Container } from "@/components/layout/container"
-import { NewsletterForm } from "@/components/forms/newsletter-form"
 import { siteConfig } from "@/lib/site"
 
-const footerNav = [
-  {
-    title: "Training",
-    links: [
-      { href: "/cpr-certification", label: "CPR Certification" },
-      { href: "/first-aid-training", label: "First Aid Training" },
-      { href: "/aed-training", label: "AED Training" },
-      { href: "/healthcare-provider-courses", label: "Healthcare Provider Courses" },
-      { href: "/corporate-training", label: "Corporate Training" },
-    ],
-  },
-  {
-    title: "Company",
-    links: [
-      { href: "/about", label: "About" },
-      { href: "/class-calendar", label: "Class Calendar" },
-      { href: "/resources", label: "Resources" },
-      { href: "/testimonials", label: "Testimonials" },
-      { href: "/oklahoma-cpr-training", label: "Oklahoma service area" },
-      { href: "/contact", label: "Contact" },
-    ],
-  },
+const footerLinks = [
+  { href: "/classes", label: "Classes" },
+  { href: "/corporate-training", label: "Corporate Training" },
+  { href: "/class-calendar", label: "Schedule" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
 ]
+
+function FacebookIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} aria-hidden="true" focusable="false">
+      <path
+        fill="currentColor"
+        d="M14.5 8.5H16V6h-1.5C12.57 6 11 7.57 11 9.5V11H9v2.5h2V20h2.5v-6.5H16V11h-2.5V9.5c0-.55.45-1 1-1Z"
+      />
+    </svg>
+  )
+}
 
 export function Footer() {
   const pathname = usePathname()
@@ -38,45 +32,34 @@ export function Footer() {
 
   return (
     <footer className="border-t bg-navy text-white">
-      <Container className="grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-4">
-        <div className="lg:col-span-1">
+      <Container className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
+        <div>
           <Logo inverted />
-          <p className="mt-4 max-w-xs text-sm leading-6 text-white/75">
-            Professional CPR, BLS, AED, and First Aid certification for Oklahoma
-            workplaces, schools, and healthcare teams.
+          <p className="mt-4 text-sm font-medium tracking-wide text-white/80">
+            Serving Oklahoma
+          </p>
+          <p className="mt-2 max-w-xs text-sm leading-6 text-white/70">
+            {siteConfig.tagline}
           </p>
         </div>
-        {footerNav.map((group) => (
-          <div key={group.title}>
-            <p className="text-sm font-semibold tracking-wide text-white">
-              {group.title}
-            </p>
-            <ul className="mt-4 space-y-2">
-              {group.links.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-white/75 transition hover:text-white"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
         <div>
-          <p className="text-sm font-semibold tracking-wide text-white">
-            Edmond classroom
-          </p>
+          <p className="text-sm font-semibold tracking-wide text-white">Explore</p>
+          <ul className="mt-4 space-y-2">
+            {footerLinks.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className="text-sm text-white/75 transition hover:text-white"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <p className="text-sm font-semibold tracking-wide text-white">Contact</p>
           <ul className="mt-4 space-y-3 text-sm text-white/75">
-            <li className="flex gap-2">
-              <MapPin className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
-              {siteConfig.address.street}
-              <br />
-              {siteConfig.address.city}, {siteConfig.address.region}{" "}
-              {siteConfig.address.postalCode}
-            </li>
             <li>
               <a
                 href={siteConfig.phoneHref}
@@ -95,26 +78,28 @@ export function Footer() {
                 {siteConfig.email}
               </a>
             </li>
-            <li>
-              <a
-                href={siteConfig.social.facebookReviews}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white"
-              >
-                Facebook reviews
-              </a>
-            </li>
           </ul>
-          <div className="mt-6">
-            <p className="mb-2 text-sm font-semibold">Class openings &amp; renewal tips</p>
-            <NewsletterForm variant="dark" />
+        </div>
+        <div>
+          <p className="text-sm font-semibold tracking-wide text-white">Follow</p>
+          <div className="mt-4 flex gap-3">
+            <a
+              href={siteConfig.social.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex size-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
+              aria-label="Pulse CPR on Facebook"
+            >
+              <FacebookIcon className="size-5" />
+            </a>
           </div>
         </div>
       </Container>
       <div className="border-t border-white/10">
         <Container className="flex flex-col gap-3 py-5 text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} {siteConfig.legalName}. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} {siteConfig.legalName}. All rights reserved.
+          </p>
           <div className="flex gap-4">
             <Link href="/privacy" className="hover:text-white">
               Privacy
@@ -122,14 +107,6 @@ export function Footer() {
             <Link href="/terms" className="hover:text-white">
               Terms
             </Link>
-            <a
-              href={siteConfig.social.facebookReviews}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white"
-            >
-              Facebook reviews
-            </a>
           </div>
         </Container>
       </div>

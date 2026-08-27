@@ -282,7 +282,7 @@ select * from (
   (
     'BLS Provider', 'Healthcare', '2026-09-06'::date, '08:00'::time, '12:30'::time, 'Christine Oldenburg',
     '1019 Waterwood Pkwy, Ste C, Edmond, OK 73034',
-    'BLS Provider for healthcare teams. Skills testing and same-day eCard processing.',
+    'BLS Provider for healthcare teams. Skills testing and certification card processing.',
     95::numeric, 6, '2026-09-05 18:00:00-05'::timestamptz, 'scheduled'
   ),
   (
@@ -316,22 +316,10 @@ select * from (
     119::numeric, 7, '2026-09-25 18:00:00-05'::timestamptz, 'scheduled'
   ),
   (
-    'PALS Provider', 'Healthcare', '2026-10-03'::date, '08:00'::time, '16:00'::time, 'Christine Oldenburg',
-    '1019 Waterwood Pkwy, Ste C, Edmond, OK 73034',
-    'Pediatric Advanced Life Support for licensed clinicians.',
-    195::numeric, 5, '2026-10-02 18:00:00-05'::timestamptz, 'scheduled'
-  ),
-  (
     'Heartsaver CPR/AED', 'CPR', '2026-10-07'::date, '17:30'::time, '21:00'::time, 'Christine Oldenburg',
     '1019 Waterwood Pkwy, Ste C, Edmond, OK 73034',
     'Evening Heartsaver CPR/AED public class.',
     75::numeric, 9, '2026-10-06 18:00:00-05'::timestamptz, 'scheduled'
-  ),
-  (
-    'ACLS Provider', 'Healthcare', '2026-10-17'::date, '08:00'::time, '16:30'::time, 'Christine Oldenburg',
-    '1019 Waterwood Pkwy, Ste C, Edmond, OK 73034',
-    'ACLS Provider for nurses, paramedics, and clinical teams.',
-    195::numeric, 6, '2026-10-16 18:00:00-05'::timestamptz, 'scheduled'
   ),
   (
     'Pediatric First Aid & CPR', 'First Aid', '2026-10-24'::date, '09:00'::time, '14:00'::time, 'Christine Oldenburg',

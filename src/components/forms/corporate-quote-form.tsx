@@ -92,7 +92,6 @@ export function CorporateQuoteForm() {
             <option value="first-aid">First Aid</option>
             <option value="cpr-first-aid">CPR / AED / First Aid</option>
             <option value="bls">BLS Provider</option>
-            <option value="acls-pals">ACLS / PALS</option>
             <option value="mixed">Mixed roster — help us plan</option>
           </select>
         </Field>

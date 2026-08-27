@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { defaultInstructor, siteConfig, testimonials } from "@/lib/site"
+import { defaultInstructor, instructors, siteConfig, testimonials } from "@/lib/site"
 import type { ClassRecord } from "@/lib/tms/types"
 import { formatTimeRange } from "@/lib/tms/format"
 
@@ -140,10 +140,28 @@ export function localBusinessJsonLd() {
       worstRating: "1",
     },
     sameAs: [siteConfig.social.facebook, siteConfig.social.facebookReviews],
+    founder: {
+      "@type": "Person",
+      name: defaultInstructor,
+      honorificSuffix: "RN",
+      jobTitle: instructors[0].role,
+      image: instructors[0].image ? `${siteConfig.url}${instructors[0].image}` : undefined,
+    },
     employee: {
       "@type": "Person",
       name: defaultInstructor,
-      jobTitle: "Instructor",
+      honorificSuffix: "RN",
+      jobTitle: instructors[0].role,
+      image: instructors[0].image ? `${siteConfig.url}${instructors[0].image}` : undefined,
+      description: instructors[0].shortBio,
+      alumniOf: {
+        "@type": "CollegeOrUniversity",
+        name: "Rose State College",
+      },
+      hasCredential: instructors[0].certifications.map((credential) => ({
+        "@type": "EducationalOccupationalCredential",
+        name: credential,
+      })),
       worksFor: { "@id": `${siteConfig.url}/#business` },
     },
     knowsAbout: [
@@ -151,8 +169,6 @@ export function localBusinessJsonLd() {
       "AED training",
       "First Aid",
       "BLS Provider",
-      "ACLS",
-      "PALS",
       "Oklahoma workplace safety training",
     ],
     contactPoint: [
@@ -179,8 +195,6 @@ export function localBusinessJsonLd() {
         "First Aid Training",
         "AED Training",
         "BLS Provider",
-        "ACLS",
-        "PALS",
         "Corporate on-site training",
       ].map((name) => ({
         "@type": "Offer",
@@ -306,7 +320,7 @@ export function howToGetCertifiedJsonLd() {
     "@type": "HowTo",
     name: "How to get CPR certified in Oklahoma with Pulse CPR",
     description:
-      "Book a Pulse CPR class in Edmond or request on-site training, complete skills practice, and receive a two-year eCard.",
+      "Book a Pulse CPR class in Edmond or request on-site training, complete skills practice, and receive a two-year certification card.",
     totalTime: "PT4H",
     estimatedCost: {
       "@type": "MonetaryAmount",
@@ -318,7 +332,7 @@ export function howToGetCertifiedJsonLd() {
         "@type": "HowToStep",
         position: 1,
         name: "Choose the right course",
-        text: "Heartsaver CPR/AED/First Aid is for workplaces, teachers, and community responders. BLS, ACLS, and PALS are for healthcare providers.",
+        text: "Heartsaver CPR/AED/First Aid is for workplaces, teachers, and community responders. BLS is for healthcare providers.",
         url: `${siteConfig.url}/resources/bls-vs-heartsaver`,
       },
       {
@@ -337,8 +351,8 @@ export function howToGetCertifiedJsonLd() {
       {
         "@type": "HowToStep",
         position: 4,
-        name: "Receive your eCard",
-        text: "After you pass skills testing, Pulse CPR processes a nationally recognized eCard, typically the same business day. Cards are valid for two years.",
+        name: "Receive your certification card",
+        text: "After you pass skills testing, Pulse CPR issues a nationally recognized certification card. Cards are typically valid for two years.",
       },
     ],
   }

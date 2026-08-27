@@ -1,14 +1,14 @@
 export const siteConfig = {
   name: "Pulse CPR",
   legalName: "Pulse CPR Oklahoma, LLC",
-  tagline: "Lifesaving skills. Oklahoma-ready teams.",
+  tagline: "Learn It. Know It. Save A Life.",
   description:
-    "Pulse CPR delivers professional CPR, BLS, AED, and First Aid certification from Edmond, Oklahoma, and on-site across the state. Book a public class or request workplace training for schools, clinics, and companies.",
+    "Pulse CPR — Learn It. Know It. Save A Life. American Heart Association and American Red Cross CPR, AED, First Aid, and BLS certification from Edmond, Oklahoma, and on-site across the state.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://pulsecprok.com",
   phone: "(405) 763-6811",
   phoneHref: "tel:+14057636811",
-  email: "Pulse.CPR2024@gmail.com",
-  bookingEmail: "Pulse.CPR2024@gmail.com",
+  email: "contact@pulsecprok.com",
+  bookingEmail: "contact@pulsecprok.com",
   address: {
     street: "1019 Waterwood Pkwy, Ste C",
     city: "Edmond",
@@ -50,22 +50,10 @@ export const siteConfig = {
 
 export const navItems = [
   { href: "/", label: "Home" },
-  {
-    href: "/cpr-certification",
-    label: "Courses",
-    children: [
-      { href: "/cpr-certification", label: "CPR Certification" },
-      { href: "/first-aid-training", label: "First Aid Training" },
-      { href: "/aed-training", label: "AED Training" },
-      { href: "/healthcare-provider-courses", label: "Healthcare Provider Courses" },
-      { href: "/corporate-training", label: "Corporate Training" },
-    ],
-  },
-  { href: "/class-calendar", label: "Class Calendar" },
-  { href: "/resources", label: "Resources" },
-  { href: "/oklahoma-cpr-training", label: "Oklahoma" },
-  { href: "/testimonials", label: "Testimonials" },
+  { href: "/classes", label: "Classes" },
   { href: "/about", label: "About" },
+  { href: "/corporate-training", label: "Corporate Training" },
+  { href: "/class-calendar", label: "Schedule" },
   { href: "/contact", label: "Contact" },
 ] as const
 
@@ -94,7 +82,7 @@ export const courses = [
       "Adult, child, and infant CPR",
       "Choking relief for all ages",
       "Hands-on manikin practice",
-      "Same-day eCard processing",
+      "Nationally recognized certification card",
     ],
   },
   {
@@ -140,19 +128,19 @@ export const courses = [
   {
     slug: "healthcare-provider-courses",
     title: "Healthcare Provider Courses",
-    shortTitle: "BLS / ACLS / PALS",
+    shortTitle: "BLS Provider",
     audience: "Nurses, EMTs, dentists, and clinical teams",
-    duration: "4–16 hours",
+    duration: "4 hours",
     price: "From $95",
     renewal: "Valid 2 years",
     summary:
-      "BLS Provider, ACLS, and PALS for licensed clinicians who need current cards for credentialing, privileging, or onboarding.",
+      "BLS Provider for licensed clinicians who need current cards for credentialing, privileging, or onboarding.",
     href: "/healthcare-provider-courses",
     image:
       "https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=1400&q=80",
     highlights: [
       "BLS Provider with high-performance CPR",
-      "ACLS and PALS renewal options",
+      "Initial and renewal tracks",
       "Skills testing with current algorithms",
       "Hospital and clinic group sessions",
     ],
@@ -183,13 +171,80 @@ export const defaultInstructor = "Christine Oldenburg"
 
 export const instructors = [
   {
-    name: defaultInstructor,
-    role: "Instructor",
-    credentials: "Credentials and certifications will be added from her resume",
-    bio: "Instructor biography coming soon. Pulse CPR will publish Christine Oldenburg’s background, credentials, and teaching experience here once her resume is on file.",
-    image: "",
+    name: "Christine Oldenburg, RN",
+    role: "Founder and Lead Instructor",
+    credentials: "RN · ACLS · AHA CPR · AHA Instructor",
+    certifications: [
+      "Registered Nurse (RN)",
+      "Advanced Cardiac Life Support (ACLS)",
+      "American Heart Association CPR Certification",
+      "American Heart Association Instructor Certification",
+    ],
+    shortBio:
+      "Christine Oldenburg, RN, is the founder and lead instructor of Pulse CPR. With more than 24 years of nursing experience and extensive clinical backgrounds in emergency, critical care, telemetry, cardiac, and hospital nursing, she brings real-world healthcare expertise into every classroom. As an American Heart Association Instructor and former healthcare educator, Christine is passionate about teaching practical lifesaving skills that help individuals and organizations respond confidently during emergencies.",
+    bio: [
+      "Christine Oldenburg is a Registered Nurse with more than 24 years of healthcare experience serving patients throughout Oklahoma. Throughout her nursing career, she has worked in medical-surgical units, oncology, telemetry, intensive care, critical care, emergency care, cardiac step-down units, and hospital float nursing, providing care to patients across a wide range of healthcare settings.",
+      "Christine earned her Associate Degree in Nursing from Rose State College and has maintained active nursing licensure in the State of Oklahoma. Her professional experience includes work with Mercy Hospital, Norman Regional Hospital, OU Medical Center, and Midwest Regional Medical Center. Throughout her career, she has cared for patients experiencing cardiac emergencies, critical illness, and complex medical conditions, developing the calm decision-making skills required during life-threatening situations.",
+      "In addition to her bedside nursing experience, Christine served as an Adjunct Instructor RN for Moore Norman Technology Center, where she helped develop, teach, and implement state-approved healthcare training programs. Her experience as both a clinician and educator allows her to present lifesaving skills in a clear, practical, and engaging way for students of all experience levels.",
+      "Through Pulse CPR, Christine is committed to empowering individuals, families, healthcare professionals, businesses, schools, churches, and community organizations with the skills and confidence needed to respond during emergencies when every second matters.",
+    ],
+    image: "/images/christine-oldenburg.jpg",
   },
 ] as const
+
+export const instructorPhoto = {
+  src: "/images/christine-oldenburg.jpg",
+  alt: "Christine Oldenburg, RN, Pulse CPR instructor wearing the Pulse CPR instructor top",
+  width: 444,
+  height: 628,
+} as const
+
+export const homeClassCards = [
+  {
+    title: "Adult CPR",
+    href: "/cpr-certification",
+    description: "Hands-on adult CPR so you can recognize cardiac arrest and start compressions with confidence.",
+    image:
+      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "Clinical training setting used for adult CPR practice",
+  },
+  {
+    title: "Pediatric & Infant CPR",
+    href: "/cpr-certification",
+    description: "Age-specific CPR and choking response for children and infants in homes, schools, and childcare.",
+    image:
+      "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "Infant receiving attentive care during a pediatric health visit",
+  },
+  {
+    title: "AED Training",
+    href: "/aed-training",
+    description: "Learn to retrieve, place, and use an AED quickly when every second of a cardiac emergency counts.",
+    image:
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "Emergency medical equipment used in AED and resuscitation training",
+  },
+  {
+    title: "First Aid",
+    href: "/first-aid-training",
+    description: "Practical first aid for bleeding, burns, and sudden illness until professional help arrives.",
+    image:
+      "https://images.unsplash.com/photo-1584433144859-1fc3ab64a957?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "First aid supplies prepared for emergency response training",
+  },
+] as const
+
+export const trustReasons = [
+  "Led by a Registered Nurse with 24+ years of healthcare experience",
+  "American Heart Association Instructor Certified",
+  "Hands-On Training From Real Healthcare Experience",
+  "Flexible Classes for Individuals and Organizations",
+  "Corporate and On-Site Training Available",
+  "Practical, Easy-to-Understand Instruction",
+] as const
+
+export const aboutMission =
+  "At Pulse CPR, our mission is to equip individuals and organizations with the knowledge, skills, and confidence needed to respond effectively during medical emergencies. We believe that quality CPR and first aid training saves lives, strengthens communities, and empowers people to act when moments matter most."
 
 export const testimonials = [
   {
@@ -258,9 +313,9 @@ export const faqs = [
       "Most Heartsaver CPR, First Aid, AED, and BLS Provider cards are valid for two years. We recommend scheduling renewal 30–45 days before expiration so your team never has a gap.",
   },
   {
-    question: "Do I receive a card the same day?",
+    question: "When do I receive my certification card?",
     answer:
-      "Yes. After you complete skills testing, we process nationally recognized eCards, typically the same business day. Printable receipts are available immediately for employers who need proof of attendance.",
+      "After you complete skills testing, Pulse CPR issues a nationally recognized certification card. Timing depends on the card issuer. Ask when you book if you have a credentialing deadline.",
   },
   {
     question: "Can you train our staff on-site?",
@@ -275,7 +330,7 @@ export const faqs = [
   {
     question: "Is this training aligned with current guidelines?",
     answer:
-      "Yes. Pulse CPR instruction follows current American Heart Association and Emergency Cardiovascular Care science. Healthcare provider courses use the latest BLS, ACLS, and PALS algorithms.",
+      "Yes. Pulse CPR instruction follows current American Heart Association and Emergency Cardiovascular Care science. Healthcare provider courses use the latest BLS algorithms.",
   },
   {
     question: "Do you offer evening or weekend classes?",
@@ -295,7 +350,7 @@ export const faqs = [
   {
     question: "Who is Pulse CPR?",
     answer:
-      "Pulse CPR (Facebook: Pulse.CPR) is an Oklahoma training company that teaches CPR, AED, First Aid, BLS, ACLS, and PALS. Public classes meet at 1019 Waterwood Pkwy, Ste C, Edmond, OK 73034. Instructor Christine Oldenburg also trains on-site statewide.",
+      "Pulse CPR (Facebook: Pulse.CPR) is an Oklahoma training company founded by Christine Oldenburg, RN, an American Heart Association Instructor. Public classes meet at 1019 Waterwood Pkwy, Ste C, Edmond, OK 73034. Christine also trains on-site statewide.",
   },
   {
     question: "Which Oklahoma cities do you serve?",
@@ -310,7 +365,7 @@ export const faqs = [
   {
     question: "How do I book a CPR class in Oklahoma?",
     answer:
-      "Use the booking form at pulsecprok.com/book, call (405) 763-6811, or email Pulse.CPR2024@gmail.com. Request an on-site quote for groups of six or more. A coordinator confirms seats within one business day.",
+      "Use the booking form at pulsecprok.com/book, call (405) 763-6811, or email contact@pulsecprok.com. Request an on-site quote for groups of six or more. A coordinator confirms seats within one business day.",
   },
 ] as const
 
@@ -376,16 +431,6 @@ export const classes = [
     price: "$119",
   },
   {
-    id: "pals-1003",
-    title: "PALS Provider",
-    category: "Healthcare",
-    date: "2026-10-03",
-    time: "8:00 AM – 4:00 PM",
-    location: "Edmond classroom",
-    seats: 5,
-    price: "$195",
-  },
-  {
     id: "cpr-1007",
     title: "Heartsaver CPR/AED",
     category: "CPR",
@@ -394,16 +439,6 @@ export const classes = [
     location: "Edmond classroom",
     seats: 9,
     price: "$75",
-  },
-  {
-    id: "acls-1017",
-    title: "ACLS Provider",
-    category: "Healthcare",
-    date: "2026-10-17",
-    time: "8:00 AM – 4:30 PM",
-    location: "Edmond classroom",
-    seats: 6,
-    price: "$195",
   },
   {
     id: "fa-1024",
@@ -487,7 +522,7 @@ export const resources = [
     slug: "what-to-expect-in-a-bls-class",
     title: "What to expect in a Pulse CPR BLS class",
     excerpt:
-      "From prework to high-performance CPR and eCards: a walkthrough so first-time healthcare students know exactly how the morning will go.",
+      "From prework to high-performance CPR: a walkthrough so first-time healthcare students know exactly how the morning will go.",
     category: "Healthcare",
     readTime: "4 min",
     date: "2026-05-14",
@@ -499,8 +534,6 @@ export const courseSelectOptions = [
   { value: "first-aid", label: "First Aid Training" },
   { value: "aed", label: "AED Training" },
   { value: "bls", label: "BLS for Healthcare Providers" },
-  { value: "acls", label: "ACLS" },
-  { value: "pals", label: "PALS" },
   { value: "corporate", label: "Corporate / group training" },
   { value: "unsure", label: "Not sure — help me choose" },
 ] as const

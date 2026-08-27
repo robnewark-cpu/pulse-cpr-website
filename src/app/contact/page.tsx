@@ -1,5 +1,6 @@
 import { Mail, MapPin, Phone } from "lucide-react"
 import { PageHero } from "@/components/sections/page-hero"
+import { InstructorPortrait } from "@/components/brand/instructor-portrait"
 import { Container } from "@/components/layout/container"
 import { ContactForm } from "@/components/forms/contact-form"
 import { JsonLd } from "@/components/seo/json-ld"
@@ -9,7 +10,7 @@ import { siteConfig } from "@/lib/site"
 export const metadata = createMetadata({
   title: "Contact Pulse CPR",
   description:
-    "Contact Pulse CPR in Edmond for class questions, eCards, and corporate scheduling. Call (405) 763-6811, email Pulse.CPR2024@gmail.com, or send a message.",
+    "Contact Pulse CPR in Edmond for class questions, certification cards, and corporate scheduling. Call (405) 763-6811, email contact@pulsecprok.com, or send a message.",
   path: "/contact",
 })
 
@@ -37,6 +38,10 @@ export default function ContactPage() {
       <section className="py-12 sm:py-16">
         <Container className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <div className="space-y-6">
+            <InstructorPortrait
+              className="aspect-[4/5] w-full max-w-sm overflow-hidden rounded-2xl shadow-sm ring-1 ring-navy/10"
+              sizes="(max-width: 1024px) 100vw, 320px"
+            />
             <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-navy/10">
               <h2 className="text-xl font-semibold">Edmond classroom</h2>
               <ul className="mt-4 space-y-3 text-sm text-muted-foreground">

@@ -4,7 +4,7 @@ import { createMetadata } from "@/lib/seo"
 export const metadata = createMetadata({
   title: "CPR Certification in Oklahoma",
   description:
-    "Heartsaver CPR certification at the Edmond classroom and on-site across Oklahoma City and the state. Adult, child, and infant CPR with choking response and same-day eCards.",
+    "Heartsaver CPR certification at the Edmond classroom and on-site across Oklahoma City and the state. Adult, child, and infant CPR with choking response.",
   path: "/cpr-certification",
   keywords: ["CPR certification Oklahoma City", "Heartsaver CPR OKC", "CPR class Oklahoma"],
 })
@@ -42,8 +42,8 @@ export default function CprCertificationPage() {
           detail: "Responsive and unresponsive choking, pregnancy considerations, and when to stop.",
         },
         {
-          title: "Skills check and eCard",
-          detail: "Short assessment, then same-day course completion documentation for your employer.",
+          title: "Skills check and certification",
+          detail: "Short assessment, then course completion documentation for your employer.",
         },
       ]}
       faqs={[

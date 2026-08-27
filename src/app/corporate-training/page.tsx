@@ -25,7 +25,7 @@ const audiences = [
   },
   {
     title: "Healthcare facilities",
-    body: "Clinics, dental offices, home health, and hospital units that need BLS, ACLS, or PALS on a credentialing calendar.",
+    body: "Clinics, dental offices, home health, and hospital units that need BLS on a credentialing calendar.",
   },
   {
     title: "Schools and childcare",

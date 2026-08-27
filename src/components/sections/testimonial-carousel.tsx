@@ -1,5 +1,6 @@
 "use client"
 
+import { Star } from "lucide-react"
 import {
   Carousel,
   CarouselContent,
@@ -21,9 +22,15 @@ export function TestimonialCarousel() {
         {testimonials.map((item) => (
           <CarouselItem key={item.name} className="md:basis-1/2 lg:basis-1/3">
             <figure className="flex h-full flex-col rounded-2xl bg-white p-6 shadow-sm ring-1 ring-navy/10">
-              <p className="text-xs font-semibold tracking-[0.14em] text-primary uppercase">
-                Recommends on Facebook
-              </p>
+              <div className="flex gap-0.5" aria-label="5 star review">
+                {Array.from({ length: 5 }).map((_, index) => (
+                  <Star
+                    key={index}
+                    className="size-4 fill-[#D62828] text-[#D62828]"
+                    aria-hidden="true"
+                  />
+                ))}
+              </div>
               <blockquote className="mt-4 flex-1 text-sm leading-6 text-navy/85">
                 “{excerpt(item.quote)}”
               </blockquote>
