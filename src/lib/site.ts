@@ -166,7 +166,7 @@ export const courses = [
     price: "Custom quote",
     renewal: "Scheduled to your roster",
     summary:
-      "We bring instructors, manikins, and AEDs to your Oklahoma workplace so entire shifts certify without losing a full day off-site.",
+      "We bring the instructor, manikins, and AEDs to your Oklahoma workplace so entire shifts certify without losing a full day off-site.",
     href: "/corporate-training",
     image:
       "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1400&q=80",
@@ -179,38 +179,15 @@ export const courses = [
   },
 ] as const
 
+export const defaultInstructor = "Christine Oldenburg"
+
 export const instructors = [
   {
-    name: "Maya Chen, RN, BSN",
-    role: "Lead Instructor",
-    credentials: "AHA BLS Faculty · 14 years emergency nursing",
-    bio: "Maya spent a decade in Oklahoma City trauma bays before building Pulse CPR’s teaching model. She is known for calm skills coaching and high first-attempt pass rates.",
-    image:
-      "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    name: "James Okonkwo, NRP",
-    role: "Paramedic Educator",
-    credentials: "Nationally Registered Paramedic · ACLS / PALS",
-    bio: "James teaches high-performance CPR the way field teams actually work it: clear roles, tight feedback, and no wasted motion.",
-    image:
-      "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    name: "Sarah Whitfield, RN",
-    role: "Pediatric Specialist",
-    credentials: "PALS Instructor · Pediatric ICU",
-    bio: "Sarah leads infant and child modules for childcare centers, school nurses, and families who want more than a checkbox course.",
-    image:
-      "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    name: "Marcus Hale, PA-C",
-    role: "Healthcare Faculty",
-    credentials: "Physician Assistant · BLS / ACLS Training Center Faculty",
-    bio: "Marcus designs hospital and clinic programs that match credentialing calendars, night-shift availability, and current ECC algorithms.",
-    image:
-      "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=80",
+    name: defaultInstructor,
+    role: "Instructor",
+    credentials: "Credentials and certifications will be added from her resume",
+    bio: "Instructor biography coming soon. Pulse CPR will publish Christine Oldenburg’s background, credentials, and teaching experience here once her resume is on file.",
+    image: "",
   },
 ] as const
 
@@ -318,7 +295,7 @@ export const faqs = [
   {
     question: "Who is Pulse CPR?",
     answer:
-      "Pulse CPR (Facebook: Pulse.CPR) is an Oklahoma training company that teaches CPR, AED, First Aid, BLS, ACLS, and PALS. Public classes meet at 1019 Waterwood Pkwy, Ste C, Edmond, OK 73034. Instructors also train on-site statewide.",
+      "Pulse CPR (Facebook: Pulse.CPR) is an Oklahoma training company that teaches CPR, AED, First Aid, BLS, ACLS, and PALS. Public classes meet at 1019 Waterwood Pkwy, Ste C, Edmond, OK 73034. Instructor Christine Oldenburg also trains on-site statewide.",
   },
   {
     question: "Which Oklahoma cities do you serve?",

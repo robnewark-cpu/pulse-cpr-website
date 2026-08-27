@@ -3,6 +3,7 @@
 import { useActionState } from "react"
 import { Field, FormStatus, fieldClassName } from "@/components/forms/form-shared"
 import { Button } from "@/components/ui/button"
+import { defaultInstructor } from "@/lib/site"
 import { createFirstInstructor, signInInstructor, type ActionResult } from "@/lib/tms/actions"
 
 const idle: ActionResult = { status: "idle", message: "" }
@@ -42,7 +43,7 @@ export function LoginForm({ canCreate }: { canCreate: boolean }) {
           </p>
           <FormStatus state={createState} />
           <Field label="Your name" name="name">
-            <input id="name" name="name" defaultValue="Christine" className={inputClass} />
+            <input id="name" name="name" defaultValue={defaultInstructor} className={inputClass} />
           </Field>
           <Field label="Email" name="setup-email">
             <input id="setup-email" name="email" type="email" required className={inputClass} />

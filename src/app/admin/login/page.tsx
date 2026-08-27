@@ -23,7 +23,7 @@ export default async function AdminLoginPage() {
       <p className="text-sm font-semibold tracking-[0.16em] text-primary uppercase">Pulse CPR</p>
       <h1 className="mt-2 text-3xl font-bold text-navy">Class manager</h1>
       <p className="mt-2 text-sm text-muted-foreground">
-        For instructors. Students register from the public calendar.
+        For the instructor. Students register from the public calendar.
       </p>
       {configured ? (
         <div className="mt-8 rounded-2xl bg-white p-5 shadow-sm ring-1 ring-navy/10">

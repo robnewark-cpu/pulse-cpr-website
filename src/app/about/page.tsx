@@ -9,7 +9,7 @@ import { siteConfig } from "@/lib/site"
 export const metadata = createMetadata({
   title: "About Pulse CPR",
   description:
-    "Meet the Oklahoma instructors behind Pulse CPR. Our mission is practical, guideline-based CPR, AED, BLS, and First Aid training that employers and clinicians can trust.",
+    "Meet Christine Oldenburg, Pulse CPR’s Edmond instructor. Practical, guideline-based CPR, AED, BLS, and First Aid training that employers and clinicians can trust.",
   path: "/about",
 })
 
@@ -34,7 +34,7 @@ export default function AboutPage() {
           <div>
             <h2 className="text-2xl font-bold">Mission</h2>
             <p className="mt-4 text-muted-foreground leading-7">
-              We exist so Oklahoma responders do not freeze. That means small classes, current science, and instructors who still work emergencies—not facilitators reading a script.
+              We exist so Oklahoma responders do not freeze. That means small classes, current science, and an instructor who coaches until the skill sticks—not a facilitator reading a script.
             </p>
             <p className="mt-4 text-muted-foreground leading-7">
               Pulse CPR is headquartered in {siteConfig.address.city}, with on-site programs across the metro, Tulsa, Norman, and statewide worksites.
@@ -53,13 +53,13 @@ export default function AboutPage() {
       </section>
       <section className="bg-accent/40 py-14 sm:py-20">
         <Container>
-          <h2 className="mb-8 text-3xl font-bold">Instructor credentials</h2>
+          <h2 className="mb-8 text-3xl font-bold">Your instructor</h2>
           <InstructorGrid />
         </Container>
       </section>
       <CtaBanner
         title="Ready to train with Pulse CPR?"
-        description="Join a public class in Edmond or bring faculty to your facility."
+        description="Join a public class in Edmond or bring training to your facility."
         primary={{ href: "/class-calendar", label: "View calendar" }}
         secondary={{ href: "/corporate-training", label: "Plan on-site training" }}
       />

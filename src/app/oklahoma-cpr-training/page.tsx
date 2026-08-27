@@ -64,7 +64,7 @@ export default function OklahomaTrainingPage() {
       <PageHero
         eyebrow="Oklahoma service area"
         title="CPR certification across Oklahoma, not just one classroom."
-        description="Pulse CPR trains individuals and teams at the Edmond classroom and brings instructors on-site to Oklahoma City, Norman, Tulsa, and other Oklahoma communities."
+        description="Pulse CPR trains individuals and teams at the Edmond classroom and brings the instructor on-site to Oklahoma City, Norman, Tulsa, and other Oklahoma communities."
         primaryCta={{ href: "/book", label: "Book a class" }}
         secondaryCta={{ href: "/corporate-training", label: "On-site quote" }}
       />
