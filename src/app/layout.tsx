@@ -4,6 +4,7 @@ import Script from "next/script"
 import "./globals.css"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
+import { DraftBanner } from "@/components/layout/draft-banner"
 import { SkipLink } from "@/components/layout/skip-link"
 import { JsonLd } from "@/components/seo/json-ld"
 import { Toaster } from "@/components/ui/sonner"
@@ -115,6 +116,7 @@ export default function RootLayout({
       >
         <JsonLd data={[localBusinessJsonLd(), websiteJsonLd()]} />
         <SkipLink />
+        <DraftBanner />
         <Header />
         <main id="main-content" className="flex-1">
           {children}

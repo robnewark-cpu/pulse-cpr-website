@@ -25,12 +25,12 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/admin", "/api/admin"],
+        disallow: ["/admin", "/api/admin", "/review"],
       },
       ...aiBots.map((userAgent) => ({
         userAgent,
         allow: "/",
-        disallow: ["/admin", "/api/admin"],
+        disallow: ["/admin", "/api/admin", "/review"],
       })),
     ],
     sitemap: `${siteConfig.url}/sitemap.xml`,
