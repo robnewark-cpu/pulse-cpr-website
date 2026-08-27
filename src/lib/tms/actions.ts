@@ -18,6 +18,7 @@ import {
   updateRegistrationRecord,
 } from "@/lib/tms/queries"
 import { COURSE_TYPES, isSupabaseConfigured } from "@/lib/tms/types"
+import { siteConfig } from "@/lib/site"
 
 export type ActionResult = {
   status: "idle" | "success" | "error"
@@ -212,7 +213,9 @@ export async function submitClassRegistration(
     revalidatePath(`/admin/classes/${classId}/roster`)
     return {
       status: "success",
-      message: "You are registered. Check your email for confirmation details.",
+      message: siteConfig.payments.url
+        ? `Complete payment with ${siteConfig.payments.processor} to confirm your seat.`
+        : `Your request is in. Pulse CPR will send an ${siteConfig.payments.processor} payment link to confirm your seat.`,
     }
   } catch (error) {
     const message = error instanceof Error ? error.message : "Registration failed."

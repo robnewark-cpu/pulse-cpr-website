@@ -12,7 +12,7 @@ export const dynamic = "force-dynamic"
 export const metadata = createMetadata({
   title: "Class Calendar",
   description:
-    "Upcoming Pulse CPR classes in Edmond: Heartsaver CPR, First Aid, AED, and BLS. Register online while seats remain.",
+    "Pulse CPR class calendar in Edmond. Public dates appear here after the instructor posts them. Request a private date anytime.",
   path: "/class-calendar",
 })
 
@@ -32,8 +32,8 @@ export default async function ClassCalendarPage() {
       />
       <PageHero
         eyebrow="Edmond classroom"
-        title="Upcoming certification dates"
-        description="This is Pulse CPR’s class calendar — dates added in the instructor class manager, shown here for students. Pick a day, filter by course, and register while seats remain."
+        title="Class calendar"
+        description="Public certification dates appear here when Pulse CPR posts them. Request a private or on-site date anytime."
         primaryCta={{ href: "/book", label: "Request a private date" }}
         secondaryCta={{ href: "/corporate-training", label: "On-site training" }}
       />
@@ -44,7 +44,7 @@ export default async function ClassCalendarPage() {
       </section>
       <CtaBanner
         title="Do not see a date that works?"
-        description="We add weeknight and Saturday seats as demand grows, and we can open a private class for six or more students."
+        description="Ask for another public date, or request a private class for six or more students. Payments are processed by Aegis Pay."
         primary={{ href: "/contact", label: "Ask for another date" }}
         secondary={{ href: "/book", label: "Request a custom date" }}
       />

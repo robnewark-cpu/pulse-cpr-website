@@ -46,6 +46,10 @@ export const siteConfig = {
     facebookReviews:
       "https://www.facebook.com/profile.php?id=61572683277410&sk=reviews",
   },
+  payments: {
+    processor: "Aegis Pay",
+    url: process.env.NEXT_PUBLIC_AEGIS_PAY_URL ?? "",
+  },
 } as const
 
 export const navItems = [
@@ -365,110 +369,12 @@ export const faqs = [
   {
     question: "How do I book a CPR class in Oklahoma?",
     answer:
-      "Use the booking form at pulsecprok.com/book, call (405) 763-6811, or email contact@pulsecprok.com. Request an on-site quote for groups of six or more. A coordinator confirms seats within one business day.",
-  },
-] as const
-
-export const classes = [
-  {
-    id: "bls-0906",
-    title: "BLS Provider",
-    category: "Healthcare",
-    date: "2026-09-06",
-    time: "8:00 AM – 12:30 PM",
-    location: "Edmond classroom",
-    seats: 6,
-    price: "$95",
+      "Use the booking form at pulsecprok.com/book, call (405) 763-6811, or email contact@pulsecprok.com. Request an on-site quote for groups of six or more. Class payments are processed by Aegis Pay.",
   },
   {
-    id: "cpr-0908",
-    title: "Heartsaver CPR/AED",
-    category: "CPR",
-    date: "2026-09-08",
-    time: "5:30 PM – 9:00 PM",
-    location: "Edmond classroom",
-    seats: 8,
-    price: "$75",
-  },
-  {
-    id: "fa-0912",
-    title: "First Aid Certification",
-    category: "First Aid",
-    date: "2026-09-12",
-    time: "9:00 AM – 12:00 PM",
-    location: "Edmond classroom",
-    seats: 10,
-    price: "$69",
-  },
-  {
-    id: "aed-0916",
-    title: "AED Skills Workshop",
-    category: "AED",
-    date: "2026-09-16",
-    time: "6:00 PM – 8:00 PM",
-    location: "Edmond classroom",
-    seats: 12,
-    price: "$59",
-  },
-  {
-    id: "bls-0920",
-    title: "BLS Provider Renewal",
-    category: "Healthcare",
-    date: "2026-09-20",
-    time: "8:00 AM – 11:30 AM",
-    location: "Edmond classroom",
-    seats: 4,
-    price: "$85",
-  },
-  {
-    id: "cpr-0926",
-    title: "Heartsaver CPR/AED/First Aid",
-    category: "CPR",
-    date: "2026-09-26",
-    time: "9:00 AM – 3:00 PM",
-    location: "Edmond classroom",
-    seats: 7,
-    price: "$119",
-  },
-  {
-    id: "cpr-1007",
-    title: "Heartsaver CPR/AED",
-    category: "CPR",
-    date: "2026-10-07",
-    time: "5:30 PM – 9:00 PM",
-    location: "Edmond classroom",
-    seats: 9,
-    price: "$75",
-  },
-  {
-    id: "fa-1024",
-    title: "Pediatric First Aid & CPR",
-    category: "First Aid",
-    date: "2026-10-24",
-    time: "9:00 AM – 2:00 PM",
-    location: "Edmond classroom",
-    seats: 8,
-    price: "$99",
-  },
-  {
-    id: "corp-1030",
-    title: "On-site Corporate Session",
-    category: "Corporate",
-    date: "2026-10-30",
-    time: "By request",
-    location: "Your Oklahoma workplace",
-    seats: 24,
-    price: "Quote",
-  },
-  {
-    id: "bls-1107",
-    title: "BLS Provider",
-    category: "Healthcare",
-    date: "2026-11-07",
-    time: "8:00 AM – 12:30 PM",
-    location: "Edmond classroom",
-    seats: 8,
-    price: "$95",
+    question: "How do I pay for a class?",
+    answer:
+      "Pulse CPR processes class payments through Aegis Pay. After you request a seat, complete payment with Aegis Pay to confirm. Pulse CPR does not process cards on this website.",
   },
 ] as const
 

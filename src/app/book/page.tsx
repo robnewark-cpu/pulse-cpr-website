@@ -46,7 +46,7 @@ export default async function BookPage({
       <PageHero
         eyebrow="Online booking"
         title="Reserve a seat or request a private date"
-        description="Public seats are listed on the class calendar with remaining counts. Use this form for a custom date, on-site session, or if you are not sure which course you need."
+        description="Public seats are listed on the class calendar when posted. Use this form for a custom date, on-site session, or if you are not sure which course you need. Payments are processed by Aegis Pay."
       />
       <section className="py-12 sm:py-16">
         <Container className="max-w-3xl">

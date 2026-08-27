@@ -17,7 +17,7 @@ export const metadata = {
 const pagesToReview = [
   { href: "/", label: "Home", note: "First impression, phone, and booking" },
   { href: "/about", label: "About", note: "Your name and bio placeholder" },
-  { href: "/class-calendar", label: "Class calendar", note: "Month calendar we built — sample dates until you send real ones" },
+  { href: "/class-calendar", label: "Class calendar", note: "Empty until you add dates from your phone" },
   { href: "/cpr-certification", label: "CPR", note: `Listed at ${courses[0].price}` },
   { href: "/first-aid-training", label: "First Aid", note: `Listed at ${courses[1].price}` },
   { href: "/aed-training", label: "AED", note: `Listed at ${courses[2].price}` },
@@ -63,9 +63,9 @@ const christineActions = [
       "Draft policy: free reschedule with 48 hours’ notice; same-day cancel may forfeit the seat. eCards typically same business day. Change either if that is not how you run class.",
   },
   {
-    title: "Send real class dates, or say “keep sample dates for now”",
+    title: "Add real class dates from your phone",
     detail:
-      "The calendar is Pulse CPR’s own calendar (not Google Calendar). Sample Edmond dates are showing until you send a real schedule or we connect the class manager.",
+      "The public calendar is empty on purpose. Sign in at /admin/login, tap New class, and students will see the date on Schedule.",
   },
   {
     title: "Confirm the live domain",
@@ -91,7 +91,7 @@ const builderActions = [
   {
     title: "Set production environment variables",
     detail:
-      "NEXT_PUBLIC_SITE_URL=https://pulsecprok.com. Leave NEXT_PUBLIC_DRAFT_MODE unset so the yellow draft bar disappears.",
+      "NEXT_PUBLIC_SITE_URL=https://pulsecprok.com. NEXT_PUBLIC_AEGIS_PAY_URL if you have an Aegis Pay checkout or invoice link. Leave NEXT_PUBLIC_DRAFT_MODE unset so the yellow draft bar disappears.",
   },
   {
     title: "Make forms actually deliver",
@@ -109,14 +109,14 @@ const builderActions = [
       "Paste resume into instructors[0] in src/lib/site.ts, add her photo, correct prices, and replace AHA/eCard language to match the card she issues.",
   },
   {
-    title: "Calendar: keep samples, or connect Supabase and enter her dates",
+    title: "Calendar: connect Supabase if it is not on yet, then she adds dates",
     detail:
-      "Without Supabase, the public calendar shows sample dates. For live registration: create a Supabase project, run supabase/schema.sql, add URL + anon key, create her /admin login, enter real classes.",
+      "The public calendar stays empty until she posts a class. For live registration: create a Supabase project, run supabase/schema.sql, add URL + anon key, create her /admin login. If demo dates were already inserted, run supabase/clear-classes.sql.",
   },
   {
     title: "Optional today, not required to publish",
     detail:
-      "Google Business Profile matching the Edmond NAP, GA4 ID, Resend confirmation emails, replace remaining Unsplash photos, custom logo if she has a better file.",
+      "Google Business Profile matching the Edmond NAP, GA4 ID, Resend confirmation emails, Aegis Pay checkout URL, replace remaining Unsplash photos, custom logo if she has a better file.",
   },
 ]
 
@@ -152,7 +152,7 @@ export default function ReviewPage() {
               <li>• Your bio and credentials (waiting on resume)</li>
               <li>• Your photo (initials “CO” for now)</li>
               <li>• Stock photos on course pages</li>
-              <li>• Sample class dates on the calendar</li>
+              <li>• Public calendar is empty until you add a class</li>
               <li>• Forms on this draft do not email you yet</li>
               <li>• Legal name {siteConfig.legalName} — confirm or correct</li>
             </ul>

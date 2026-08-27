@@ -20,7 +20,7 @@ export default function TermsPage() {
       <section className="py-12 sm:py-16">
         <Container className="max-w-3xl space-y-5 text-sm leading-7 text-muted-foreground">
           <p>
-            Course descriptions, prices, and calendar seats can change. A reservation is confirmed only after a Pulse CPR coordinator replies. Completion cards are issued to students who meet skills requirements.
+            Course descriptions, prices, and calendar seats can change. Class payments are processed by {siteConfig.payments.processor}. A seat is confirmed after payment, not when a form is submitted. Completion cards are issued to students who meet skills requirements.
           </p>
           <p>
             Website content is for general information and does not replace medical advice or emergency care. Call 911 for a medical emergency.

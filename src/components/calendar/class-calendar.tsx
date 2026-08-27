@@ -128,7 +128,7 @@ export function PublicClassCalendar({
           <p className="mt-8 rounded-2xl bg-white p-6 text-sm text-muted-foreground ring-1 ring-navy/10">
             {selectedDate
               ? "No classes on that day. Pick another date or show all upcoming classes."
-              : "No classes match that search. Call Pulse CPR or request an on-site date."}
+              : "No public classes are posted yet. Call Pulse CPR, request a date, or check back after the instructor adds a class."}
           </p>
         ) : (
           <ul className="mt-6 divide-y overflow-hidden rounded-2xl bg-white ring-1 ring-navy/10">
