@@ -46,7 +46,7 @@ export default async function BookPage({
       <PageHero
         eyebrow="Online booking"
         title="Reserve a seat or request a private date"
-        description="Tell us the course, preferred date, and whether you want the Oklahoma City classroom or on-site training. A coordinator will confirm seats."
+        description="Tell us the course, preferred date, and whether you want the Edmond classroom or on-site training. A coordinator will confirm seats."
       />
       <section className="py-12 sm:py-16">
         <Container className="max-w-3xl">

@@ -10,7 +10,7 @@ export function llmsTxt() {
 
   return `# Pulse CPR
 
-> Pulse CPR (also known as Pulse.CPR on Facebook) is an Oklahoma CPR, AED, First Aid, BLS, ACLS, and PALS training company. Public classes meet in Oklahoma City. Instructors also travel on-site statewide.
+> Pulse CPR (also known as Pulse.CPR on Facebook) is an Oklahoma CPR, AED, First Aid, BLS, ACLS, and PALS training company. Public classes meet at 1019 Waterwood Pkwy, Ste C, Edmond, OK 73034. Instructors also travel on-site statewide.
 
 ## Entity
 - Name: ${siteConfig.name}

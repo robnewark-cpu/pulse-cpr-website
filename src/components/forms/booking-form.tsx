@@ -64,7 +64,7 @@ export function BookingForm({ defaultCourse }: { defaultCourse?: string }) {
             <option value="" disabled>
               Choose a setting
             </option>
-            <option value="okc-classroom">Oklahoma City classroom</option>
+            <option value="edmond-classroom">Edmond classroom</option>
             <option value="on-site">On-site at our workplace</option>
             <option value="either">Either works</option>
           </select>

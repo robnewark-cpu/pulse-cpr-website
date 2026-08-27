@@ -90,7 +90,7 @@ export default function CorporateTrainingPage() {
       </section>
       <CtaBanner
         title="Prefer to send a few people to the classroom?"
-        description="Public Heartsaver, First Aid, AED, and BLS seats are open in Oklahoma City most weeks."
+        description="Public Heartsaver, First Aid, AED, and BLS seats are open in Edmond most weeks."
         primary={{ href: "/book", label: "Book individual seats" }}
         secondary={{ href: "/contact", label: "Ask a coordinator" }}
       />

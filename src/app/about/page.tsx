@@ -25,7 +25,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About Pulse CPR"
         title="A training company built for the moment someone actually needs help."
-        description="Pulse CPR started in Oklahoma City to give workplaces and clinical teams instruction that feels like the real event: calm, specific, and practiced until it sticks."
+        description="Pulse CPR started in Edmond to give workplaces and clinical teams instruction that feels like the real event: calm, specific, and practiced until it sticks."
         primaryCta={{ href: "/book", label: "Book a class" }}
         secondaryCta={{ href: "/contact", label: "Contact us" }}
       />
@@ -59,7 +59,7 @@ export default function AboutPage() {
       </section>
       <CtaBanner
         title="Ready to train with Pulse CPR?"
-        description="Join a public class in Oklahoma City or bring faculty to your facility."
+        description="Join a public class in Edmond or bring faculty to your facility."
         primary={{ href: "/class-calendar", label: "View calendar" }}
         secondary={{ href: "/corporate-training", label: "Plan on-site training" }}
       />

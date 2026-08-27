@@ -257,7 +257,7 @@ export function courseJsonLd({
       courseWorkload: "PT2H",
       location: {
         "@type": "Place",
-        name: `${siteConfig.name} Oklahoma City classroom and on-site Oklahoma locations`,
+        name: `${siteConfig.name} Edmond classroom and on-site Oklahoma locations`,
         address: {
           "@type": "PostalAddress",
           addressLocality: siteConfig.address.city,
@@ -298,7 +298,7 @@ export function howToGetCertifiedJsonLd() {
     "@type": "HowTo",
     name: "How to get CPR certified in Oklahoma with Pulse CPR",
     description:
-      "Book a Pulse CPR class in Oklahoma City or request on-site training, complete skills practice, and receive a two-year eCard.",
+      "Book a Pulse CPR class in Edmond or request on-site training, complete skills practice, and receive a two-year eCard.",
     totalTime: "PT4H",
     estimatedCost: {
       "@type": "MonetaryAmount",
@@ -324,7 +324,7 @@ export function howToGetCertifiedJsonLd() {
         "@type": "HowToStep",
         position: 3,
         name: "Complete class and skills testing",
-        text: "Attend the Oklahoma City classroom or an on-site session. Practice CPR, AED, and first aid skills with instructor coaching.",
+        text: "Attend the Edmond classroom or an on-site session. Practice CPR, AED, and first aid skills with instructor coaching.",
       },
       {
         "@type": "HowToStep",

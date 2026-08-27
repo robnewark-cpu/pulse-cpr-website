@@ -1,6 +1,6 @@
 # Pulse CPR
 
-Production website for Pulse CPR Oklahoma — professional CPR, BLS, AED, and First Aid certification serving Oklahoma City and statewide teams.
+Production website for Pulse CPR Oklahoma — professional CPR, BLS, AED, and First Aid certification from the Edmond classroom, serving Oklahoma City and statewide teams.
 
 ## Stack
 

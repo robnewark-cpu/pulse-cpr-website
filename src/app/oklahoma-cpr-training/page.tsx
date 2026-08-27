@@ -10,9 +10,9 @@ import { cn } from "@/lib/utils"
 import { courses, faqs, siteConfig } from "@/lib/site"
 
 export const metadata = createMetadata({
-  title: "CPR Training in Oklahoma City, Edmond, Norman & Tulsa",
+  title: "CPR Training in Edmond, Oklahoma City, Norman & Tulsa",
   description:
-    "Pulse CPR offers CPR, AED, First Aid, and BLS certification in Oklahoma City and on-site across Oklahoma, including Edmond, Norman, Tulsa, and Lawton.",
+    "Pulse CPR offers CPR, AED, First Aid, and BLS certification at 1019 Waterwood Pkwy in Edmond and on-site across Oklahoma, including Oklahoma City, Norman, Tulsa, and Lawton.",
   path: "/oklahoma-cpr-training",
   keywords: [
     "CPR certification Oklahoma City",
@@ -55,7 +55,7 @@ export default function OklahomaTrainingPage() {
               serviceUrl: `${siteConfig.url}/book`,
               serviceLocation: {
                 "@type": "Place",
-                name: "Oklahoma City classroom and customer worksites",
+                name: "Edmond classroom and customer worksites",
               },
             },
           },
@@ -64,7 +64,7 @@ export default function OklahomaTrainingPage() {
       <PageHero
         eyebrow="Oklahoma service area"
         title="CPR certification across Oklahoma, not just one classroom."
-        description="Pulse CPR trains individuals and teams in Oklahoma City and brings instructors on-site to Edmond, Norman, Tulsa, and other Oklahoma communities."
+        description="Pulse CPR trains individuals and teams at the Edmond classroom and brings instructors on-site to Oklahoma City, Norman, Tulsa, and other Oklahoma communities."
         primaryCta={{ href: "/book", label: "Book a class" }}
         secondaryCta={{ href: "/corporate-training", label: "On-site quote" }}
       />
@@ -73,10 +73,10 @@ export default function OklahomaTrainingPage() {
           <div data-speakable="true">
             <h2 className="text-2xl font-bold">Where Pulse CPR trains</h2>
             <p className="mt-4 text-muted-foreground leading-7">
-              Pulse CPR (Pulse.CPR on Facebook) is an Oklahoma training company. Students can attend a public class in Oklahoma City or request on-site CPR, AED, First Aid, BLS, ACLS, or PALS at a workplace, school, clinic, or childcare center.
+              Pulse CPR (Pulse.CPR on Facebook) is an Oklahoma training company. Students can attend a public class at 1019 Waterwood Pkwy, Ste C, Edmond, or request on-site CPR, AED, First Aid, BLS, ACLS, or PALS at a workplace, school, clinic, or childcare center.
             </p>
             <p className="mt-4 text-muted-foreground leading-7">
-              Coordinates for the Oklahoma City service hub: {siteConfig.geo.latitude},{" "}
+              Coordinates for the Edmond classroom: {siteConfig.geo.latitude},{" "}
               {siteConfig.geo.longitude}. Statewide travel is quoted by city or zip code.
             </p>
           </div>
@@ -98,12 +98,12 @@ export default function OklahomaTrainingPage() {
           <div className="mt-6 grid gap-4 md:grid-cols-2">
             {[
               {
-                city: "Oklahoma City",
-                body: "Public Heartsaver, First Aid, AED, BLS, ACLS, and PALS classes meet in Oklahoma City. Same-day eCards are processed after skills testing.",
+                city: "Edmond classroom",
+                body: "Public Heartsaver, First Aid, AED, BLS, ACLS, and PALS classes meet at 1019 Waterwood Pkwy, Ste C, Edmond, OK 73034. Same-day eCards are processed after skills testing.",
               },
               {
-                city: "Edmond & Norman",
-                body: "Schools, childcare centers, and offices in Edmond, Norman, Moore, and Yukon often book on-site so staff do not travel to a downtown classroom.",
+                city: "Oklahoma City metro",
+                body: "Schools, childcare centers, and offices in Oklahoma City, Norman, Moore, and Yukon often book on-site so staff do not travel, or they join a public class in Edmond.",
               },
               {
                 city: "Tulsa & Broken Arrow",

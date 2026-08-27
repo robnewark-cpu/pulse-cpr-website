@@ -89,7 +89,7 @@ export const metadata: Metadata = {
   },
   other: {
     "geo.region": "US-OK",
-    "geo.placename": "Oklahoma City, OK",
+    "geo.placename": "Edmond, OK",
     "geo.position": `${siteConfig.geo.latitude};${siteConfig.geo.longitude}`,
     ICBM: `${siteConfig.geo.latitude}, ${siteConfig.geo.longitude}`,
   },

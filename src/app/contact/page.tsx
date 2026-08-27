@@ -9,7 +9,7 @@ import { siteConfig } from "@/lib/site"
 export const metadata = createMetadata({
   title: "Contact Pulse CPR",
   description:
-    "Contact Pulse CPR in Oklahoma City for class questions, eCards, and corporate scheduling. Call, email, or send a message.",
+    "Contact Pulse CPR in Edmond for class questions, eCards, and corporate scheduling. Call (405) 763-6811, email Pulse.CPR2024@gmail.com, or send a message.",
   path: "/contact",
 })
 
@@ -38,7 +38,7 @@ export default function ContactPage() {
         <Container className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <div className="space-y-6">
             <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-navy/10">
-              <h2 className="text-xl font-semibold">Oklahoma City classroom</h2>
+              <h2 className="text-xl font-semibold">Edmond classroom</h2>
               <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
                 <li className="flex gap-3">
                   <MapPin className="mt-0.5 size-4 text-primary" aria-hidden="true" />
@@ -72,7 +72,7 @@ export default function ContactPage() {
             </div>
             <div className="overflow-hidden rounded-2xl ring-1 ring-navy/10">
               <iframe
-                title="Map of Pulse CPR Oklahoma City classroom"
+                title="Map of Pulse CPR Edmond classroom"
                 src={`https://maps.google.com/maps?q=${mapsQuery}&z=14&output=embed`}
                 className="h-72 w-full border-0"
                 loading="lazy"
