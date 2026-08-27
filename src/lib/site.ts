@@ -42,8 +42,9 @@ export const siteConfig = {
     "Lawton",
   ],
   social: {
-    facebook: "https://www.facebook.com/pulsecprok",
-    instagram: "https://www.instagram.com/pulsecprok",
+    facebook: "https://www.facebook.com/profile.php?id=61572683277410",
+    facebookReviews:
+      "https://www.facebook.com/profile.php?id=61572683277410&sk=reviews",
   },
 } as const
 
@@ -70,7 +71,7 @@ export const navItems = [
 export const stats = [
   { value: "12,000+", label: "Oklahomans certified" },
   { value: "98%", label: "First-attempt pass rate" },
-  { value: "4.9/5", label: "Average student rating" },
+  { value: "10", label: "Facebook reviews, all recommend" },
   { value: "Same-week", label: "Corporate scheduling" },
 ] as const
 
@@ -214,52 +215,61 @@ export const instructors = [
 
 export const testimonials = [
   {
+    name: "Cecelia Varela",
+    date: "September 27, 2025",
     quote:
-      "Pulse CPR certified 42 of our teachers on a teacher workday without disrupting the building. Professional, punctual, and genuinely kind with anxious first-timers.",
-    name: "Lauren Briggs",
-    title: "Assistant Superintendent",
-    org: "Edmond-area school district",
-    rating: 5,
+      "Just got done with my class. She did an amazing job. Thank you so much. Definitely recommend booking a class from her.",
   },
   {
+    name: "Kayla Price",
+    date: "September 27, 2025",
     quote:
-      "Our clinic needed BLS cards before a Joint Commission window. Pulse CPR ran two evening sessions on-site and every nurse left with a card the same week.",
-    name: "Dr. Priya Nair",
-    title: "Medical Director",
-    org: "Midwest City outpatient clinic",
-    rating: 5,
+      "I had 4 girls needing CPR asap and she was so accommodating and quick! Contacted her on a Monday and had the class set up for later that week! Shes super sweet! Highly recommend!!",
   },
   {
-    quote:
-      "We manage restaurants across OKC. Pulse CPR trained managers in First Aid and AED use after hours. The quote process was straightforward and the instruction was excellent.",
-    name: "Andre Cole",
-    title: "Director of Operations",
-    org: "Hospitality group, Oklahoma City",
-    rating: 5,
+    name: "Cayla Kieser",
+    date: "September 4, 2025",
+    quote: "Christine is amazing! I love how hands on her classes are!",
   },
   {
-    quote:
-      "I renewed my Heartsaver card for coaching. Small class, lots of practice time, and I finally feel like I would actually start CPR if I had to.",
-    name: "Elena Vasquez",
-    title: "Youth soccer coach",
-    org: "Norman",
-    rating: 5,
+    name: "Emily Ray",
+    date: "September 4, 2025",
+    quote: "Christine was an amazing instructor!",
   },
   {
-    quote:
-      "Construction sites are not classrooms. Pulse CPR set up in our trailer, worked around our safety meeting, and kept the session practical.",
-    name: "Hank Reilly",
-    title: "Safety Manager",
-    org: "Commercial contractor, Tulsa",
-    rating: 5,
+    name: "Elite Kids Learning Center",
+    date: "July 9, 2025",
+    quote: "Great company! provided CPR training for my employees at my daycare!",
   },
   {
+    name: "Acacia Bradford",
+    date: "June 12, 2025",
     quote:
-      "Our dental team needed BLS without traveling downtown. Instructors arrived with everything, explained algorithms clearly, and stayed late for questions.",
-    name: "Nicole Hart, DDS",
-    title: "Practice owner",
-    org: "Yukon",
-    rating: 5,
+      "Such a great experience! The instructor was very professional and kind. I love the fact that she came to me, instead of me having to go sit in a classroom somewhere.",
+  },
+  {
+    name: "Kimberlee Duncan",
+    date: "April 10, 2025",
+    quote:
+      "What a great experience with Pulse cpr. The instructor was awesome . She made me feel comfortable and was very knowledgeable. I would highly recommend!!!!!!",
+  },
+  {
+    name: "Brittany Wilbanks",
+    date: "March 29, 2025",
+    quote:
+      "I can't say enough good things about Pulse CPR and the CPR certification course I took with them! From start to finish, the entire experience was exceptional and exceeded my expectations. The team is not only highly skilled but also incredibly passionate about making sure each student leaves with the confidence and knowledge to act in an emergency situation. What stood out to me the most was the hands-on, real-world approach they took to teaching. Instead of just focusing on memorizing steps, they really emphasized the \"why\" behind every technique. The instructor made the material relatable, and I never once felt overwhelmed. In fact, I felt empowered! The facility itself was modern, spotless, and filled with all the necessary equipment for a realistic training experience. The CPR dummies felt so lifelike, and the AED simulations were super helpful. They even had a practice scenario where we had to react to a surprise emergency situation – it was a great way to see how we would respond under pressure. I also loved how they went above and beyond with post-course support. After completing my certification, I received a digital toolkit with refresher materials and videos to help keep my skills sharp. It's clear that Pulse CPR truly cares about its students and their preparedness long after the class ends. If you're looking for CPR training that goes beyond the basics and prepares you for any emergency, look no further than Pulse CPR. They've set the bar high for what CPR training should be, and I'm so glad I chose them!",
+  },
+  {
+    name: "Lb Loud",
+    date: "March 1, 2025",
+    quote:
+      "I can't recommend Pulse CPR enough! The CPR class was incredibly informative, hands-on, and well-structured. They are fantastic instructors—knowledgeable, patient, and engaging. They make learning CPR simple and easy to remember, which is exactly what you need in an emergency. Whether you're a first-timer or need a refresher, this is the perfect place to get certified. Definitely a must for anyone wanting to be prepared to save a life!",
+  },
+  {
+    name: "Shelby Martinez",
+    date: "February 2, 2025",
+    quote:
+      "I had the pleasure of being the first customer at Pulse CPR, and I couldn't be more impressed. I was a bit nervous going in, but both sisters did an excellent job of walking me through the process. Seeing them demonstrate first really helped calm my nerves, and by the time I was practicing, I felt so much more confident. The training verification process was simple and easy, and their hands-on, supportive approach made everything clear. I left knowing I can save a life successfully. Highly recommend Pulse CPR for anyone looking for a top-notch CPR course with caring and professional instructors!",
   },
 ] as const
 

@@ -88,6 +88,16 @@ export function Footer() {
                 {siteConfig.email}
               </a>
             </li>
+            <li>
+              <a
+                href={siteConfig.social.facebookReviews}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white"
+              >
+                Facebook reviews
+              </a>
+            </li>
           </ul>
           <div className="mt-6">
             <p className="mb-2 text-sm font-semibold">Class openings &amp; renewal tips</p>
@@ -105,9 +115,14 @@ export function Footer() {
             <Link href="/terms" className="hover:text-white">
               Terms
             </Link>
-            <Link href="/book" className="hover:text-white">
-              Book a class
-            </Link>
+            <a
+              href={siteConfig.social.facebookReviews}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white"
+            >
+              Facebook reviews
+            </a>
           </div>
         </Container>
       </div>

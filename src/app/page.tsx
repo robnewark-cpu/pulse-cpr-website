@@ -192,10 +192,10 @@ export default function HomePage() {
               <p className="text-sm font-semibold tracking-[0.16em] text-primary uppercase">
                 Proof
               </p>
-              <h2 className="mt-2 text-3xl font-bold">Oklahoma teams trust Pulse CPR</h2>
+              <h2 className="mt-2 text-3xl font-bold">Facebook reviews from real students</h2>
             </div>
             <Link href="/testimonials" className={cn(buttonVariants({ variant: "outline" }))}>
-              Read more reviews
+              Read Facebook reviews
             </Link>
           </div>
           <TestimonialCarousel />

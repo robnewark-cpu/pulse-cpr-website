@@ -98,11 +98,12 @@ export function localBusinessJsonLd() {
     ],
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "286",
+      ratingValue: "5",
+      reviewCount: "10",
       bestRating: "5",
+      worstRating: "1",
     },
-    sameAs: Object.values(siteConfig.social),
+    sameAs: [siteConfig.social.facebook, siteConfig.social.facebookReviews],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Lifesaving certification courses",
