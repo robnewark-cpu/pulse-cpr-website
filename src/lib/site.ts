@@ -44,7 +44,6 @@ export const siteConfig = {
   social: {
     facebook: "https://www.facebook.com/pulsecprok",
     instagram: "https://www.instagram.com/pulsecprok",
-    linkedin: "https://www.linkedin.com/company/pulse-cpr-oklahoma",
   },
 } as const
 
@@ -148,7 +147,7 @@ export const courses = [
       "BLS Provider, ACLS, and PALS for licensed clinicians who need current cards for credentialing, privileging, or onboarding.",
     href: "/healthcare-provider-courses",
     image:
-      "https://images.unsplash.com/photo-1551076804-c1460adf2d34?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=1400&q=80",
     highlights: [
       "BLS Provider with high-performance CPR",
       "ACLS and PALS renewal options",

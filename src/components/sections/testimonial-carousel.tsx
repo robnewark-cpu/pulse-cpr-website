@@ -12,7 +12,7 @@ import { testimonials } from "@/lib/site"
 
 export function TestimonialCarousel() {
   return (
-    <Carousel opts={{ align: "start", loop: true }} className="px-12">
+    <Carousel opts={{ align: "start", loop: true }} className="px-0 sm:px-12">
       <CarouselContent>
         {testimonials.map((item) => (
           <CarouselItem key={item.name} className="md:basis-1/2 lg:basis-1/3">
@@ -35,8 +35,8 @@ export function TestimonialCarousel() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <CarouselPrevious className="left-1 sm:-left-12" />
+      <CarouselNext className="right-1 sm:-right-12" />
     </Carousel>
   )
 }

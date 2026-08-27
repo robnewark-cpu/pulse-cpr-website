@@ -76,17 +76,22 @@ function flattenErrors(error: z.ZodError): Record<string, string> {
   return fieldErrors
 }
 
+function field(formData: FormData, name: string) {
+  const value = formData.get(name)
+  return typeof value === "string" ? value : ""
+}
+
 export async function submitContact(
   _prev: FormState,
   formData: FormData
 ): Promise<FormState> {
   const parsed = contactSchema.safeParse({
-    name: formData.get("name"),
-    email: formData.get("email"),
-    phone: formData.get("phone"),
-    subject: formData.get("subject"),
-    message: formData.get("message"),
-    company: formData.get("company") ?? "",
+    name: field(formData, "name"),
+    email: field(formData, "email"),
+    phone: field(formData, "phone"),
+    subject: field(formData, "subject"),
+    message: field(formData, "message"),
+    company: field(formData, "company"),
   })
 
   if (!parsed.success) {
@@ -116,14 +121,14 @@ export async function submitBooking(
   formData: FormData
 ): Promise<FormState> {
   const parsed = bookingSchema.safeParse({
-    name: formData.get("name"),
-    email: formData.get("email"),
-    phone: formData.get("phone"),
-    course: formData.get("course"),
-    preferredDate: formData.get("preferredDate"),
-    location: formData.get("location"),
-    students: formData.get("students"),
-    notes: formData.get("notes") ?? "",
+    name: field(formData, "name"),
+    email: field(formData, "email"),
+    phone: field(formData, "phone"),
+    course: field(formData, "course"),
+    preferredDate: field(formData, "preferredDate"),
+    location: field(formData, "location"),
+    students: field(formData, "students"),
+    notes: field(formData, "notes"),
   })
 
   if (!parsed.success) {
@@ -154,15 +159,15 @@ export async function submitQuote(
   formData: FormData
 ): Promise<FormState> {
   const parsed = quoteSchema.safeParse({
-    company: formData.get("company"),
-    name: formData.get("name"),
-    email: formData.get("email"),
-    phone: formData.get("phone"),
-    industry: formData.get("industry"),
-    employees: formData.get("employees"),
-    location: formData.get("location"),
-    courses: formData.get("courses"),
-    details: formData.get("details") ?? "",
+    company: field(formData, "company"),
+    name: field(formData, "name"),
+    email: field(formData, "email"),
+    phone: field(formData, "phone"),
+    industry: field(formData, "industry"),
+    employees: field(formData, "employees"),
+    location: field(formData, "location"),
+    courses: field(formData, "courses"),
+    details: field(formData, "details"),
   })
 
   if (!parsed.success) {
@@ -193,7 +198,7 @@ export async function submitNewsletter(
   formData: FormData
 ): Promise<FormState> {
   const parsed = newsletterSchema.safeParse({
-    email: formData.get("email"),
+    email: field(formData, "email"),
   })
 
   if (!parsed.success) {

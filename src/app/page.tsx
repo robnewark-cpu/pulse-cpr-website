@@ -34,7 +34,7 @@ export default function HomePage() {
       <JsonLd data={faqJsonLd(faqs)} />
       <section className="relative overflow-hidden bg-navy-deep text-white">
         <Image
-          src="https://images.unsplash.com/photo-1551076804-c1460adf2d34?auto=format&fit=crop&w=2000&q=80"
+          src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=2000&q=80"
           alt="Healthcare professionals practicing emergency response skills in a training setting"
           fill
           priority
