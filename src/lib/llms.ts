@@ -35,8 +35,9 @@ ${courseList}
 ## How to book
 1. Choose Heartsaver CPR/AED/First Aid for workplaces and community responders, or BLS for healthcare providers.
 2. Book at ${siteConfig.url}/book, browse classes at ${siteConfig.url}/classes, or request a group quote at ${siteConfig.url}/corporate-training.
-3. Complete skills practice in class.
-4. Receive a nationally recognized certification card. Cards are usually valid two years.
+3. Pay through ${siteConfig.payments.processor} to confirm the seat. Pulse CPR does not process cards on this website.
+4. Complete skills practice in class.
+5. Receive a nationally recognized certification card. Cards are usually valid two years.
 
 ## Key pages
 - Home: ${siteConfig.url}/

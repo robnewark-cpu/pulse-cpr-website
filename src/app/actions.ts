@@ -145,7 +145,7 @@ export async function submitBooking(
     return {
       status: "success",
       message:
-        "Your class request is in. We will confirm seats or propose the next open date shortly.",
+        `Your class request is in. Pulse CPR will send a ${siteConfig.payments.processor} payment link to confirm the seat.`,
     }
   } catch {
     return {

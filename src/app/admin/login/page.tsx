@@ -1,4 +1,5 @@
 import { redirect } from "next/navigation"
+import { AddClassFromPhoneGuide } from "@/components/admin/add-class-from-phone"
 import { LoginForm } from "@/components/admin/login-form"
 import { isSupabaseConfigured } from "@/lib/tms/types"
 import { currentStaff, staffConfigured } from "@/lib/tms/queries"
@@ -19,7 +20,7 @@ export default async function AdminLoginPage() {
   const canCreate = configured ? !(await staffConfigured()) : false
 
   return (
-    <section className="mx-auto max-w-md px-4 py-10">
+    <section className="mx-auto max-w-xl px-4 py-10">
       <p className="text-sm font-semibold tracking-[0.16em] text-primary uppercase">Pulse CPR</p>
       <h1 className="mt-2 text-3xl font-bold text-navy">Class manager</h1>
       <p className="mt-2 text-sm text-muted-foreground">
@@ -44,6 +45,9 @@ export default async function AdminLoginPage() {
           <p className="mt-4">Need help? Call {siteConfig.phone}.</p>
         </div>
       )}
+      <div className="mt-10">
+        <AddClassFromPhoneGuide />
+      </div>
     </section>
   )
 }

@@ -10,7 +10,7 @@ import {
   selectClassName,
   useFormAction,
 } from "@/components/forms/form-shared"
-import { courseSelectOptions } from "@/lib/site"
+import { courseSelectOptions, siteConfig } from "@/lib/site"
 
 export function BookingForm({ defaultCourse }: { defaultCourse?: string }) {
   const [state, action, pending] = useFormAction(submitBooking)
@@ -85,6 +85,9 @@ export function BookingForm({ defaultCourse }: { defaultCourse?: string }) {
       <Field label="Notes (optional)" name="notes">
         <Textarea id="notes" name="notes" rows={4} placeholder="Shift constraints, renewal deadline, or industry requirements." />
       </Field>
+      <p className="text-sm text-muted-foreground">
+        Class payments are processed by {siteConfig.payments.processor}. After you request a seat, you will receive a payment link to confirm.
+      </p>
       <FormStatus state={state} />
       <Button type="submit" size="xl" disabled={pending} className="w-full sm:w-auto">
         {pending ? "Requesting seat…" : "Request a seat"}

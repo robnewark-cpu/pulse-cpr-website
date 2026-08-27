@@ -62,7 +62,7 @@ export default async function RegisterPage({ params }: { params: Promise<{ id: s
               </div>
             </dl>
             <p className="mt-6 text-sm text-muted-foreground">
-              Questions? Call {siteConfig.phone} or email {siteConfig.email}.
+              Payments are processed by {siteConfig.payments.processor}. Questions? Call {siteConfig.phone} or email {siteConfig.email}.
             </p>
           </div>
           <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-navy/10">

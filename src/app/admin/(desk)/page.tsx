@@ -28,7 +28,12 @@ export default async function AdminClassesPage() {
       </div>
       {upcoming.length === 0 ? (
         <p className="rounded-2xl bg-white p-5 text-sm text-muted-foreground ring-1 ring-navy/10">
-          No scheduled classes. Create one — it takes about 20 seconds.
+          No scheduled classes. Tap New class at the bottom of the screen — it takes about 20 seconds. Need the
+          phone steps? Open{" "}
+          <Link href="/admin/help" className="font-medium text-primary underline-offset-2 hover:underline">
+            How to add a class
+          </Link>
+          .
         </p>
       ) : (
         <ul className="grid gap-3">

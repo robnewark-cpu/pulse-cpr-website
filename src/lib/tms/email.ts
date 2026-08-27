@@ -44,15 +44,16 @@ export async function sendRegistrationConfirmation(
 ) {
   const html = `
     <p>Hi ${registration.student_name},</p>
-    <p>You are registered for Pulse CPR:</p>
+    <p>Pulse CPR received your class request:</p>
     <p><strong>${classSummary(session)}</strong></p>
-    <p>Seats held: ${registration.seats}<br/>Price: ${formatPrice(session.price)}</p>
-    <p>Bring a photo ID and clothes you can move in. Questions? Call ${siteConfig.phone} or email ${siteConfig.email}.</p>
+    <p>Seats requested: ${registration.seats}<br/>Price: ${formatPrice(session.price)}</p>
+    <p>Complete payment with ${siteConfig.payments.processor} to confirm your seat. Pulse CPR does not process cards on this website.</p>
+    <p>Questions? Call ${siteConfig.phone} or email ${siteConfig.email}.</p>
     <p>Pulse CPR<br/>${siteConfig.address.street}<br/>${siteConfig.address.city}, ${siteConfig.address.region} ${siteConfig.address.postalCode}<br/>${siteConfig.email}</p>
   `
   const result = await sendEmail({
     to: registration.email,
-    subject: `Confirmed: ${session.name} on ${formatClassDate(session.class_date)}`,
+    subject: `Payment needed: ${session.name} on ${formatClassDate(session.class_date)}`,
     html,
   })
   await sendEmail({

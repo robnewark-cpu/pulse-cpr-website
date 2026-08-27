@@ -23,6 +23,9 @@ export default function PrivacyPage() {
             {siteConfig.legalName} (“Pulse CPR”) operates {siteConfig.url}. When you submit a booking, quote, contact, or newsletter form, we use your name, email, phone, and training details to respond and to deliver class logistics.
           </p>
           <p>
+            Class payments are processed by {siteConfig.payments.processor}. Pulse CPR does not store credit or debit card numbers on this website. Payment details you enter on {siteConfig.payments.processor} are handled by that processor.
+          </p>
+          <p>
             We do not sell personal information. Form data may be processed by our email or webhook provider if those services are configured. Analytics run only when a measurement ID is present.
           </p>
           <p>
