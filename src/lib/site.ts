@@ -42,6 +42,7 @@ export const siteConfig = {
     "Lawton",
   ],
   social: {
+    facebookPageId: "61572683277410",
     facebook: "https://www.facebook.com/profile.php?id=61572683277410",
     facebookReviews:
       "https://www.facebook.com/profile.php?id=61572683277410&sk=reviews",

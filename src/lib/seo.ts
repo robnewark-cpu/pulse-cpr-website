@@ -11,6 +11,27 @@ export const HOME_OG_DESCRIPTION =
   "Pulse CPR — Learn It. Know It. Save A Life. American Heart Association and American Red Cross CPR, AED, First Aid, and BLS certification from Edmond, Oklahoma."
 export const HOME_TWITTER_DESCRIPTION = "Pulse CPR — Learn It. Know It. Save A Life."
 
+/** Facebook's public default App ID. Clears the Sharing Debugger `fb:app_id` warning. */
+export const FACEBOOK_DEFAULT_APP_ID = "966242223397117"
+
+export function facebookAppId() {
+  return process.env.NEXT_PUBLIC_FB_APP_ID?.trim() || FACEBOOK_DEFAULT_APP_ID
+}
+
+export function facebookMeta() {
+  return { appId: facebookAppId() }
+}
+
+export function geoAndFacebookOtherTags() {
+  return {
+    "geo.region": "US-OK",
+    "geo.placename": `${siteConfig.address.city}, ${siteConfig.address.region}`,
+    "geo.position": `${siteConfig.geo.latitude};${siteConfig.geo.longitude}`,
+    ICBM: `${siteConfig.geo.latitude}, ${siteConfig.geo.longitude}`,
+    "fb:pages": siteConfig.social.facebookPageId,
+  }
+}
+
 export const ogImage = {
   url: SHARE_IMAGE_URL,
   secureUrl: SHARE_IMAGE_URL,
@@ -47,12 +68,8 @@ export function createMetadata({
     description,
     keywords,
     alternates: { canonical: ogUrl },
-    other: {
-      "geo.region": "US-OK",
-      "geo.placename": `${siteConfig.address.city}, ${siteConfig.address.region}`,
-      "geo.position": `${siteConfig.geo.latitude};${siteConfig.geo.longitude}`,
-      ICBM: `${siteConfig.geo.latitude}, ${siteConfig.geo.longitude}`,
-    },
+    facebook: facebookMeta(),
+    other: geoAndFacebookOtherTags(),
     openGraph: {
       title: ogTitle,
       description: ogDescription,

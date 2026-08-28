@@ -14,6 +14,8 @@ import {
   HOME_OG_URL,
   HOME_TWITTER_DESCRIPTION,
   SHARE_IMAGE_URL,
+  facebookMeta,
+  geoAndFacebookOtherTags,
   localBusinessJsonLd,
   websiteJsonLd,
 } from "@/lib/seo"
@@ -91,6 +93,7 @@ export const metadata: Metadata = {
     description: HOME_TWITTER_DESCRIPTION,
     images: [SHARE_IMAGE_URL],
   },
+  facebook: facebookMeta(),
   icons: {
     icon: [{ url: "/logo.svg", type: "image/svg+xml" }],
     apple: [{ url: "/logo.svg" }],
@@ -105,12 +108,7 @@ export const metadata: Metadata = {
       "application/rss+xml": [{ url: "/feed.xml", title: "Pulse CPR resources" }],
     },
   },
-  other: {
-    "geo.region": "US-OK",
-    "geo.placename": "Edmond, OK",
-    "geo.position": `${siteConfig.geo.latitude};${siteConfig.geo.longitude}`,
-    ICBM: `${siteConfig.geo.latitude}, ${siteConfig.geo.longitude}`,
-  },
+  other: geoAndFacebookOtherTags(),
 }
 
 export const viewport: Viewport = {
