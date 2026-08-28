@@ -45,7 +45,7 @@ export function CoursePage({
             { name: "Home", path: "/" },
             { name: title, path },
           ]),
-          courseJsonLd({ name: title, description, path }),
+          courseJsonLd({ name: title, description, path, price }),
           faqJsonLd(faqs),
         ]}
       />
@@ -103,7 +103,7 @@ export function CoursePage({
                 <dd className="font-medium text-navy">{duration}</dd>
               </div>
               <div className="flex justify-between gap-4 border-b pb-3">
-                <dt className="text-muted-foreground">Investment</dt>
+                <dt className="text-muted-foreground">Price</dt>
                 <dd className="font-medium text-navy">{price}</dd>
               </div>
               <div className="flex justify-between gap-4">

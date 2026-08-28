@@ -83,6 +83,7 @@ export const courses = [
     audience: "Workplace, schools, and community responders",
     duration: "3–4 hours",
     price: "$75",
+    priceUsd: 75,
     renewal: "Valid 2 years",
     summary:
       "Adult, child, and infant CPR with choking response. Built for teachers, coaches, childcare staff, and any team that needs a nationally recognized card.",
@@ -103,6 +104,7 @@ export const courses = [
     audience: "Employers, coaches, and caregivers",
     duration: "2–3 hours",
     price: "$69",
+    priceUsd: 69,
     renewal: "Valid 2 years",
     summary:
       "Practical first aid for bleeding, burns, medical emergencies, and injury assessment so your team can act before EMS arrives.",
@@ -123,6 +125,7 @@ export const courses = [
     audience: "Offices, gyms, churches, and public venues",
     duration: "2 hours",
     price: "$59",
+    priceUsd: 59,
     renewal: "Valid 2 years",
     summary:
       "Learn to recognize sudden cardiac arrest, apply pads correctly, and deliver a shock with confidence using the AED on your wall.",
@@ -143,6 +146,7 @@ export const courses = [
     audience: "Nurses, EMTs, dentists, and clinical teams",
     duration: "4 hours",
     price: "$95",
+    priceUsd: 95,
     renewal: "Valid 2 years",
     summary:
       "BLS Provider for licensed clinicians who need current cards for credentialing, privileging, or onboarding.",
@@ -163,6 +167,7 @@ export const courses = [
     audience: "Businesses, schools, and agencies",
     duration: "Half-day or custom",
     price: "Custom quote",
+    priceUsd: null,
     renewal: "Scheduled to your roster",
     summary:
       "We bring the instructor, manikins, and AEDs to your Oklahoma workplace so entire shifts certify without losing a full day off-site.",
@@ -214,6 +219,7 @@ export const homeClassCards = [
   {
     title: "Adult CPR",
     href: "/cpr-certification",
+    price: "$75",
     description: "Hands-on adult CPR so you can recognize cardiac arrest and start compressions with confidence.",
     image:
       "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80",
@@ -222,6 +228,7 @@ export const homeClassCards = [
   {
     title: "Pediatric & Infant CPR",
     href: "/cpr-certification",
+    price: "$75",
     description: "Age-specific CPR and choking response for children and infants in homes, schools, and childcare.",
     image:
       "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&w=1200&q=80",
@@ -230,6 +237,7 @@ export const homeClassCards = [
   {
     title: "AED Training",
     href: "/aed-training",
+    price: "$59",
     description: "Learn to retrieve, place, and use an AED quickly when every second of a cardiac emergency counts.",
     image:
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
@@ -238,6 +246,7 @@ export const homeClassCards = [
   {
     title: "First Aid",
     href: "/first-aid-training",
+    price: "$69",
     description: "Practical first aid for bleeding, burns, and sudden illness until professional help arrives.",
     image:
       "https://images.unsplash.com/photo-1584433144859-1fc3ab64a957?auto=format&fit=crop&w=1200&q=80",
@@ -318,6 +327,21 @@ export const testimonials = [
 ] as const
 
 export const faqs = [
+  {
+    question: "How much does CPR certification cost in Edmond, OK?",
+    answer:
+      "Pulse CPR Heartsaver CPR certification is $75 in Edmond, Oklahoma. First Aid training is $69, AED training is $59, and BLS Provider is $95. Corporate on-site training for six or more students is a custom quote. Public classes meet at 1019 Waterwood Pkwy, Ste C, Edmond, OK 73034.",
+  },
+  {
+    question: "What are Pulse CPR business hours?",
+    answer:
+      "The Edmond classroom is open Monday–Friday 8:00 AM – 6:00 PM and Saturday 9:00 AM – 2:00 PM. Sunday is by appointment. Call (405) 763-6811 or email contact@pulsecprok.com.",
+  },
+  {
+    question: "When is the next CPR class in Edmond?",
+    answer:
+      "Public Heartsaver, First Aid, AED, and BLS classes typically run weeknights and Saturdays in Edmond. Current open seats are listed at pulsecprok.com/class-calendar. Call (405) 763-6811 for the next available date if you do not see a time that works.",
+  },
   {
     question: "How long is CPR certification valid?",
     answer:

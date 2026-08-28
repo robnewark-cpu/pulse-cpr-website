@@ -1,4 +1,5 @@
 import { HomeClasses } from "@/components/sections/home-classes"
+import { ClassFacts } from "@/components/sections/class-facts"
 import { CtaBanner } from "@/components/sections/cta-banner"
 import { PageHero } from "@/components/sections/page-hero"
 import { JsonLd } from "@/components/seo/json-ld"
@@ -23,10 +24,11 @@ export default function ClassesPage() {
       <PageHero
         eyebrow="Pulse CPR classes"
         title="Find the right CPR, AED, or First Aid class."
-        description="American Heart Association and American Red Cross certification classes for individuals, families, and Oklahoma organizations."
+        description="American Heart Association and American Red Cross certification classes for individuals, families, and Oklahoma organizations. Heartsaver CPR is $75, First Aid is $69, AED is $59, and BLS Provider is $95."
         primaryCta={{ href: "/book", label: "Sign Up Today" }}
         secondaryCta={{ href: "/class-calendar", label: "View schedule" }}
       />
+      <ClassFacts heading="Oklahoma CPR, AED, First Aid, and BLS prices" />
       <HomeClasses />
       <CtaBanner
         variant="red"

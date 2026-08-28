@@ -118,7 +118,11 @@ const builderActions = [
   {
     title: "Optional today, not required to publish",
     detail:
-      "Google Business Profile matching the Edmond NAP, GA4 ID, Resend confirmation emails, Square payment link, replace remaining Unsplash photos, custom logo if she has a better file.",
+      "Google Analytics, Resend confirmation emails, Square payment link, replace remaining Unsplash photos, custom logo if she has a better file.",
+  },
+  {
+    title: "Google Business Profile (AI and Maps visibility)",
+    detail: `Claim or create the Google Business Profile with this exact NAP so Google and AI answers match the website: Pulse CPR; ${siteConfig.address.street}, ${siteConfig.address.city}, ${siteConfig.address.region} ${siteConfig.address.postalCode}; ${siteConfig.phone}; website https://pulsecprok.com/; hours Monday–Friday 8:00 AM–6:00 PM, Saturday 9:00 AM–2:00 PM, Sunday by appointment. Primary categories: CPR class and First aid class. Do not invent Google reviews. Link the Facebook page Pulse.CPR.`,
   },
 ]
 

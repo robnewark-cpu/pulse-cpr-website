@@ -5,6 +5,7 @@ import { HomeHero } from "@/components/sections/home-hero"
 import { TrustBar } from "@/components/sections/trust-bar"
 import { TestimonialCarousel } from "@/components/sections/testimonial-carousel"
 import { FaqAccordion } from "@/components/sections/faq-accordion"
+import { ClassFacts } from "@/components/sections/class-facts"
 import { CtaBanner } from "@/components/sections/cta-banner"
 import { Container } from "@/components/layout/container"
 import { JsonLd } from "@/components/seo/json-ld"
@@ -15,7 +16,8 @@ import { cn } from "@/lib/utils"
 
 export const metadata = createMetadata({
   title: siteConfig.name,
-  description: siteConfig.description,
+  description:
+    "Pulse CPR — Learn It. Know It. Save A Life. CPR certification is $75 in Edmond, OK. First Aid $69, AED $59, BLS Provider $95. Hours: Monday–Friday 8:00 AM – 6:00 PM, Saturday 9:00 AM – 2:00 PM. Call (405) 763-6811.",
   path: "/",
   keywords: [
     "CPR certification Oklahoma City",
@@ -34,6 +36,7 @@ export default function HomePage() {
       <JsonLd data={[faqJsonLd(faqs), howToGetCertifiedJsonLd()]} />
       <HomeHero />
       <TrustBar />
+      <ClassFacts />
       <HomeClasses />
       <HomeCorporate />
       <section className="bg-[#F5F6F8] py-14 sm:py-20">
