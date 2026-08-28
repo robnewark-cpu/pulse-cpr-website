@@ -16,7 +16,7 @@ export const ogImage = {
   secureUrl: SHARE_IMAGE_URL,
   width: 1200,
   height: 630,
-  alt: "Pulse CPR Oklahoma",
+  alt: "Pulse CPR Oklahoma — Learn It. Know It. Save A Life. Instructor Christine Oldenburg, RN. CPR, AED, First Aid, and BLS training.",
   type: "image/jpeg",
 } as const
 

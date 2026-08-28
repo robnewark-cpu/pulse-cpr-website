@@ -15,6 +15,7 @@ import {
   HOME_TWITTER_DESCRIPTION,
   SHARE_IMAGE_URL,
   localBusinessJsonLd,
+  ogImage,
   websiteJsonLd,
 } from "@/lib/seo"
 import { siteConfig } from "@/lib/site"
@@ -80,7 +81,7 @@ export const metadata: Metadata = {
         secureUrl: SHARE_IMAGE_URL,
         width: 1200,
         height: 630,
-        alt: "Pulse CPR Oklahoma",
+        alt: ogImage.alt,
         type: "image/jpeg",
       },
     ],
