@@ -43,6 +43,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.4,
     },
     {
+      url: new URL("/ai.txt", siteConfig.url).toString(),
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.35,
+    },
+    {
       url: new URL("/feed.xml", siteConfig.url).toString(),
       lastModified,
       changeFrequency: "weekly",

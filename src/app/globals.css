@@ -98,8 +98,15 @@
   html {
     @apply font-sans scroll-smooth;
   }
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    overflow-x: clip;
+  }
   body {
     @apply bg-background text-foreground antialiased;
+    overflow-x: clip;
+    min-width: 0;
   }
   h1,
   h2,

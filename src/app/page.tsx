@@ -4,6 +4,7 @@ import { HomeCorporate } from "@/components/sections/home-corporate"
 import { HomeHero } from "@/components/sections/home-hero"
 import { TrustBar } from "@/components/sections/trust-bar"
 import { TestimonialCarousel } from "@/components/sections/testimonial-carousel"
+import { FaqAccordion } from "@/components/sections/faq-accordion"
 import { CtaBanner } from "@/components/sections/cta-banner"
 import { Container } from "@/components/layout/container"
 import { JsonLd } from "@/components/seo/json-ld"
@@ -51,6 +52,27 @@ export default function HomePage() {
             </Link>
           </div>
           <TestimonialCarousel />
+        </Container>
+      </section>
+      <section className="py-14 sm:py-20" aria-labelledby="home-faq-heading">
+        <Container className="max-w-3xl">
+          <p className="text-sm font-semibold tracking-[0.16em] text-primary uppercase">
+            FAQs
+          </p>
+          <h2 id="home-faq-heading" className="mt-2 text-3xl font-extrabold tracking-tight">
+            Oklahoma CPR certification questions
+          </h2>
+          <p className="mt-3 text-muted-foreground" data-speakable="true">
+            Answers for Edmond, Oklahoma City, and statewide Pulse CPR classes. More local detail is
+            on the{" "}
+            <Link href="/oklahoma-cpr-training" className="font-semibold text-navy underline-offset-4 hover:underline">
+              Oklahoma CPR training
+            </Link>{" "}
+            page.
+          </p>
+          <div className="mt-8">
+            <FaqAccordion />
+          </div>
         </Container>
       </section>
       <CtaBanner

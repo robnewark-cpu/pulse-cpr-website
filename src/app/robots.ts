@@ -25,12 +25,12 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/admin", "/api/admin", "/review"],
+        disallow: ["/admin", "/api/admin", "/review", "/register"],
       },
       ...aiBots.map((userAgent) => ({
         userAgent,
         allow: "/",
-        disallow: ["/admin", "/api/admin", "/review"],
+        disallow: ["/admin", "/api/admin", "/review", "/register"],
       })),
       {
         userAgent: "facebookexternalhit",

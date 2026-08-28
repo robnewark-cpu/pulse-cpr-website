@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Mail, Phone } from "lucide-react"
+import { Mail, MapPin, Phone } from "lucide-react"
 import { Logo } from "@/components/brand/logo"
 import { Container } from "@/components/layout/container"
 import { siteConfig } from "@/lib/site"
@@ -11,7 +11,10 @@ const footerLinks = [
   { href: "/classes", label: "Classes" },
   { href: "/corporate-training", label: "Corporate Training" },
   { href: "/class-calendar", label: "Schedule" },
+  { href: "/oklahoma-cpr-training", label: "Oklahoma Training" },
   { href: "/about", label: "About" },
+  { href: "/resources", label: "Resources" },
+  { href: "/testimonials", label: "Reviews" },
   { href: "/contact", label: "Contact" },
 ]
 
@@ -29,6 +32,7 @@ function FacebookIcon({ className }: { className?: string }) {
 export function Footer() {
   const pathname = usePathname()
   if (pathname.startsWith("/admin")) return null
+  const { address } = siteConfig
 
   return (
     <footer className="border-t bg-navy text-white">
@@ -44,12 +48,12 @@ export function Footer() {
         </div>
         <div>
           <p className="text-sm font-semibold tracking-wide text-white">Explore</p>
-          <ul className="mt-4 space-y-2">
+          <ul className="mt-4 space-y-1">
             {footerLinks.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-sm text-white/75 transition hover:text-white"
+                  className="inline-flex min-h-11 items-center text-sm text-white/75 transition hover:text-white"
                 >
                   {link.label}
                 </Link>
@@ -61,9 +65,19 @@ export function Footer() {
           <p className="text-sm font-semibold tracking-wide text-white">Contact</p>
           <ul className="mt-4 space-y-3 text-sm text-white/75">
             <li>
+              <Link href="/contact" className="inline-flex items-start gap-2 hover:text-white">
+                <MapPin className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
+                <address className="not-italic">
+                  {address.street}
+                  <br />
+                  {address.city}, {address.region} {address.postalCode}
+                </address>
+              </Link>
+            </li>
+            <li>
               <a
                 href={siteConfig.phoneHref}
-                className="inline-flex items-center gap-2 hover:text-white"
+                className="inline-flex min-h-11 items-center gap-2 hover:text-white"
               >
                 <Phone className="size-4" aria-hidden="true" />
                 {siteConfig.phone}
@@ -72,7 +86,7 @@ export function Footer() {
             <li>
               <a
                 href={`mailto:${siteConfig.email}`}
-                className="inline-flex items-center gap-2 hover:text-white"
+                className="inline-flex min-h-11 items-center gap-2 hover:text-white"
               >
                 <Mail className="size-4" aria-hidden="true" />
                 {siteConfig.email}
@@ -87,12 +101,15 @@ export function Footer() {
               href={siteConfig.social.facebook}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex size-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
+              className="inline-flex size-11 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
               aria-label="Pulse CPR on Facebook"
             >
               <FacebookIcon className="size-5" />
             </a>
           </div>
+          <p className="mt-4 text-xs leading-5 text-white/55">
+            Pulse.CPR on Facebook · Edmond classroom and on-site classes across Oklahoma.
+          </p>
         </div>
       </Container>
       <div className="border-t border-white/10">
@@ -101,10 +118,10 @@ export function Footer() {
             © {new Date().getFullYear()} {siteConfig.legalName}. All rights reserved.
           </p>
           <div className="flex gap-4">
-            <Link href="/privacy" className="hover:text-white">
+            <Link href="/privacy" className="inline-flex min-h-11 items-center hover:text-white">
               Privacy
             </Link>
-            <Link href="/terms" className="hover:text-white">
+            <Link href="/terms" className="inline-flex min-h-11 items-center hover:text-white">
               Terms
             </Link>
           </div>

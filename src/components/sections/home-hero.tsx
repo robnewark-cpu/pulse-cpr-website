@@ -20,12 +20,14 @@ export function HomeHero() {
             <p className="text-sm font-semibold tracking-[0.18em] text-primary uppercase">
               Learn It. Know It. Save A Life.
             </p>
-            <h1 className="mt-4 text-5xl font-extrabold tracking-tight sm:text-6xl lg:text-[4.35rem] lg:leading-[0.95]">
+            <h1 className="mt-4 text-4xl font-extrabold tracking-tight sm:text-6xl lg:text-[4.35rem] lg:leading-[0.95]">
               <span className="block text-navy">LEARN CPR.</span>
               <span className="mt-2 block text-[#D62828]">SAVE LIVES.</span>
             </h1>
             <p className="mt-6 max-w-xl text-base leading-7 text-muted-foreground sm:text-lg">
-              American Heart Association and American Red Cross certification classes serving Oklahoma.
+              American Heart Association and American Red Cross CPR, AED, First Aid, and BLS
+              certification from Edmond, Oklahoma, plus on-site classes for Oklahoma City and
+              statewide teams.
             </p>
             <ul className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               {trustPoints.map((item) => (
@@ -43,7 +45,7 @@ export function HomeHero() {
                 href="/classes"
                 className={cn(
                   buttonVariants({ size: "xl" }),
-                  "justify-center bg-[#D62828] font-semibold text-white hover:bg-[#b51f1f]"
+                  "min-h-12 justify-center bg-[#D62828] font-semibold text-white hover:bg-[#b51f1f]"
                 )}
               >
                 View Classes
@@ -52,18 +54,24 @@ export function HomeHero() {
                 href="/class-calendar"
                 className={cn(
                   buttonVariants({ size: "xl", variant: "outline" }),
-                  "justify-center border-navy/20 font-semibold text-navy hover:bg-accent"
+                  "min-h-12 justify-center border-navy/20 font-semibold text-navy hover:bg-accent"
                 )}
               >
                 Schedule A Class
               </Link>
             </div>
+            <p className="mt-5 text-sm text-muted-foreground">
+              <Link href="/oklahoma-cpr-training" className="font-semibold text-navy underline-offset-4 hover:underline">
+                CPR training across Oklahoma
+              </Link>
+              , including Edmond, Oklahoma City, Norman, and on-site workplaces.
+            </p>
           </div>
         </FadeIn>
-        <FadeIn delay={0.08} className="relative min-h-[26rem] sm:min-h-[32rem] lg:min-h-full">
+        <FadeIn delay={0.08} className="relative min-h-[18rem] sm:min-h-[32rem] lg:min-h-full">
           <InstructorPortrait
             priority
-            className="absolute inset-0 h-full min-h-[26rem] sm:min-h-[32rem] lg:min-h-[38rem]"
+            className="absolute inset-0 h-full min-h-[18rem] sm:min-h-[32rem] lg:min-h-[38rem]"
             sizes="(max-width: 1024px) 100vw, 45vw"
           />
         </FadeIn>

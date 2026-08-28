@@ -2,7 +2,7 @@ import { CoursePage } from "@/components/sections/course-page"
 import { createMetadata } from "@/lib/seo"
 
 export const metadata = createMetadata({
-  title: "Healthcare Provider Courses | BLS",
+  title: "BLS Provider Courses",
   description:
     "BLS Provider courses in Edmond for nurses, EMTs, dentists, and clinical teams. Renewal and initial tracks, plus on-site Oklahoma City sessions.",
   keywords: ["BLS class Oklahoma City", "BLS certification OKC", "healthcare CPR Oklahoma"],

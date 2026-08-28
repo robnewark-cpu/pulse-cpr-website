@@ -113,7 +113,7 @@ export function PublicClassCalendar({
               type="button"
               onClick={() => setFilter(item)}
               className={cn(
-                "min-h-10 rounded-full border px-3 py-1.5 text-sm font-medium",
+                "min-h-11 rounded-full border px-4 py-2 text-sm font-medium",
                 filter === item
                   ? "border-primary bg-primary text-white"
                   : "border-border bg-white text-navy hover:bg-accent"

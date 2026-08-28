@@ -44,8 +44,8 @@ export function TestimonialCarousel() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="left-1 sm:-left-12" />
-      <CarouselNext className="right-1 sm:-right-12" />
+      <CarouselPrevious size="icon" className="left-1 size-11 min-h-11 min-w-11 sm:-left-12" />
+      <CarouselNext size="icon" className="right-1 size-11 min-h-11 min-w-11 sm:-right-12" />
     </Carousel>
   )
 }

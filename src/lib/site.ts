@@ -61,6 +61,12 @@ export const navItems = [
   { href: "/contact", label: "Contact" },
 ] as const
 
+export const extraNavItems = [
+  { href: "/oklahoma-cpr-training", label: "Oklahoma Training" },
+  { href: "/resources", label: "Resources" },
+  { href: "/testimonials", label: "Reviews" },
+] as const
+
 export const stats = [
   { value: "Edmond + on-site", label: "Classroom and statewide training" },
   { value: "2-year", label: "Typical card validity" },
