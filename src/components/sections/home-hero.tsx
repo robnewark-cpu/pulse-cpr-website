@@ -27,7 +27,9 @@ export function HomeHero() {
             <p className="mt-6 max-w-xl text-base leading-7 text-muted-foreground sm:text-lg">
               American Heart Association and American Red Cross CPR, AED, First Aid, and BLS
               certification from Edmond, Oklahoma, plus on-site classes for Oklahoma City and
-              statewide teams.
+              statewide teams. Heartsaver CPR is $75, First Aid is $69, AED is $59, and BLS
+              Provider is $95. The Edmond classroom is open Monday–Friday 8:00 AM – 6:00 PM and
+              Saturday 9:00 AM – 2:00 PM.
             </p>
             <ul className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               {trustPoints.map((item) => (

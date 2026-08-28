@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { defaultInstructor, instructors, siteConfig, testimonials } from "@/lib/site"
+import { courses, defaultInstructor, instructors, siteConfig, testimonials } from "@/lib/site"
 import type { ClassRecord } from "@/lib/tms/types"
 import { formatTimeRange } from "@/lib/tms/format"
 
@@ -127,7 +127,10 @@ export function localBusinessJsonLd() {
     image: ogImage.url,
     logo: `${siteConfig.url}/logo.svg`,
     description: siteConfig.description,
-    priceRange: "$$",
+    priceRange: "$59–$95",
+    currenciesAccepted: "USD",
+    paymentAccepted: "Square",
+    openingHours: siteConfig.openingHoursSpecification,
     address: {
       "@type": "PostalAddress",
       streetAddress: siteConfig.address.street,
@@ -221,18 +224,20 @@ export function localBusinessJsonLd() {
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Lifesaving certification courses",
-      itemListElement: [
-        "CPR Certification",
-        "First Aid Training",
-        "AED Training",
-        "BLS Provider",
-        "Corporate on-site training",
-      ].map((name) => ({
+      itemListElement: courses.map((course) => ({
         "@type": "Offer",
+        name: course.title,
+        url: new URL(course.href, siteConfig.url).toString(),
+        price: course.priceUsd ?? undefined,
+        priceCurrency: course.priceUsd ? "USD" : undefined,
+        availability: "https://schema.org/InStock",
         itemOffered: {
           "@type": "Course",
-          name,
+          name: course.title,
+          description: course.summary,
+          url: new URL(course.href, siteConfig.url).toString(),
           provider: { "@id": `${siteConfig.url}/#business` },
+          timeRequired: course.duration,
         },
       })),
     },
@@ -273,11 +278,15 @@ export function courseJsonLd({
   name,
   description,
   path,
+  price,
 }: {
   name: string
   description: string
   path: string
+  price?: string
 }) {
+  const priceUsd = price?.match(/\$(\d+)/)?.[1]
+
   return {
     "@context": "https://schema.org",
     "@type": "Course",
@@ -294,6 +303,7 @@ export function courseJsonLd({
       category: "Paid",
       availability: "https://schema.org/InStock",
       url: new URL("/book", siteConfig.url).toString(),
+      price: priceUsd,
       priceCurrency: "USD",
       areaServed: {
         "@type": "State",

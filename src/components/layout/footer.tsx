@@ -45,6 +45,9 @@ export function Footer() {
           <p className="mt-2 max-w-xs text-sm leading-6 text-white/70">
             {siteConfig.tagline}
           </p>
+          <p className="mt-3 text-sm leading-6 text-white/75">
+            CPR $75 · First Aid $69 · AED $59 · BLS $95
+          </p>
         </div>
         <div>
           <p className="text-sm font-semibold tracking-wide text-white">Explore</p>
@@ -92,6 +95,14 @@ export function Footer() {
                 {siteConfig.email}
               </a>
             </li>
+          </ul>
+          <p className="mt-5 text-sm font-semibold tracking-wide text-white">Hours</p>
+          <ul className="mt-2 space-y-1 text-sm text-white/75">
+            {siteConfig.hours.map((item) => (
+              <li key={item.day}>
+                {item.day}: {item.time}
+              </li>
+            ))}
           </ul>
         </div>
         <div>

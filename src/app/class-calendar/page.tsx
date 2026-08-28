@@ -40,6 +40,17 @@ export default async function ClassCalendarPage() {
       />
       <section className="py-12 sm:py-16">
         <Container>
+          <div className="mb-10 max-w-3xl" data-speakable="true">
+            <h2 className="text-2xl font-bold">When Pulse CPR holds public classes</h2>
+            <p className="mt-4 text-muted-foreground leading-7">
+              Public Heartsaver CPR ($75), First Aid ($69), AED ($59), and BLS Provider ($95) classes
+              typically run weeknights and Saturdays at {siteConfig.address.street},{" "}
+              {siteConfig.address.city}, {siteConfig.address.region} {siteConfig.address.postalCode}.
+              Edmond classroom hours are Monday–Friday 8:00 AM – 6:00 PM and Saturday 9:00 AM – 2:00
+              PM; Sunday is by appointment. If no date is listed below, call {siteConfig.phone} or
+              request a private class.
+            </p>
+          </div>
           <PublicClassCalendar classes={classes} liveRegistration={isSupabaseConfigured()} />
         </Container>
       </section>
