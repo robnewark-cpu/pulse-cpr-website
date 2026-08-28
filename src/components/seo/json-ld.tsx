@@ -2,7 +2,8 @@ function asGraphItem(item: unknown) {
   if (!item || typeof item !== "object") return item
   const record = item as Record<string, unknown>
   if (!("@context" in record)) return record
-  const { "@context": _context, ...rest } = record
+  const rest = { ...record }
+  delete rest["@context"]
   return rest
 }
 
