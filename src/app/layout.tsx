@@ -127,6 +127,9 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <meta property="fb:pages" content={siteConfig.social.facebookPageId} />
+      </head>
       <body
         className={`${plusJakarta.variable} ${geistMono.variable} flex min-h-screen flex-col font-sans antialiased`}
       >

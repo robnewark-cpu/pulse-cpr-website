@@ -28,7 +28,6 @@ export function geoAndFacebookOtherTags() {
     "geo.placename": `${siteConfig.address.city}, ${siteConfig.address.region}`,
     "geo.position": `${siteConfig.geo.latitude};${siteConfig.geo.longitude}`,
     ICBM: `${siteConfig.geo.latitude}, ${siteConfig.geo.longitude}`,
-    "fb:pages": siteConfig.social.facebookPageId,
   }
 }
 
