@@ -14,11 +14,14 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const { id } = await params
   const session = await getPublicClass(id)
   if (!session) return {}
-  return createMetadata({
-    title: `Register: ${session.name}`,
-    description: `Reserve a seat in ${session.name} on ${session.class_date} at Pulse CPR in Edmond.`,
-    path: `/register/${session.id}`,
-  })
+  return {
+    ...createMetadata({
+      title: `Register: ${session.name}`,
+      description: `Reserve a seat in ${session.name} on ${session.class_date} at Pulse CPR in Edmond.`,
+      path: `/register/${session.id}`,
+    }),
+    robots: { index: false, follow: false },
+  }
 }
 
 export default async function RegisterPage({ params }: { params: Promise<{ id: string }> }) {

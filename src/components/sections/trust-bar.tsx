@@ -15,7 +15,7 @@ export function TrustBar() {
         {items.map((item) => (
           <p
             key={item.label}
-            className="flex flex-col items-start gap-3 text-sm font-semibold sm:flex-row sm:items-center sm:text-[0.95rem]"
+            className="flex flex-col items-start gap-3 text-sm font-semibold leading-snug sm:flex-row sm:items-center sm:text-[0.95rem]"
           >
             <item.icon className="size-6 shrink-0 text-white" aria-hidden="true" />
             <span>{item.label}</span>

@@ -14,7 +14,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
-import { navItems, siteConfig } from "@/lib/site"
+import { extraNavItems, navItems, siteConfig } from "@/lib/site"
 import { cn } from "@/lib/utils"
 
 export function Header() {
@@ -58,17 +58,18 @@ export function Header() {
             href="/book"
             className={cn(
               buttonVariants({ size: "xl" }),
-              "hidden h-12 rounded-lg bg-[#D62828] px-6 text-base font-semibold text-white shadow-sm hover:bg-[#b51f1f] sm:inline-flex"
+              "inline-flex h-11 min-h-11 rounded-lg bg-[#D62828] px-3.5 text-sm font-semibold text-white shadow-sm hover:bg-[#b51f1f] sm:h-12 sm:px-6 sm:text-base"
             )}
           >
-            Sign Up Today
+            <span className="sm:hidden">Sign Up</span>
+            <span className="hidden sm:inline">Sign Up Today</span>
           </Link>
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger
               aria-label="Open menu"
               className={cn(
                 buttonVariants({ variant: "outline", size: "icon" }),
-                "lg:hidden"
+                "size-11 min-h-11 min-w-11 lg:hidden"
               )}
             >
               <Menu className="size-5" />
@@ -84,7 +85,17 @@ export function Header() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="rounded-lg px-3 py-2.5 text-base font-medium text-navy hover:bg-accent"
+                    className="min-h-11 rounded-lg px-3 py-2.5 text-base font-medium text-navy hover:bg-accent"
+                    onClick={() => setOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+                {extraNavItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="min-h-11 rounded-lg px-3 py-2.5 text-base font-medium text-navy hover:bg-accent"
                     onClick={() => setOpen(false)}
                   >
                     {item.label}

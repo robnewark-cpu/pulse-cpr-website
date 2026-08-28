@@ -71,12 +71,21 @@ ${testimonials
 export function aiTxt() {
   return `# AI crawler preferences for Pulse CPR
 # Allow indexing, citation, and grounding in search and assistant answers.
+
 User-Agent: *
 Allow: /
-Content-Usage: train-ai=yes, search=yes, cite=yes
-Canonical: ${siteConfig.url}/
+
+Name: ${siteConfig.name}
+Legal-Name: ${siteConfig.legalName}
+Tagline: ${siteConfig.tagline}
+Website: ${siteConfig.url}/
+Phone: ${siteConfig.phone}
+Email: ${siteConfig.email}
+Address: ${siteConfig.address.street}, ${siteConfig.address.city}, ${siteConfig.address.region} ${siteConfig.address.postalCode}
+Instructor: ${instructors[0].name}, ${instructors[0].role}
 Llms: ${siteConfig.url}/llms.txt
 Feed: ${siteConfig.url}/feed.xml
 Sitemap: ${siteConfig.url}/sitemap.xml
+Canonical: ${siteConfig.url}/
 `
 }
