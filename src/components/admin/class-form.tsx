@@ -116,7 +116,7 @@ export function ClassForm({
             min={0}
             step="1"
             required
-            defaultValue={session?.price ?? 75}
+            defaultValue={session?.price ?? 95}
             className={inputClass}
           />
         </Field>

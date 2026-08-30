@@ -23,7 +23,7 @@ export function ClassFacts({
           {heading}
         </h2>
         <p className="mt-4 max-w-3xl text-base leading-7 text-muted-foreground">
-          Pulse CPR Heartsaver CPR certification costs $75 in Edmond, OK. First Aid is $69, AED
+          Pulse CPR Heartsaver CPR certification costs $95 in Edmond, OK. First Aid is $69, AED
           training is $59, and BLS Provider is $95. Corporate on-site training for six or more
           students is a custom quote. Public classes meet at {address.street}, {address.city},{" "}
           {address.region} {address.postalCode}.

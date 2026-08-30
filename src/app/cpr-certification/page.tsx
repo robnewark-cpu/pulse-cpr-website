@@ -20,7 +20,7 @@ export default function CprCertificationPage() {
       imageAlt="Stethoscope and clinical workspace representing professional emergency preparedness training"
       audience="Non-clinical responders"
       duration="3–4 hours"
-      price="$75"
+      price="$95"
       outcomes={[
         "Recognize cardiac arrest and activate emergency response immediately.",
         "Deliver high-quality chest compressions at the correct rate and depth.",
