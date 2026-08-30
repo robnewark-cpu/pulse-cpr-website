@@ -82,8 +82,8 @@ export const courses = [
     shortTitle: "Heartsaver CPR",
     audience: "Workplace, schools, and community responders",
     duration: "3–4 hours",
-    price: "$75",
-    priceUsd: 75,
+    price: "$95",
+    priceUsd: 95,
     renewal: "Valid 2 years",
     summary:
       "Adult, child, and infant CPR with choking response. Built for teachers, coaches, childcare staff, and any team that needs a nationally recognized card.",
@@ -219,7 +219,7 @@ export const homeClassCards = [
   {
     title: "Adult CPR",
     href: "/cpr-certification",
-    price: "$75",
+    price: "$95",
     description: "Hands-on adult CPR so you can recognize cardiac arrest and start compressions with confidence.",
     image:
       "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80",
@@ -228,7 +228,7 @@ export const homeClassCards = [
   {
     title: "Pediatric & Infant CPR",
     href: "/cpr-certification",
-    price: "$75",
+    price: "$95",
     description: "Age-specific CPR and choking response for children and infants in homes, schools, and childcare.",
     image:
       "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&w=1200&q=80",
@@ -330,7 +330,7 @@ export const faqs = [
   {
     question: "How much does CPR certification cost in Edmond, OK?",
     answer:
-      "Pulse CPR Heartsaver CPR certification is $75 in Edmond, Oklahoma. First Aid training is $69, AED training is $59, and BLS Provider is $95. Corporate on-site training for six or more students is a custom quote. Public classes meet at 1019 Waterwood Pkwy, Ste C, Edmond, OK 73034.",
+      "Pulse CPR Heartsaver CPR certification is $95 in Edmond, Oklahoma. First Aid training is $69, AED training is $59, and BLS Provider is $95. Corporate on-site training for six or more students is a custom quote. Public classes meet at 1019 Waterwood Pkwy, Ste C, Edmond, OK 73034.",
   },
   {
     question: "What are Pulse CPR business hours?",

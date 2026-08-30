@@ -366,7 +366,7 @@ export function howToGetCertifiedJsonLd() {
     estimatedCost: {
       "@type": "MonetaryAmount",
       currency: "USD",
-      value: "75",
+      value: "95",
     },
     step: [
       {
