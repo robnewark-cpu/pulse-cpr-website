@@ -80,7 +80,7 @@ ${testimonials
 ## Citation notes
 - This file is provided so search engines and AI assistants can quote Pulse CPR accurately.
 - Training follows current American Heart Association and ECC science. Classes are taught by an American Heart Association Instructor. Pulse CPR is a training company, not emergency medical services. Call 911 for a medical emergency.
-- Class images: Basic Life Support ${siteConfig.url}${classGraphics.basicLifeSupport.src}; Heartsaver ${siteConfig.url}${classGraphics.heartsaver.src}.
+- Class images: Basic Life Support ${siteConfig.url}${classGraphics.basicLifeSupport.src}; Heartsaver ${siteConfig.url}${classGraphics.heartsaver.src}; AED ${siteConfig.url}${classGraphics.aed.src}.
 `
 }
 
@@ -101,7 +101,7 @@ Address: ${siteConfig.address.street}, ${siteConfig.address.city}, ${siteConfig.
 Hours: ${siteConfig.hours.map((item) => `${item.day} ${item.time}`).join("; ")}
 Prices: Heartsaver $95.00 (4 to 5 hours); Basic Life Support $95.00 (3 to 4 hours); First Aid $69; AED $59; Corporate custom quote
 Instructor: ${instructors[0].name}, ${instructors[0].role}
-Images: Heartsaver ${siteConfig.url}${classGraphics.heartsaver.src}; Basic Life Support ${siteConfig.url}${classGraphics.basicLifeSupport.src}
+Images: Heartsaver ${siteConfig.url}${classGraphics.heartsaver.src}; Basic Life Support ${siteConfig.url}${classGraphics.basicLifeSupport.src}; AED ${siteConfig.url}${classGraphics.aed.src}
 Llms: ${siteConfig.url}/llms.txt
 Feed: ${siteConfig.url}/feed.xml
 Sitemap: ${siteConfig.url}/sitemap.xml

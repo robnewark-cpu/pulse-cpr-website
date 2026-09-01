@@ -24,7 +24,7 @@ export default function ClassesPage() {
       <PageHero
         eyebrow="Pulse CPR classes"
         title="Find the right CPR, AED, or First Aid class."
-        description="American Heart Association certification classes for individuals, families, and Oklahoma organizations. Heartsaver is $95.00 and takes 4 to 5 hours. Basic Life Support is $95.00 and takes 3 to 4 hours. First Aid is $69, and AED is $59."
+        description="Heartsaver, Basic Life Support, AED, and First Aid classes for individuals, families, and Oklahoma organizations. Heartsaver is $95.00 and takes 4 to 5 hours. Basic Life Support is $95.00 and takes 3 to 4 hours. First Aid is $69, and AED is $59."
         primaryCta={{ href: "/book", label: "Sign Up Today" }}
         secondaryCta={{ href: "/class-calendar", label: "View schedule" }}
       />

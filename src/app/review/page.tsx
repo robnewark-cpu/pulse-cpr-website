@@ -43,12 +43,12 @@ const christineActions = [
   {
     title: "Send a photo of you (and the classroom if you have one)",
     detail:
-      "A headshot or teaching photo. Right now the About card uses Christine’s instructor photo. Heartsaver and Basic Life Support use the class graphics she provided.",
+      "A headshot or teaching photo. Right now the About card uses Christine’s instructor photo. Heartsaver, Basic Life Support, and AED use the class graphics she provided.",
   },
   {
     title: "Approve the Heartsaver and Basic Life Support graphics",
     detail:
-      "The homepage OUR CLASSES cards and those course pages now use the Heartsaver and Basic Life Support graphics (no doctor stock photo, no baby-feet photo). Say if any other picture should change before this goes live on PulseCPROK.com.",
+      "The homepage OUR CLASSES cards and those course pages now use the Heartsaver, Basic Life Support, and AED graphics (no doctor, baby-feet, or bedroom stock photos). Say if any other picture should change before this goes live on PulseCPROK.com.",
   },
   {
     title: "Confirm the business facts already on the site",
