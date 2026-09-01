@@ -46,7 +46,7 @@ export function Footer() {
             {siteConfig.tagline}
           </p>
           <p className="mt-3 text-sm leading-6 text-white/75">
-            CPR $95.00 · First Aid $69 · AED $59 · BLS $95
+            Heartsaver $95.00 · Basic Life Support $95.00 · First Aid $69 · AED $59
           </p>
         </div>
         <div>

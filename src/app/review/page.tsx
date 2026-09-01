@@ -20,10 +20,10 @@ const pagesToReview = [
   { href: "/about", label: "About", note: "Your name and bio placeholder" },
   { href: "/class-calendar", label: "Class calendar", note: "Empty until you add dates from your phone" },
   { href: "/review#add-a-class", label: "Add a class from your phone", note: "Step-by-step for Safari or Chrome" },
-  { href: "/cpr-certification", label: "CPR", note: `Listed at ${courses[0].price}` },
+  { href: "/cpr-certification", label: "Heartsaver", note: `Listed at ${courses[0].price}` },
   { href: "/first-aid-training", label: "First Aid", note: `Listed at ${courses[1].price}` },
   { href: "/aed-training", label: "AED", note: `Listed at ${courses[2].price}` },
-  { href: "/healthcare-provider-courses", label: "BLS / ACLS / PALS", note: `Listed at ${courses[3].price}` },
+  { href: "/healthcare-provider-courses", label: "Basic Life Support", note: `Listed at ${courses[3].price}` },
   { href: "/corporate-training", label: "On-site / corporate", note: "Group quote form" },
   { href: "/testimonials", label: "Reviews", note: "Your real Facebook reviews" },
   { href: "/contact", label: "Contact", note: "Phone, email, Edmond address" },
@@ -52,7 +52,7 @@ const christineActions = [
   {
     title: "Confirm prices",
     detail:
-      "CPR $95.00 (4 to 5 hours) · First Aid $69 · AED $59 · provider CPR $95 · corporate is a custom quote · on-site minimum six students. Tell us if any of that is wrong.",
+      "Heartsaver $95.00 (4 to 5 hours) · Basic Life Support $95.00 (3 to 4 hours) · First Aid $69 · AED $59 · corporate is a custom quote · on-site minimum six students. Tell us if any of that is wrong.",
   },
   {
     title: "Confirm which cards you issue",

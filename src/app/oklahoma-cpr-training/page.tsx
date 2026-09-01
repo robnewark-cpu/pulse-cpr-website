@@ -75,7 +75,7 @@ export default function OklahomaTrainingPage() {
           <div data-speakable="true">
             <h2 className="text-2xl font-bold">Where Pulse CPR trains</h2>
             <p className="mt-4 text-muted-foreground leading-7">
-              Pulse CPR (Pulse.CPR on Facebook) is an Oklahoma training company. Students can attend a public class at 1019 Waterwood Pkwy, Ste C, Edmond, or request on-site CPR, AED, First Aid, or BLS at a workplace, school, clinic, or childcare center. Heartsaver CPR is $95.00 and takes 4 to 5 hours. First Aid is $69, AED is $59, and BLS Provider is $95. The Edmond classroom is open Monday–Friday 8:00 AM – 6:00 PM and Saturday 9:00 AM – 2:00 PM.
+              Pulse CPR (Pulse.CPR on Facebook) is an Oklahoma training company. Students can attend a public class at 1019 Waterwood Pkwy, Ste C, Edmond, or request on-site Heartsaver, Basic Life Support, AED, or First Aid at a workplace, school, clinic, or childcare center. Heartsaver is $95.00 and takes 4 to 5 hours. Basic Life Support is $95.00 and takes 3 to 4 hours. First Aid is $69, and AED is $59. The Edmond classroom is open Monday–Friday 8:00 AM – 6:00 PM and Saturday 9:00 AM – 2:00 PM.
             </p>
             <p className="mt-4 text-muted-foreground leading-7">
               Coordinates for the Edmond classroom: {siteConfig.geo.latitude},{" "}
@@ -101,7 +101,7 @@ export default function OklahomaTrainingPage() {
             {[
               {
                 city: "Edmond classroom",
-                body: "Public Heartsaver, First Aid, AED, and BLS classes meet at 1019 Waterwood Pkwy, Ste C, Edmond, OK 73034.",
+                body: "Public Heartsaver, First Aid, AED, and Basic Life Support classes meet at 1019 Waterwood Pkwy, Ste C, Edmond, OK 73034.",
               },
               {
                 city: "Oklahoma City metro",
@@ -109,7 +109,7 @@ export default function OklahomaTrainingPage() {
               },
               {
                 city: "Tulsa & Broken Arrow",
-                body: "Pulse CPR travels to Tulsa-area workplaces for group CPR and BLS. Six or more students usually makes an on-site date the better value.",
+                body: "Pulse CPR travels to Tulsa-area workplaces for group Heartsaver and Basic Life Support. Six or more students usually makes an on-site date the better value.",
               },
               {
                 city: "Lawton, Stillwater & statewide",

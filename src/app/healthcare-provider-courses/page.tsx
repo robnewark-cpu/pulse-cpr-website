@@ -2,10 +2,10 @@ import { CoursePage } from "@/components/sections/course-page"
 import { createMetadata } from "@/lib/seo"
 
 export const metadata = createMetadata({
-  title: "BLS Provider Courses",
+  title: "Basic Life Support Courses",
   description:
-    "BLS Provider courses in Edmond for nurses, EMTs, dentists, and clinical teams. Renewal and initial tracks, plus on-site Oklahoma City sessions.",
-  keywords: ["BLS class Oklahoma City", "BLS certification OKC", "healthcare CPR Oklahoma"],
+    "Basic Life Support courses in Edmond for nurses, EMTs, dentists, and clinical teams. The class takes 3 to 4 hours. Renewal and initial tracks, plus on-site Oklahoma City sessions.",
+  keywords: ["BLS class Oklahoma City", "Basic Life Support Oklahoma", "healthcare CPR Oklahoma"],
   path: "/healthcare-provider-courses",
 })
 
@@ -14,13 +14,13 @@ export default function HealthcareCoursesPage() {
     <CoursePage
       path="/healthcare-provider-courses"
       eyebrow="Clinical certification"
-      title="BLS for healthcare providers"
-      description="Christine Oldenburg, RN, an American Heart Association Instructor, teaches Pulse CPR BLS Provider courses to the standard Oklahoma hospitals, clinics, and credentialing offices expect. Choose initial or renewal tracks, including group sessions at your facility."
+      title="Basic Life Support for healthcare providers"
+      description="Christine Oldenburg, RN, an American Heart Association Instructor, teaches Pulse CPR Basic Life Support courses to the standard Oklahoma hospitals, clinics, and credentialing offices expect. The class takes 3 to 4 hours. Choose initial or renewal tracks, including group sessions at your facility."
       image="https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=1600&q=80"
       imageAlt="Surgical and clinical team collaborating in a professional healthcare setting"
       audience="Licensed clinicians"
-      duration="4 hours"
-      price="$95"
+      duration="3 to 4 hours"
+      price="$95.00"
       outcomes={[
         "Perform high-performance BLS with closed-loop communication.",
         "Apply current ECC algorithms for adult and pediatric emergencies.",
@@ -30,7 +30,7 @@ export default function HealthcareCoursesPage() {
       ]}
       agenda={[
         {
-          title: "BLS Provider",
+          title: "Basic Life Support",
           detail: "Adult, child, and infant high-quality CPR, AED, bag-mask, and team dynamics. Initial and renewal options.",
         },
         {

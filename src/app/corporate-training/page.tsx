@@ -25,7 +25,7 @@ const audiences = [
   },
   {
     title: "Healthcare facilities",
-    body: "Clinics, dental offices, home health, and hospital units that need BLS on a credentialing calendar.",
+    body: "Clinics, dental offices, home health, and hospital units that need Basic Life Support on a credentialing calendar.",
   },
   {
     title: "Schools and childcare",
@@ -90,7 +90,7 @@ export default function CorporateTrainingPage() {
       </section>
       <CtaBanner
         title="Prefer to send a few people to the classroom?"
-        description="Public Heartsaver, First Aid, AED, and BLS seats are open in Edmond most weeks."
+        description="Public Heartsaver, First Aid, AED, and Basic Life Support seats are open in Edmond most weeks."
         primary={{ href: "/book", label: "Book individual seats" }}
         secondary={{ href: "/contact", label: "Ask a coordinator" }}
       />

@@ -24,7 +24,7 @@ const bodies: Record<string, string[]> = {
     "Training should include the specific unit you own whenever possible. Bring the model name to class or list it on your booking form.",
   ],
   "bls-vs-heartsaver": [
-    "BLS Provider is for healthcare professionals: nurses, EMTs, dentists, medical assistants, and students in clinical programs. It emphasizes high-performance CPR, bag-mask ventilation, and team roles.",
+    "Basic Life Support is for healthcare professionals: nurses, EMTs, dentists, medical assistants, and students in clinical programs. It emphasizes high-performance CPR, bag-mask ventilation, and team roles.",
     "Heartsaver CPR/AED is for workplaces, teachers, coaches, and community responders. It covers adult, child, and infant CPR without the clinical team choreography.",
     "If HR is unsure, choose based on job role, not job title. A front-desk coordinator in a clinic may need BLS because credentialing says so. A warehouse lead usually needs Heartsaver plus First Aid.",
   ],
