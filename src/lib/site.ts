@@ -90,7 +90,7 @@ export const classGraphics = {
   },
   firstAid: {
     src: "/images/first-aid.jpg",
-    alt: "First Aid class graphic for Pulse CPR in Edmond, Oklahoma — FIRST AID kit badge. Be Prepared. Save Lives.",
+    alt: "First Aid class graphic for Pulse CPR in Edmond, Oklahoma — FIRST AID kit. Be Prepared. Be the Help.",
   },
 } as const
 
