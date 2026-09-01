@@ -1,12 +1,19 @@
 import { CoursePage } from "@/components/sections/course-page"
 import { createMetadata } from "@/lib/seo"
+import { classGraphics } from "@/lib/site"
 
 export const metadata = createMetadata({
   title: "AED Training in Oklahoma",
   description:
-    "AED training for Oklahoma offices, gyms, churches, and public venues. Learn pad placement, prompts, and device readiness with Pulse CPR.",
-  keywords: ["AED training Oklahoma", "AED class Oklahoma City", "defibrillator training OKC"],
+    "AED training for Oklahoma offices, gyms, churches, and public venues. Learn pad placement, prompts, and device readiness with Pulse CPR in Edmond.",
+  keywords: [
+    "AED training Oklahoma",
+    "AED class Oklahoma City",
+    "defibrillator training OKC",
+    "Automated External Defibrillator Edmond",
+  ],
   path: "/aed-training",
+  image: classGraphics.aed,
 })
 
 export default function AedTrainingPage() {
@@ -16,8 +23,8 @@ export default function AedTrainingPage() {
       eyebrow="AED"
       title="AED training that turns a wall-mounted device into a ready program"
       description="Sudden cardiac arrest is a minute-by-minute emergency. This course teaches Oklahoma teams to retrieve the AED, apply pads correctly, follow prompts, and keep compressions going."
-      image="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1600&q=80"
-      imageAlt="Clinical training environment used for emergency and AED skills practice"
+      image={classGraphics.aed.src}
+      imageAlt={classGraphics.aed.alt}
       audience="Public venues and workplace response teams"
       duration="2 hours"
       price="$59"

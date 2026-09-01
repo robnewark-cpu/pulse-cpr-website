@@ -3,7 +3,7 @@ export const siteConfig = {
   legalName: "Pulse CPR Oklahoma, LLC",
   tagline: "Learn It. Know It. Save A Life.",
   description:
-    "Pulse CPR — Learn It. Know It. Save A Life. American Heart Association CPR, AED, First Aid, Heartsaver, and Basic Life Support certification from Edmond, Oklahoma, and on-site across the state.",
+    "Pulse CPR — Learn It. Know It. Save A Life. Heartsaver, Basic Life Support, AED, and First Aid classes in Edmond, Oklahoma, and on-site across the state. Taught by Christine Oldenburg, RN, an American Heart Association Instructor.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://pulsecprok.com",
   phone: "(405) 763-6811",
   phoneHref: "tel:+14057636811",
@@ -84,6 +84,10 @@ export const classGraphics = {
     src: "/images/heartsaver.jpg",
     alt: "Heartsaver CPR, AED, and First Aid class graphic for Pulse CPR in Edmond, Oklahoma. Be Prepared. Save Lives.",
   },
+  aed: {
+    src: "/images/aed.jpg",
+    alt: "AED Automated External Defibrillator class graphic for Pulse CPR in Edmond, Oklahoma. Be Prepared. Save Lives.",
+  },
 } as const
 
 export function absoluteUrl(path: string) {
@@ -145,8 +149,7 @@ export const courses = [
     summary:
       "Learn to recognize sudden cardiac arrest, apply pads correctly, and deliver a shock with confidence using the AED on your wall.",
     href: "/aed-training",
-    image:
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1400&q=80",
+    image: classGraphics.aed.src,
     highlights: [
       "Pad placement and prompts",
       "Adult and pediatric pads",
@@ -255,9 +258,9 @@ export const homeClassCards = [
     href: "/aed-training",
     price: "$59",
     description: "Learn to retrieve, place, and use an AED quickly when every second of a cardiac emergency counts.",
-    image:
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "Emergency medical equipment used in AED and resuscitation training",
+    image: classGraphics.aed.src,
+    imageAlt: classGraphics.aed.alt,
+    imageFit: "contain" as const,
   },
   {
     title: "First Aid",

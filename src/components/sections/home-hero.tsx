@@ -25,12 +25,11 @@ export function HomeHero() {
               <span className="mt-2 block text-[#D62828]">SAVE LIVES.</span>
             </h1>
             <p className="mt-6 max-w-xl text-base leading-7 text-muted-foreground sm:text-lg">
-              American Heart Association CPR, AED, First Aid, and Basic Life Support
-              certification from Edmond, Oklahoma, plus on-site classes for Oklahoma City and
-              statewide teams. Heartsaver is $95.00 and takes 4 to 5 hours. Basic Life Support is
-              $95.00 and takes 3 to 4 hours. First Aid is $69, and AED is $59. The Edmond classroom
-              is open Monday–Friday 8:00 AM – 6:00 PM and
-              Saturday 9:00 AM – 2:00 PM.
+              Heartsaver, Basic Life Support, AED, and First Aid classes in Edmond, Oklahoma, plus
+              on-site training for Oklahoma City and statewide teams. Instruction follows current
+              American Heart Association science. Heartsaver is $95.00 and takes 4 to 5 hours. Basic
+              Life Support is $95.00 and takes 3 to 4 hours. First Aid is $69, and AED is $59. The
+              Edmond classroom is open Monday–Friday 8:00 AM – 6:00 PM and Saturday 9:00 AM – 2:00 PM.
             </p>
             <ul className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               {trustPoints.map((item) => (

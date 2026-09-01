@@ -16,7 +16,7 @@ export const HOME_OG_URL = "https://pulsecprok.com/"
 export const HOME_OG_TITLE =
   "Pulse CPR | CPR, BLS, AED & First Aid Training in Oklahoma"
 export const HOME_OG_DESCRIPTION =
-  "Pulse CPR — Learn It. Know It. Save A Life. American Heart Association CPR, AED, First Aid, Heartsaver, and Basic Life Support certification from Edmond, Oklahoma."
+  "Pulse CPR — Learn It. Know It. Save A Life. Heartsaver, Basic Life Support, AED, and First Aid classes in Edmond, Oklahoma. Taught by an American Heart Association Instructor."
 export const HOME_TWITTER_DESCRIPTION = "Pulse CPR — Learn It. Know It. Save A Life."
 
 /** Facebook's public default App ID. Clears the Sharing Debugger `fb:app_id` warning. */
@@ -149,6 +149,7 @@ export function localBusinessJsonLd() {
       ogImage.url,
       absoluteUrl(classGraphics.basicLifeSupport.src),
       absoluteUrl(classGraphics.heartsaver.src),
+      absoluteUrl(classGraphics.aed.src),
       `${siteConfig.url}${instructors[0].image}`,
     ],
     logo: `${siteConfig.url}/logo.svg`,

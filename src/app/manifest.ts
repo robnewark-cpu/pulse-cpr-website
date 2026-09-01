@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Pulse CPR Oklahoma",
     short_name: "Pulse CPR",
     description:
-      "American Heart Association Heartsaver, Basic Life Support, AED, and First Aid classes in Edmond, Oklahoma, and on-site statewide.",
+      "Heartsaver, Basic Life Support, AED, and First Aid classes in Edmond, Oklahoma, and on-site statewide.",
     start_url: "/",
     scope: "/",
     display: "standalone",
