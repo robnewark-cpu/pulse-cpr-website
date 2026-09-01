@@ -2,7 +2,7 @@ import { MetadataRoute } from "next"
 import { resources, siteConfig } from "@/lib/site"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date("2026-08-27")
+  const lastModified = new Date("2026-09-01")
 
   const entries: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] }[] =
     [

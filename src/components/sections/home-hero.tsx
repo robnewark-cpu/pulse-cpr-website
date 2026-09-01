@@ -25,7 +25,7 @@ export function HomeHero() {
               <span className="mt-2 block text-[#D62828]">SAVE LIVES.</span>
             </h1>
             <p className="mt-6 max-w-xl text-base leading-7 text-muted-foreground sm:text-lg">
-              American Heart Association and American Red Cross CPR, AED, First Aid, and Basic Life Support
+              American Heart Association CPR, AED, First Aid, and Basic Life Support
               certification from Edmond, Oklahoma, plus on-site classes for Oklahoma City and
               statewide teams. Heartsaver is $95.00 and takes 4 to 5 hours. Basic Life Support is
               $95.00 and takes 3 to 4 hours. First Aid is $69, and AED is $59. The Edmond classroom

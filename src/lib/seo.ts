@@ -1,5 +1,13 @@
 import type { Metadata } from "next"
-import { courses, defaultInstructor, instructors, siteConfig, testimonials } from "@/lib/site"
+import {
+  absoluteUrl,
+  classGraphics,
+  courses,
+  defaultInstructor,
+  instructors,
+  siteConfig,
+  testimonials,
+} from "@/lib/site"
 import type { ClassRecord } from "@/lib/tms/types"
 import { formatTimeRange } from "@/lib/tms/format"
 
@@ -8,7 +16,7 @@ export const HOME_OG_URL = "https://pulsecprok.com/"
 export const HOME_OG_TITLE =
   "Pulse CPR | CPR, BLS, AED & First Aid Training in Oklahoma"
 export const HOME_OG_DESCRIPTION =
-  "Pulse CPR — Learn It. Know It. Save A Life. American Heart Association and American Red Cross CPR, AED, First Aid, and BLS certification from Edmond, Oklahoma."
+  "Pulse CPR — Learn It. Know It. Save A Life. American Heart Association CPR, AED, First Aid, Heartsaver, and Basic Life Support certification from Edmond, Oklahoma."
 export const HOME_TWITTER_DESCRIPTION = "Pulse CPR — Learn It. Know It. Save A Life."
 
 /** Facebook's public default App ID. Clears the Sharing Debugger `fb:app_id` warning. */
@@ -45,11 +53,13 @@ export function createMetadata({
   description,
   path = "/",
   keywords,
+  image,
 }: {
   title: string
   description: string
   path?: string
   keywords?: string[]
+  image?: { url?: string; src?: string; alt: string; width?: number; height?: number }
 }): Metadata {
   const url = new URL(path, siteConfig.url).toString()
   const isHome = path === "/"
@@ -61,6 +71,17 @@ export function createMetadata({
   const ogDescription = isHome ? HOME_OG_DESCRIPTION : description
   const twitterDescription = isHome ? HOME_TWITTER_DESCRIPTION : description
   const ogUrl = isHome ? HOME_OG_URL : url
+  const imagePath = image?.url ?? image?.src
+  const shareImage = imagePath
+    ? {
+        url: absoluteUrl(imagePath),
+        secureUrl: absoluteUrl(imagePath),
+        width: image?.width ?? 1200,
+        height: image?.height ?? 1200,
+        alt: image?.alt ?? ogImage.alt,
+        type: "image/jpeg" as const,
+      }
+    : ogImage
 
   return {
     title: { absolute: fullTitle },
@@ -76,13 +97,13 @@ export function createMetadata({
       siteName: siteConfig.name,
       locale: "en_US",
       type: "website",
-      images: [ogImage],
+      images: [shareImage],
     },
     twitter: {
       card: "summary_large_image",
       title: ogTitle,
       description: twitterDescription,
-      images: [SHARE_IMAGE_URL],
+      images: [shareImage.url],
     },
   }
 }
@@ -124,7 +145,12 @@ export function localBusinessJsonLd() {
     url: siteConfig.url,
     telephone: siteConfig.phone,
     email: siteConfig.email,
-    image: ogImage.url,
+    image: [
+      ogImage.url,
+      absoluteUrl(classGraphics.basicLifeSupport.src),
+      absoluteUrl(classGraphics.heartsaver.src),
+      `${siteConfig.url}${instructors[0].image}`,
+    ],
     logo: `${siteConfig.url}/logo.svg`,
     description: siteConfig.description,
     priceRange: "$59–$95",
@@ -237,6 +263,7 @@ export function localBusinessJsonLd() {
           name: course.title,
           description: course.summary,
           url: new URL(course.href, siteConfig.url).toString(),
+          image: course.image.startsWith("/") ? absoluteUrl(course.image) : course.image,
           provider: { "@id": `${siteConfig.url}/#business` },
           timeRequired: course.duration,
         },
@@ -281,12 +308,14 @@ export function courseJsonLd({
   path,
   price,
   duration,
+  image,
 }: {
   name: string
   description: string
   path: string
   price?: string
   duration?: string
+  image?: string
 }) {
   const priceUsd = price?.match(/\$(\d+(?:\.\d+)?)/)?.[1]
   const courseWorkload = duration?.includes("4 to 5") || duration?.includes("4–5")
@@ -307,6 +336,7 @@ export function courseJsonLd({
     name,
     description,
     url: new URL(path, siteConfig.url).toString(),
+    image: image ? absoluteUrl(image) : undefined,
     provider: {
       "@type": "EducationalOrganization",
       name: siteConfig.name,

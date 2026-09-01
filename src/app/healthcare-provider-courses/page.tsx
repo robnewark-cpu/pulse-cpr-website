@@ -1,5 +1,6 @@
 import { CoursePage } from "@/components/sections/course-page"
 import { createMetadata } from "@/lib/seo"
+import { classGraphics } from "@/lib/site"
 
 export const metadata = createMetadata({
   title: "Basic Life Support Courses",
@@ -7,6 +8,7 @@ export const metadata = createMetadata({
     "Basic Life Support courses in Edmond for nurses, EMTs, dentists, and clinical teams. The class takes 3 to 4 hours. Renewal and initial tracks, plus on-site Oklahoma City sessions.",
   keywords: ["BLS class Oklahoma City", "Basic Life Support Oklahoma", "healthcare CPR Oklahoma"],
   path: "/healthcare-provider-courses",
+  image: classGraphics.basicLifeSupport,
 })
 
 export default function HealthcareCoursesPage() {
@@ -16,8 +18,8 @@ export default function HealthcareCoursesPage() {
       eyebrow="Clinical certification"
       title="Basic Life Support for healthcare providers"
       description="Christine Oldenburg, RN, an American Heart Association Instructor, teaches Pulse CPR Basic Life Support courses to the standard Oklahoma hospitals, clinics, and credentialing offices expect. The class takes 3 to 4 hours. Choose initial or renewal tracks, including group sessions at your facility."
-      image="https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=1600&q=80"
-      imageAlt="Surgical and clinical team collaborating in a professional healthcare setting"
+      image={classGraphics.basicLifeSupport.src}
+      imageAlt={classGraphics.basicLifeSupport.alt}
       audience="Licensed clinicians"
       duration="3 to 4 hours"
       price="$95.00"

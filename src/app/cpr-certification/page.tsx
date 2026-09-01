@@ -1,5 +1,6 @@
 import { CoursePage } from "@/components/sections/course-page"
 import { createMetadata } from "@/lib/seo"
+import { classGraphics } from "@/lib/site"
 
 export const metadata = createMetadata({
   title: "Heartsaver CPR Certification in Oklahoma",
@@ -7,6 +8,7 @@ export const metadata = createMetadata({
     "Heartsaver CPR certification at the Edmond classroom and on-site across Oklahoma City and the state. Adult, child, and infant CPR in a 4 to 5 hour class.",
   path: "/cpr-certification",
   keywords: ["CPR certification Oklahoma City", "Heartsaver CPR OKC", "CPR class Oklahoma"],
+  image: classGraphics.heartsaver,
 })
 
 export default function CprCertificationPage() {
@@ -16,8 +18,8 @@ export default function CprCertificationPage() {
       eyebrow="Heartsaver CPR"
       title="Heartsaver CPR for workplaces, schools, and community responders"
       description="Learn adult, child, and infant CPR with choking relief and the confidence to start compressions before EMS arrives. The class takes 4 to 5 hours. Ideal for teachers, coaches, office teams, and anyone who is not a licensed healthcare provider."
-      image="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1600&q=80"
-      imageAlt="Stethoscope and clinical workspace representing professional emergency preparedness training"
+      image={classGraphics.heartsaver.src}
+      imageAlt={classGraphics.heartsaver.alt}
       audience="Non-clinical responders"
       duration="4 to 5 hours"
       price="$95.00"
