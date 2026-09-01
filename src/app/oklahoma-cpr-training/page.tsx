@@ -25,7 +25,9 @@ export const metadata = createMetadata({
 })
 
 const localFaqs = faqs.filter((item) =>
-  /cities|on-site|Pulse CPR|reviews|book|cost|hours|next CPR/i.test(item.question)
+  /cities|on-site|Pulse CPR|reviews|book|cost|hours|next CPR|How long is a CPR|certification card/i.test(
+    item.question
+  )
 )
 
 export default function OklahomaTrainingPage() {
@@ -73,7 +75,7 @@ export default function OklahomaTrainingPage() {
           <div data-speakable="true">
             <h2 className="text-2xl font-bold">Where Pulse CPR trains</h2>
             <p className="mt-4 text-muted-foreground leading-7">
-              Pulse CPR (Pulse.CPR on Facebook) is an Oklahoma training company. Students can attend a public class at 1019 Waterwood Pkwy, Ste C, Edmond, or request on-site CPR, AED, First Aid, or BLS at a workplace, school, clinic, or childcare center. Heartsaver CPR is $95, First Aid is $69, AED is $59, and BLS Provider is $95. The Edmond classroom is open Monday–Friday 8:00 AM – 6:00 PM and Saturday 9:00 AM – 2:00 PM.
+              Pulse CPR (Pulse.CPR on Facebook) is an Oklahoma training company. Students can attend a public class at 1019 Waterwood Pkwy, Ste C, Edmond, or request on-site CPR, AED, First Aid, or BLS at a workplace, school, clinic, or childcare center. Heartsaver CPR is $95.00 and takes 4 to 5 hours; your certification card is typically ready within 4 to 5 hours. First Aid is $69, AED is $59, and BLS Provider is $95. The Edmond classroom is open Monday–Friday 8:00 AM – 6:00 PM and Saturday 9:00 AM – 2:00 PM.
             </p>
             <p className="mt-4 text-muted-foreground leading-7">
               Coordinates for the Edmond classroom: {siteConfig.geo.latitude},{" "}

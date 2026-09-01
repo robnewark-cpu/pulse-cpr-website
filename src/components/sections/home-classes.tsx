@@ -39,7 +39,9 @@ export function HomeClasses() {
                   <div className="flex flex-1 flex-col p-5">
                     <h3 className="text-lg font-bold text-navy">{item.title}</h3>
                     <p className="mt-1 text-sm font-semibold text-primary">
-                      {item.price} in Edmond, OK
+                      {"duration" in item
+                        ? `${item.price} · ${item.duration} in Edmond, OK`
+                        : `${item.price} in Edmond, OK`}
                     </p>
                     <p className="mt-2 text-sm leading-6 text-muted-foreground">
                       {item.description}

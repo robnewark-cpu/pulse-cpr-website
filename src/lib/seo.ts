@@ -279,13 +279,24 @@ export function courseJsonLd({
   description,
   path,
   price,
+  duration,
 }: {
   name: string
   description: string
   path: string
   price?: string
+  duration?: string
 }) {
-  const priceUsd = price?.match(/\$(\d+)/)?.[1]
+  const priceUsd = price?.match(/\$(\d+(?:\.\d+)?)/)?.[1]
+  const courseWorkload = duration?.includes("4–5")
+    ? "PT5H"
+    : duration?.includes("2–3")
+      ? "PT3H"
+      : duration?.startsWith("4 ")
+        ? "PT4H"
+        : duration?.startsWith("2 ")
+          ? "PT2H"
+          : "PT4H"
 
   return {
     "@context": "https://schema.org",
@@ -317,7 +328,7 @@ export function courseJsonLd({
     hasCourseInstance: {
       "@type": "CourseInstance",
       courseMode: ["onsite", "blended"],
-      courseWorkload: "PT2H",
+      courseWorkload,
       location: {
         "@type": "Place",
         name: `${siteConfig.name} Edmond classroom and on-site Oklahoma locations`,
@@ -361,12 +372,12 @@ export function howToGetCertifiedJsonLd() {
     "@type": "HowTo",
     name: "How to get CPR certified in Oklahoma with Pulse CPR",
     description:
-      "Book a Pulse CPR class in Edmond or request on-site training, complete skills practice, and receive a two-year certification card.",
-    totalTime: "PT4H",
+      "Book a Pulse CPR class in Edmond or request on-site training. Heartsaver CPR takes 4 to 5 hours, and your certification card is typically ready within 4 to 5 hours.",
+    totalTime: "PT5H",
     estimatedCost: {
       "@type": "MonetaryAmount",
       currency: "USD",
-      value: "95",
+      value: "95.00",
     },
     step: [
       {
@@ -387,13 +398,13 @@ export function howToGetCertifiedJsonLd() {
         "@type": "HowToStep",
         position: 3,
         name: "Complete class and skills testing",
-        text: "Attend the Edmond classroom or an on-site session. Practice CPR, AED, and first aid skills with instructor coaching.",
+        text: "Attend the Edmond classroom or an on-site session. Heartsaver / Adult CPR takes 4 to 5 hours of skills practice with instructor coaching.",
       },
       {
         "@type": "HowToStep",
         position: 4,
         name: "Receive your certification card",
-        text: "After you pass skills testing, Pulse CPR issues a nationally recognized certification card. Cards are typically valid for two years.",
+        text: "Your CPR certification card is typically ready within 4 to 5 hours after you pass skills testing. Cards are typically valid for two years.",
       },
     ],
   }
