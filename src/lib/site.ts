@@ -88,6 +88,10 @@ export const classGraphics = {
     src: "/images/aed.jpg",
     alt: "AED Automated External Defibrillator class graphic for Pulse CPR in Edmond, Oklahoma. Be Prepared. Save Lives.",
   },
+  firstAid: {
+    src: "/images/first-aid.jpg",
+    alt: "First Aid class graphic for Pulse CPR in Edmond, Oklahoma — FIRST AID kit badge. Be Prepared. Save Lives.",
+  },
 } as const
 
 export function absoluteUrl(path: string) {
@@ -128,8 +132,7 @@ export const courses = [
     summary:
       "Practical first aid for bleeding, burns, medical emergencies, and injury assessment so your team can act before EMS arrives.",
     href: "/first-aid-training",
-    image:
-      "https://images.unsplash.com/photo-1584433144859-1fc3ab64a957?auto=format&fit=crop&w=1400&q=80",
+    image: classGraphics.firstAid.src,
     highlights: [
       "Bleeding control and shock",
       "Burns, breaks, and sprains",
@@ -267,9 +270,9 @@ export const homeClassCards = [
     href: "/first-aid-training",
     price: "$69",
     description: "Practical first aid for bleeding, burns, and sudden illness until professional help arrives.",
-    image:
-      "https://images.unsplash.com/photo-1584433144859-1fc3ab64a957?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "First aid supplies prepared for emergency response training",
+    image: classGraphics.firstAid.src,
+    imageAlt: classGraphics.firstAid.alt,
+    imageFit: "contain" as const,
   },
 ] as const
 

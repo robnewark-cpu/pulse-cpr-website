@@ -1,5 +1,6 @@
 import { CoursePage } from "@/components/sections/course-page"
 import { createMetadata } from "@/lib/seo"
+import { classGraphics } from "@/lib/site"
 
 export const metadata = createMetadata({
   title: "First Aid Training in Oklahoma",
@@ -7,6 +8,7 @@ export const metadata = createMetadata({
     "Workplace First Aid certification in Edmond and on-site across Oklahoma. Bleeding control, medical emergencies, and injury care for Oklahoma employers.",
   keywords: ["First Aid certification Oklahoma", "workplace first aid OKC", "OSHA first aid class Oklahoma"],
   path: "/first-aid-training",
+  image: classGraphics.firstAid,
 })
 
 export default function FirstAidPage() {
@@ -16,8 +18,8 @@ export default function FirstAidPage() {
       eyebrow="First Aid"
       title="First Aid training that prepares people to act before EMS arrives"
       description="A practical, OSHA-friendly First Aid course for Oklahoma employers, coaches, and caregivers. Students practice bleeding control, injury assessment, and medical emergency response with current first aid science."
-      image="https://images.unsplash.com/photo-1584433144859-1fc3ab64a957?auto=format&fit=crop&w=1600&q=80"
-      imageAlt="First aid supplies prepared for workplace emergency response training"
+      image={classGraphics.firstAid.src}
+      imageAlt={classGraphics.firstAid.alt}
       audience="Workplaces and community teams"
       duration="2–3 hours"
       price="$69"
