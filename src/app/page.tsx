@@ -17,7 +17,7 @@ import { cn } from "@/lib/utils"
 export const metadata = createMetadata({
   title: siteConfig.name,
   description:
-    "Pulse CPR — Learn It. Know It. Save A Life. CPR certification is $95.00 in Edmond, OK and takes 4 to 5 hours. Your CPR card is typically ready within 4 to 5 hours. First Aid $69, AED $59, BLS Provider $95. Hours: Monday–Friday 8:00 AM – 6:00 PM, Saturday 9:00 AM – 2:00 PM. Call (405) 763-6811.",
+    "Pulse CPR — Learn It. Know It. Save A Life. CPR certification is $95.00 in Edmond, OK and takes 4 to 5 hours. First Aid $69, AED $59, BLS Provider $95. Hours: Monday–Friday 8:00 AM – 6:00 PM, Saturday 9:00 AM – 2:00 PM. Call (405) 763-6811.",
   path: "/",
   keywords: [
     "CPR certification Oklahoma City",

@@ -81,7 +81,7 @@ export const courses = [
     title: "CPR Certification",
     shortTitle: "Heartsaver CPR",
     audience: "Workplace, schools, and community responders",
-    duration: "4–5 hours",
+    duration: "4 to 5 hours",
     price: "$95.00",
     priceUsd: 95,
     renewal: "Valid 2 years",
@@ -220,7 +220,7 @@ export const homeClassCards = [
     title: "Adult CPR",
     href: "/cpr-certification",
     price: "$95.00",
-    duration: "4–5 hours",
+    duration: "4 to 5 hours",
     description: "Hands-on adult CPR so you can recognize cardiac arrest and start compressions with confidence.",
     image:
       "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80",
@@ -230,7 +230,7 @@ export const homeClassCards = [
     title: "Pediatric & Infant CPR",
     href: "/cpr-certification",
     price: "$95.00",
-    duration: "4–5 hours",
+    duration: "4 to 5 hours",
     description: "Age-specific CPR and choking response for children and infants in homes, schools, and childcare.",
     image:
       "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&w=1200&q=80",
@@ -332,12 +332,12 @@ export const faqs = [
   {
     question: "How much does CPR certification cost in Edmond, OK?",
     answer:
-      "Pulse CPR Heartsaver CPR certification is $95.00 in Edmond, Oklahoma. The class takes 4 to 5 hours, and your CPR certification card is typically ready within those 4 to 5 hours. First Aid training is $69, AED training is $59, and BLS Provider is $95. Corporate on-site training for six or more students is a custom quote. Public classes meet at 1019 Waterwood Pkwy, Ste C, Edmond, OK 73034.",
+      "Pulse CPR Heartsaver CPR certification is $95.00 in Edmond, Oklahoma. The class takes 4 to 5 hours. First Aid training is $69, AED training is $59, and BLS Provider is $95. Corporate on-site training for six or more students is a custom quote. Public classes meet at 1019 Waterwood Pkwy, Ste C, Edmond, OK 73034.",
   },
   {
     question: "How long is a CPR certification class?",
     answer:
-      "Adult / Heartsaver CPR certification takes 4 to 5 hours. Your CPR certification card is typically ready within 4 to 5 hours after you complete skills testing.",
+      "Adult / Heartsaver CPR certification takes 4 to 5 hours.",
   },
   {
     question: "What are Pulse CPR business hours?",
@@ -357,7 +357,7 @@ export const faqs = [
   {
     question: "When do I receive my certification card?",
     answer:
-      "Your CPR certification card is typically ready within 4 to 5 hours after you complete skills testing. Cards are usually valid for two years. Ask when you book if you have a credentialing deadline.",
+      "After you complete skills testing, Pulse CPR issues a nationally recognized certification card. Timing depends on the card issuer. Ask when you book if you have a credentialing deadline.",
   },
   {
     question: "Can you train our staff on-site?",

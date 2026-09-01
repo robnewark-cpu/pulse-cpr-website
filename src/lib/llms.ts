@@ -45,7 +45,7 @@ ${courseList}
 2. Book at ${siteConfig.url}/book, browse classes at ${siteConfig.url}/classes, or request a group quote at ${siteConfig.url}/corporate-training.
 3. Pay through ${siteConfig.payments.processor} to confirm the seat. Pulse CPR does not process cards on this website.
 4. Complete skills practice in class.
-5. Complete the 4 to 5 hour Heartsaver CPR class. Your certification card is typically ready within 4 to 5 hours after skills testing. Cards are usually valid two years.
+5. Receive a nationally recognized certification card. Cards are usually valid two years.
 
 ## Key pages
 - Home: ${siteConfig.url}/
@@ -91,7 +91,7 @@ Phone: ${siteConfig.phone}
 Email: ${siteConfig.email}
 Address: ${siteConfig.address.street}, ${siteConfig.address.city}, ${siteConfig.address.region} ${siteConfig.address.postalCode}
 Hours: ${siteConfig.hours.map((item) => `${item.day} ${item.time}`).join("; ")}
-Prices: CPR $95.00 (4–5 hours, card typically ready in 4 to 5 hours); First Aid $69; AED $59; BLS Provider $95; Corporate custom quote
+Prices: CPR $95.00 (4 to 5 hours); First Aid $69; AED $59; BLS Provider $95; Corporate custom quote
 Instructor: ${instructors[0].name}, ${instructors[0].role}
 Llms: ${siteConfig.url}/llms.txt
 Feed: ${siteConfig.url}/feed.xml

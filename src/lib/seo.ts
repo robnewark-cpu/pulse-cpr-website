@@ -288,7 +288,7 @@ export function courseJsonLd({
   duration?: string
 }) {
   const priceUsd = price?.match(/\$(\d+(?:\.\d+)?)/)?.[1]
-  const courseWorkload = duration?.includes("4–5")
+  const courseWorkload = duration?.includes("4 to 5") || duration?.includes("4–5")
     ? "PT5H"
     : duration?.includes("2–3")
       ? "PT3H"
@@ -372,7 +372,7 @@ export function howToGetCertifiedJsonLd() {
     "@type": "HowTo",
     name: "How to get CPR certified in Oklahoma with Pulse CPR",
     description:
-      "Book a Pulse CPR class in Edmond or request on-site training. Heartsaver CPR takes 4 to 5 hours, and your certification card is typically ready within 4 to 5 hours.",
+      "Book a Pulse CPR class in Edmond or request on-site training. Heartsaver CPR takes 4 to 5 hours.",
     totalTime: "PT5H",
     estimatedCost: {
       "@type": "MonetaryAmount",
@@ -404,7 +404,7 @@ export function howToGetCertifiedJsonLd() {
         "@type": "HowToStep",
         position: 4,
         name: "Receive your certification card",
-        text: "Your CPR certification card is typically ready within 4 to 5 hours after you pass skills testing. Cards are typically valid for two years.",
+        text: "After you pass skills testing, Pulse CPR issues a nationally recognized certification card. Cards are typically valid for two years.",
       },
     ],
   }
