@@ -24,7 +24,7 @@ export default function ClassesPage() {
       <PageHero
         eyebrow="Pulse CPR classes"
         title="Find the right CPR, AED, or First Aid class."
-        description="American Heart Association and American Red Cross certification classes for individuals, families, and Oklahoma organizations. Heartsaver CPR is $95, First Aid is $69, AED is $59, and BLS Provider is $95."
+        description="American Heart Association and American Red Cross certification classes for individuals, families, and Oklahoma organizations. Heartsaver CPR is $95.00 and takes 4 to 5 hours. First Aid is $69, AED is $59, and BLS Provider is $95."
         primaryCta={{ href: "/book", label: "Sign Up Today" }}
         secondaryCta={{ href: "/class-calendar", label: "View schedule" }}
       />

@@ -45,7 +45,7 @@ export function CoursePage({
             { name: "Home", path: "/" },
             { name: title, path },
           ]),
-          courseJsonLd({ name: title, description, path, price }),
+          courseJsonLd({ name: title, description, path, price, duration }),
           faqJsonLd(faqs),
         ]}
       />
