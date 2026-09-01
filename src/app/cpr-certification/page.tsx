@@ -4,7 +4,7 @@ import { createMetadata } from "@/lib/seo"
 export const metadata = createMetadata({
   title: "CPR Certification in Oklahoma",
   description:
-    "Heartsaver CPR certification at the Edmond classroom and on-site across Oklahoma City and the state. Adult, child, and infant CPR in a 4 to 5 hour class; your certification card is typically ready within 4 to 5 hours.",
+    "Heartsaver CPR certification at the Edmond classroom and on-site across Oklahoma City and the state. Adult, child, and infant CPR in a 4 to 5 hour class.",
   path: "/cpr-certification",
   keywords: ["CPR certification Oklahoma City", "Heartsaver CPR OKC", "CPR class Oklahoma"],
 })
@@ -15,11 +15,11 @@ export default function CprCertificationPage() {
       path="/cpr-certification"
       eyebrow="Heartsaver CPR"
       title="CPR certification for workplaces, schools, and community responders"
-      description="Learn adult, child, and infant CPR with choking relief and the confidence to start compressions before EMS arrives. The class takes 4 to 5 hours, and your CPR certification card is typically ready within 4 to 5 hours. Ideal for teachers, coaches, office teams, and anyone who is not a licensed healthcare provider."
+      description="Learn adult, child, and infant CPR with choking relief and the confidence to start compressions before EMS arrives. The class takes 4 to 5 hours. Ideal for teachers, coaches, office teams, and anyone who is not a licensed healthcare provider."
       image="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1600&q=80"
       imageAlt="Stethoscope and clinical workspace representing professional emergency preparedness training"
       audience="Non-clinical responders"
-      duration="4–5 hours"
+      duration="4 to 5 hours"
       price="$95.00"
       outcomes={[
         "Recognize cardiac arrest and activate emergency response immediately.",
@@ -48,9 +48,8 @@ export default function CprCertificationPage() {
       ]}
       faqs={[
         {
-          question: "How long is this CPR class, and when is my card ready?",
-          answer:
-            "Heartsaver / Adult CPR takes 4 to 5 hours. Your CPR certification card is typically ready within 4 to 5 hours after you complete skills testing.",
+          question: "How long is this CPR class?",
+          answer: "Heartsaver / Adult CPR takes 4 to 5 hours.",
         },
         {
           question: "Is this the right class instead of BLS?",

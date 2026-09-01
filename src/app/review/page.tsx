@@ -52,7 +52,7 @@ const christineActions = [
   {
     title: "Confirm prices",
     detail:
-      "CPR $95.00 (4–5 hours; card typically ready in 4 to 5 hours) · First Aid $69 · AED $59 · provider CPR $95 · corporate is a custom quote · on-site minimum six students. Tell us if any of that is wrong.",
+      "CPR $95.00 (4 to 5 hours) · First Aid $69 · AED $59 · provider CPR $95 · corporate is a custom quote · on-site minimum six students. Tell us if any of that is wrong.",
   },
   {
     title: "Confirm which cards you issue",
