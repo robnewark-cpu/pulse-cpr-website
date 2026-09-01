@@ -57,3 +57,7 @@ Without Supabase keys, the public calendar stays empty until the instructor post
 Payments are processed by **Square**. This site does not take card numbers. Optional: set `NEXT_PUBLIC_SQUARE_PAY_URL` to her Square payment or invoice link.
 
 Optional email: add a Resend API key. Students get a payment reminder; cancelled classes notify the roster.
+
+## Mobile app (App Store / Google Play)
+
+The Expo app lives in [`mobile/`](mobile/README.md). It is a separate package so website deploys stay on Next.js / Cloudflare Workers. Run `cd mobile && npm start` to preview. Store listing still needs Apple and Google developer accounts; see the mobile README for EAS build and submit steps.
