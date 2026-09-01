@@ -150,6 +150,7 @@ export function localBusinessJsonLd() {
       absoluteUrl(classGraphics.basicLifeSupport.src),
       absoluteUrl(classGraphics.heartsaver.src),
       absoluteUrl(classGraphics.aed.src),
+      absoluteUrl(classGraphics.firstAid.src),
       `${siteConfig.url}${instructors[0].image}`,
     ],
     logo: `${siteConfig.url}/logo.svg`,

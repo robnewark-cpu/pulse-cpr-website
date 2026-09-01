@@ -40,6 +40,7 @@ export default function robots(): MetadataRoute.Robots {
           "/images/basic-life-support.jpg",
           "/images/heartsaver.jpg",
           "/images/aed.jpg",
+          "/images/first-aid.jpg",
         ],
       },
       {
@@ -50,6 +51,7 @@ export default function robots(): MetadataRoute.Robots {
           "/images/basic-life-support.jpg",
           "/images/heartsaver.jpg",
           "/images/aed.jpg",
+          "/images/first-aid.jpg",
         ],
       },
       {
@@ -60,6 +62,7 @@ export default function robots(): MetadataRoute.Robots {
           "/images/basic-life-support.jpg",
           "/images/heartsaver.jpg",
           "/images/aed.jpg",
+          "/images/first-aid.jpg",
         ],
       },
     ],
