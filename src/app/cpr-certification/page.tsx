@@ -2,7 +2,7 @@ import { CoursePage } from "@/components/sections/course-page"
 import { createMetadata } from "@/lib/seo"
 
 export const metadata = createMetadata({
-  title: "CPR Certification in Oklahoma",
+  title: "Heartsaver CPR Certification in Oklahoma",
   description:
     "Heartsaver CPR certification at the Edmond classroom and on-site across Oklahoma City and the state. Adult, child, and infant CPR in a 4 to 5 hour class.",
   path: "/cpr-certification",
@@ -14,7 +14,7 @@ export default function CprCertificationPage() {
     <CoursePage
       path="/cpr-certification"
       eyebrow="Heartsaver CPR"
-      title="CPR certification for workplaces, schools, and community responders"
+      title="Heartsaver CPR for workplaces, schools, and community responders"
       description="Learn adult, child, and infant CPR with choking relief and the confidence to start compressions before EMS arrives. The class takes 4 to 5 hours. Ideal for teachers, coaches, office teams, and anyone who is not a licensed healthcare provider."
       image="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1600&q=80"
       imageAlt="Stethoscope and clinical workspace representing professional emergency preparedness training"
@@ -49,12 +49,12 @@ export default function CprCertificationPage() {
       faqs={[
         {
           question: "How long is this CPR class?",
-          answer: "Heartsaver / Adult CPR takes 4 to 5 hours.",
+          answer: "Heartsaver takes 4 to 5 hours.",
         },
         {
           question: "Is this the right class instead of BLS?",
           answer:
-            "If you are not a healthcare provider, Heartsaver CPR is usually correct. Nurses, EMTs, dental clinicians, and medical assistants typically need BLS Provider.",
+            "If you are not a healthcare provider, Heartsaver is usually correct. Nurses, EMTs, dental clinicians, and medical assistants typically need Basic Life Support.",
         },
         {
           question: "Can I add First Aid the same day?",

@@ -78,8 +78,8 @@ export const stats = [
 export const courses = [
   {
     slug: "cpr-certification",
-    title: "CPR Certification",
-    shortTitle: "Heartsaver CPR",
+    title: "Heartsaver",
+    shortTitle: "Heartsaver",
     audience: "Workplace, schools, and community responders",
     duration: "4 to 5 hours",
     price: "$95.00",
@@ -141,20 +141,20 @@ export const courses = [
   },
   {
     slug: "healthcare-provider-courses",
-    title: "Healthcare Provider Courses",
-    shortTitle: "BLS Provider",
+    title: "Basic Life Support",
+    shortTitle: "Basic Life Support",
     audience: "Nurses, EMTs, dentists, and clinical teams",
-    duration: "4 hours",
-    price: "$95",
+    duration: "3 to 4 hours",
+    price: "$95.00",
     priceUsd: 95,
     renewal: "Valid 2 years",
     summary:
-      "BLS Provider for licensed clinicians who need current cards for credentialing, privileging, or onboarding.",
+      "Basic Life Support (BLS) for licensed clinicians who need current cards for credentialing, privileging, or onboarding.",
     href: "/healthcare-provider-courses",
     image:
       "https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=1400&q=80",
     highlights: [
-      "BLS Provider with high-performance CPR",
+      "Basic Life Support with high-performance CPR",
       "Initial and renewal tracks",
       "Skills testing with current algorithms",
       "Hospital and clinic group sessions",
@@ -217,24 +217,24 @@ export const instructorPhoto = {
 
 export const homeClassCards = [
   {
-    title: "Adult CPR",
-    href: "/cpr-certification",
+    title: "Basic Life Support",
+    href: "/healthcare-provider-courses",
     price: "$95.00",
-    duration: "4 to 5 hours",
-    description: "Hands-on adult CPR so you can recognize cardiac arrest and start compressions with confidence.",
+    duration: "3 to 4 hours",
+    description: "Basic Life Support for healthcare providers who need current BLS cards for work, school, or credentialing.",
     image:
       "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "Clinical training setting used for adult CPR practice",
+    imageAlt: "Clinical training setting used for Basic Life Support practice",
   },
   {
-    title: "Pediatric & Infant CPR",
+    title: "Heartsaver",
     href: "/cpr-certification",
     price: "$95.00",
     duration: "4 to 5 hours",
-    description: "Age-specific CPR and choking response for children and infants in homes, schools, and childcare.",
+    description: "Heartsaver CPR for workplaces, schools, childcare, and community responders, including child and infant skills.",
     image:
       "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "Infant receiving attentive care during a pediatric health visit",
+    imageAlt: "Heartsaver CPR training for community and workplace responders",
   },
   {
     title: "AED Training",
@@ -332,12 +332,12 @@ export const faqs = [
   {
     question: "How much does CPR certification cost in Edmond, OK?",
     answer:
-      "Pulse CPR Heartsaver CPR certification is $95.00 in Edmond, Oklahoma. The class takes 4 to 5 hours. First Aid training is $69, AED training is $59, and BLS Provider is $95. Corporate on-site training for six or more students is a custom quote. Public classes meet at 1019 Waterwood Pkwy, Ste C, Edmond, OK 73034.",
+      "Pulse CPR Heartsaver certification is $95.00 in Edmond, Oklahoma, and takes 4 to 5 hours. Basic Life Support is $95.00 and takes 3 to 4 hours. First Aid training is $69, AED training is $59. Corporate on-site training for six or more students is a custom quote. Public classes meet at 1019 Waterwood Pkwy, Ste C, Edmond, OK 73034.",
   },
   {
     question: "How long is a CPR certification class?",
     answer:
-      "Adult / Heartsaver CPR certification takes 4 to 5 hours.",
+      "Heartsaver takes 4 to 5 hours. Basic Life Support takes 3 to 4 hours.",
   },
   {
     question: "What are Pulse CPR business hours?",
@@ -347,12 +347,12 @@ export const faqs = [
   {
     question: "When is the next CPR class in Edmond?",
     answer:
-      "Public Heartsaver, First Aid, AED, and BLS classes typically run weeknights and Saturdays in Edmond. Current open seats are listed at pulsecprok.com/class-calendar. Call (405) 763-6811 for the next available date if you do not see a time that works.",
+      "Public Heartsaver, First Aid, AED, and Basic Life Support classes typically run weeknights and Saturdays in Edmond. Current open seats are listed at pulsecprok.com/class-calendar. Call (405) 763-6811 for the next available date if you do not see a time that works.",
   },
   {
     question: "How long is CPR certification valid?",
     answer:
-      "Most Heartsaver CPR, First Aid, AED, and BLS Provider cards are valid for two years. We recommend scheduling renewal 30–45 days before expiration so your team never has a gap.",
+      "Most Heartsaver, First Aid, AED, and Basic Life Support cards are valid for two years. We recommend scheduling renewal 30–45 days before expiration so your team never has a gap.",
   },
   {
     question: "When do I receive my certification card?",
@@ -446,7 +446,7 @@ export const resources = [
   },
   {
     slug: "bls-vs-heartsaver",
-    title: "BLS vs Heartsaver: which CPR course is right for you?",
+    title: "Basic Life Support vs Heartsaver: which CPR course is right for you?",
     excerpt:
       "Healthcare providers and workplace responders take different courses. This guide helps HR, credentialing, and individuals pick correctly the first time.",
     category: "Courses",
@@ -464,7 +464,7 @@ export const resources = [
   },
   {
     slug: "what-to-expect-in-a-bls-class",
-    title: "What to expect in a Pulse CPR BLS class",
+    title: "What to expect in a Pulse CPR Basic Life Support class",
     excerpt:
       "From prework to high-performance CPR: a walkthrough so first-time healthcare students know exactly how the morning will go.",
     category: "Healthcare",
@@ -474,10 +474,10 @@ export const resources = [
 ] as const
 
 export const courseSelectOptions = [
-  { value: "cpr", label: "CPR Certification" },
+  { value: "cpr", label: "Heartsaver" },
   { value: "first-aid", label: "First Aid Training" },
   { value: "aed", label: "AED Training" },
-  { value: "bls", label: "BLS for Healthcare Providers" },
+  { value: "bls", label: "Basic Life Support" },
   { value: "corporate", label: "Corporate / group training" },
   { value: "unsure", label: "Not sure — help me choose" },
 ] as const

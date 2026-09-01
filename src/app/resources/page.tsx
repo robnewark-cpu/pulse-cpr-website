@@ -8,7 +8,7 @@ import { resources } from "@/lib/site"
 export const metadata = createMetadata({
   title: "CPR Resources",
   description:
-    "Guides for Oklahoma employers and students: workplace first aid, AED readiness, BLS vs Heartsaver, and how often to renew CPR certification.",
+    "Guides for Oklahoma employers and students: workplace first aid, AED readiness, Basic Life Support vs Heartsaver, and how often to renew CPR certification.",
   path: "/resources",
 })
 

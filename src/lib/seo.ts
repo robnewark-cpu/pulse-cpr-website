@@ -202,7 +202,8 @@ export function localBusinessJsonLd() {
       "CPR certification",
       "AED training",
       "First Aid",
-      "BLS Provider",
+      "Heartsaver",
+      "Basic Life Support",
       "Oklahoma workplace safety training",
     ],
     contactPoint: [
@@ -290,7 +291,9 @@ export function courseJsonLd({
   const priceUsd = price?.match(/\$(\d+(?:\.\d+)?)/)?.[1]
   const courseWorkload = duration?.includes("4 to 5") || duration?.includes("4–5")
     ? "PT5H"
-    : duration?.includes("2–3")
+    : duration?.includes("3 to 4")
+      ? "PT4H"
+      : duration?.includes("2–3")
       ? "PT3H"
       : duration?.startsWith("4 ")
         ? "PT4H"
@@ -372,7 +375,7 @@ export function howToGetCertifiedJsonLd() {
     "@type": "HowTo",
     name: "How to get CPR certified in Oklahoma with Pulse CPR",
     description:
-      "Book a Pulse CPR class in Edmond or request on-site training. Heartsaver CPR takes 4 to 5 hours.",
+      "Book a Pulse CPR class in Edmond or request on-site training. Heartsaver takes 4 to 5 hours. Basic Life Support takes 3 to 4 hours.",
     totalTime: "PT5H",
     estimatedCost: {
       "@type": "MonetaryAmount",
@@ -384,7 +387,7 @@ export function howToGetCertifiedJsonLd() {
         "@type": "HowToStep",
         position: 1,
         name: "Choose the right course",
-        text: "Heartsaver CPR/AED/First Aid is for workplaces, teachers, and community responders. BLS is for healthcare providers.",
+        text: "Heartsaver CPR/AED/First Aid is for workplaces, teachers, and community responders. Basic Life Support is for healthcare providers.",
         url: `${siteConfig.url}/resources/bls-vs-heartsaver`,
       },
       {
@@ -398,7 +401,7 @@ export function howToGetCertifiedJsonLd() {
         "@type": "HowToStep",
         position: 3,
         name: "Complete class and skills testing",
-        text: "Attend the Edmond classroom or an on-site session. Heartsaver / Adult CPR takes 4 to 5 hours of skills practice with instructor coaching.",
+        text: "Attend the Edmond classroom or an on-site session. Heartsaver takes 4 to 5 hours of skills practice with instructor coaching. Basic Life Support takes 3 to 4 hours.",
       },
       {
         "@type": "HowToStep",

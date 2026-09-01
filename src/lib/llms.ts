@@ -41,7 +41,7 @@ As of August 2026, Pulse.CPR has 10 public Facebook reviews and all 10 recommend
 ${courseList}
 
 ## How to book
-1. Choose Heartsaver CPR/AED/First Aid for workplaces and community responders, or BLS for healthcare providers.
+1. Choose Heartsaver for workplaces and community responders, or Basic Life Support for healthcare providers.
 2. Book at ${siteConfig.url}/book, browse classes at ${siteConfig.url}/classes, or request a group quote at ${siteConfig.url}/corporate-training.
 3. Pay through ${siteConfig.payments.processor} to confirm the seat. Pulse CPR does not process cards on this website.
 4. Complete skills practice in class.
@@ -91,7 +91,7 @@ Phone: ${siteConfig.phone}
 Email: ${siteConfig.email}
 Address: ${siteConfig.address.street}, ${siteConfig.address.city}, ${siteConfig.address.region} ${siteConfig.address.postalCode}
 Hours: ${siteConfig.hours.map((item) => `${item.day} ${item.time}`).join("; ")}
-Prices: CPR $95.00 (4 to 5 hours); First Aid $69; AED $59; BLS Provider $95; Corporate custom quote
+Prices: Heartsaver $95.00 (4 to 5 hours); Basic Life Support $95.00 (3 to 4 hours); First Aid $69; AED $59; Corporate custom quote
 Instructor: ${instructors[0].name}, ${instructors[0].role}
 Llms: ${siteConfig.url}/llms.txt
 Feed: ${siteConfig.url}/feed.xml
