@@ -42,6 +42,11 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   applicationName: siteConfig.name,
+  appleWebApp: {
+    capable: true,
+    title: "Pulse CPR",
+    statusBarStyle: "default",
+  },
   authors: [{ name: siteConfig.legalName }],
   creator: siteConfig.name,
   publisher: siteConfig.legalName,
@@ -56,6 +61,8 @@ export const metadata: Metadata = {
     "Pulse CPR",
     "Pulse.CPR",
     "CPR Edmond",
+    "Heartsaver Oklahoma",
+    "Basic Life Support Edmond",
     "CPR Norman",
     "CPR Tulsa",
   ],
@@ -96,8 +103,12 @@ export const metadata: Metadata = {
   },
   facebook: facebookMeta(),
   icons: {
-    icon: [{ url: "/logo.svg", type: "image/svg+xml" }],
-    apple: [{ url: "/logo.svg" }],
+    icon: [
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+      { url: "/logo.svg", type: "image/svg+xml" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
   alternates: {
     canonical: HOME_OG_URL,

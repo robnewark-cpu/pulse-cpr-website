@@ -43,7 +43,12 @@ const christineActions = [
   {
     title: "Send a photo of you (and the classroom if you have one)",
     detail:
-      "A headshot or teaching photo. Right now the About card uses your initials, and course photos are stock images.",
+      "A headshot or teaching photo. Right now the About card uses Christine’s instructor photo. Heartsaver and Basic Life Support use the class graphics she provided.",
+  },
+  {
+    title: "Approve the Heartsaver and Basic Life Support graphics",
+    detail:
+      "The homepage OUR CLASSES cards and those course pages now use the Heartsaver and Basic Life Support graphics (no doctor stock photo, no baby-feet photo). Say if any other picture should change before this goes live on PulseCPROK.com.",
   },
   {
     title: "Confirm the business facts already on the site",
@@ -57,7 +62,7 @@ const christineActions = [
   {
     title: "Confirm which cards you issue",
     detail:
-      "AHA Training Site, Red Cross, ASHI, or another card. The draft says training follows current AHA/ECC science and that students get a nationally recognized eCard. We will match the wording to the card you actually issue.",
+      "American Heart Association Training Site or another nationally recognized card. The draft says training follows current AHA/ECC science and that students get a nationally recognized certification card. We will match the wording to the card you actually issue.",
   },
   {
     title: "Confirm cancellation and same-day eCards",

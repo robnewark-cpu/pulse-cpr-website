@@ -2,7 +2,7 @@ import { Award, CalendarCheck, MapPinned, Users } from "lucide-react"
 import { Container } from "@/components/layout/container"
 
 const items = [
-  { icon: Award, label: "AHA & Red Cross Certified" },
+  { icon: Award, label: "AHA Instructor Certified" },
   { icon: MapPinned, label: "Proudly Serving Oklahoma" },
   { icon: Users, label: "Classes For All Skill Levels" },
   { icon: CalendarCheck, label: "Flexible Scheduling Available" },

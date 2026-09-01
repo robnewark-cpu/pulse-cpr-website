@@ -27,13 +27,25 @@ export function HomeClasses() {
                   href={item.href}
                   className="group flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-navy/10 transition duration-300 hover:-translate-y-1 hover:shadow-lg"
                 >
-                  <div className="relative aspect-[16/10] overflow-hidden">
+                  <div
+                    className={cn(
+                      "relative overflow-hidden",
+                      "imageFit" in item && item.imageFit === "contain"
+                        ? "aspect-square bg-white"
+                        : "aspect-[16/10]"
+                    )}
+                  >
                     <Image
                       src={item.image}
                       alt={item.imageAlt}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 28vw"
-                      className="object-cover transition duration-500 group-hover:scale-105"
+                      className={cn(
+                        "transition duration-500 group-hover:scale-105",
+                        "imageFit" in item && item.imageFit === "contain"
+                          ? "object-contain p-3"
+                          : "object-cover"
+                      )}
                     />
                   </div>
                   <div className="flex flex-1 flex-col p-5">

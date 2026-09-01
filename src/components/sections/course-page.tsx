@@ -45,7 +45,7 @@ export function CoursePage({
             { name: "Home", path: "/" },
             { name: title, path },
           ]),
-          courseJsonLd({ name: title, description, path, price, duration }),
+          courseJsonLd({ name: title, description, path, price, duration, image }),
           faqJsonLd(faqs),
         ]}
       />
@@ -59,13 +59,19 @@ export function CoursePage({
       <section className="py-12 sm:py-16">
         <Container className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
           <div>
-            <div className="relative aspect-[16/10] overflow-hidden rounded-2xl">
+            <div
+              className={
+                image.startsWith("/images/")
+                  ? "relative aspect-square overflow-hidden rounded-2xl bg-white ring-1 ring-navy/10"
+                  : "relative aspect-[16/10] overflow-hidden rounded-2xl"
+              }
+            >
               <Image
                 src={image}
                 alt={imageAlt}
                 fill
                 sizes="(max-width: 1024px) 100vw, 55vw"
-                className="object-cover"
+                className={image.startsWith("/images/") ? "object-contain p-4" : "object-cover"}
               />
             </div>
             <h2 className="mt-10 text-2xl font-bold">What you will be able to do</h2>

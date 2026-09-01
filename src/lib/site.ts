@@ -3,7 +3,7 @@ export const siteConfig = {
   legalName: "Pulse CPR Oklahoma, LLC",
   tagline: "Learn It. Know It. Save A Life.",
   description:
-    "Pulse CPR — Learn It. Know It. Save A Life. American Heart Association and American Red Cross CPR, AED, First Aid, and BLS certification from Edmond, Oklahoma, and on-site across the state.",
+    "Pulse CPR — Learn It. Know It. Save A Life. American Heart Association CPR, AED, First Aid, Heartsaver, and Basic Life Support certification from Edmond, Oklahoma, and on-site across the state.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://pulsecprok.com",
   phone: "(405) 763-6811",
   phoneHref: "tel:+14057636811",
@@ -75,6 +75,22 @@ export const stats = [
   { value: "Same-week", label: "Corporate scheduling" },
 ] as const
 
+export const classGraphics = {
+  basicLifeSupport: {
+    src: "/images/basic-life-support.jpg",
+    alt: "Basic Life Support class graphic for Pulse CPR in Edmond, Oklahoma — navy and red BASIC LIFE SUPPORT badge with CPR hands and heartbeat.",
+  },
+  heartsaver: {
+    src: "/images/heartsaver.jpg",
+    alt: "Heartsaver CPR, AED, and First Aid class graphic for Pulse CPR in Edmond, Oklahoma. Be Prepared. Save Lives.",
+  },
+} as const
+
+export function absoluteUrl(path: string) {
+  if (path.startsWith("http://") || path.startsWith("https://")) return path
+  return new URL(path, siteConfig.url).toString()
+}
+
 export const courses = [
   {
     slug: "cpr-certification",
@@ -88,8 +104,7 @@ export const courses = [
     summary:
       "Adult, child, and infant CPR with choking response. Built for teachers, coaches, childcare staff, and any team that needs a nationally recognized card.",
     href: "/cpr-certification",
-    image:
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1400&q=80",
+    image: classGraphics.heartsaver.src,
     highlights: [
       "Adult, child, and infant CPR",
       "Choking relief for all ages",
@@ -151,8 +166,7 @@ export const courses = [
     summary:
       "Basic Life Support (BLS) for licensed clinicians who need current cards for credentialing, privileging, or onboarding.",
     href: "/healthcare-provider-courses",
-    image:
-      "https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=1400&q=80",
+    image: classGraphics.basicLifeSupport.src,
     highlights: [
       "Basic Life Support with high-performance CPR",
       "Initial and renewal tracks",
@@ -222,9 +236,9 @@ export const homeClassCards = [
     price: "$95.00",
     duration: "3 to 4 hours",
     description: "Basic Life Support for healthcare providers who need current BLS cards for work, school, or credentialing.",
-    image:
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "Clinical training setting used for Basic Life Support practice",
+    image: classGraphics.basicLifeSupport.src,
+    imageAlt: classGraphics.basicLifeSupport.alt,
+    imageFit: "contain" as const,
   },
   {
     title: "Heartsaver",
@@ -232,9 +246,9 @@ export const homeClassCards = [
     price: "$95.00",
     duration: "4 to 5 hours",
     description: "Heartsaver CPR for workplaces, schools, childcare, and community responders, including child and infant skills.",
-    image:
-      "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "Heartsaver CPR training for community and workplace responders",
+    image: classGraphics.heartsaver.src,
+    imageAlt: classGraphics.heartsaver.alt,
+    imageFit: "contain" as const,
   },
   {
     title: "AED Training",

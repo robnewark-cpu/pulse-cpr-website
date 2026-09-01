@@ -34,15 +34,30 @@ export default function robots(): MetadataRoute.Robots {
       })),
       {
         userAgent: "facebookexternalhit",
-        allow: ["/", "/og-image.jpg"],
+        allow: [
+          "/",
+          "/og-image.jpg",
+          "/images/basic-life-support.jpg",
+          "/images/heartsaver.jpg",
+        ],
       },
       {
         userAgent: "Facebot",
-        allow: ["/", "/og-image.jpg"],
+        allow: [
+          "/",
+          "/og-image.jpg",
+          "/images/basic-life-support.jpg",
+          "/images/heartsaver.jpg",
+        ],
       },
       {
         userAgent: "LinkedInBot",
-        allow: ["/", "/og-image.jpg"],
+        allow: [
+          "/",
+          "/og-image.jpg",
+          "/images/basic-life-support.jpg",
+          "/images/heartsaver.jpg",
+        ],
       },
     ],
     sitemap: `${siteConfig.url}/sitemap.xml`,
