@@ -48,7 +48,7 @@ export async function sendRegistrationConfirmation(
     <p><strong>${classSummary(session)}</strong></p>
     <p>Seats requested: ${registration.seats}<br/>Price: ${formatPrice(session.price)}</p>
     <p>Complete payment with ${siteConfig.payments.processor} to confirm your seat. Pulse CPR does not process cards on this website.</p>
-    <p>Questions? Call ${siteConfig.phone} or email ${siteConfig.email}.</p>
+    <p>Questions? Call the office at ${siteConfig.officePhone} or cell ${siteConfig.phone}, or email ${siteConfig.email}.</p>
     <p>Pulse CPR<br/>${siteConfig.address.street}<br/>${siteConfig.address.city}, ${siteConfig.address.region} ${siteConfig.address.postalCode}<br/>${siteConfig.email}</p>
   `
   const result = await sendEmail({

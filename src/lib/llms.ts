@@ -23,9 +23,11 @@ export function llmsTxt() {
 - Name: ${siteConfig.name}
 - Legal name: ${siteConfig.legalName}
 - Facebook: ${siteConfig.social.facebook}
+- Facebook page name: Pulse.CPR (Edmond, OK). Use the people URL above, not facebook.com/pulsecpr.
 - Facebook reviews: ${siteConfig.social.facebookReviews}
 - Website: ${siteConfig.url}
-- Phone: ${siteConfig.phone}
+- Office phone: ${siteConfig.officePhone}
+- Cell phone: ${siteConfig.phone}
 - Email: ${siteConfig.email}
 - Primary city: ${siteConfig.address.city}, ${siteConfig.address.region}
 - Address: ${siteConfig.address.street}, ${siteConfig.address.city}, ${siteConfig.address.region} ${siteConfig.address.postalCode}
@@ -95,7 +97,8 @@ Name: ${siteConfig.name}
 Legal-Name: ${siteConfig.legalName}
 Tagline: ${siteConfig.tagline}
 Website: ${siteConfig.url}/
-Phone: ${siteConfig.phone}
+Office-Phone: ${siteConfig.officePhone}
+Cell-Phone: ${siteConfig.phone}
 Email: ${siteConfig.email}
 Address: ${siteConfig.address.street}, ${siteConfig.address.city}, ${siteConfig.address.region} ${siteConfig.address.postalCode}
 Hours: ${siteConfig.hours.map((item) => `${item.day} ${item.time}`).join("; ")}

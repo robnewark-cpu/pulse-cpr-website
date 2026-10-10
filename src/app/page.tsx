@@ -17,7 +17,7 @@ import { cn } from "@/lib/utils"
 export const metadata = createMetadata({
   title: siteConfig.name,
   description:
-    "Pulse CPR — Learn It. Know It. Save A Life. Heartsaver is $95.00 and takes 4 to 5 hours. Basic Life Support is $95.00 and takes 3 to 4 hours. First Aid $69, AED $59. Hours: Monday–Friday 8:00 AM – 6:00 PM, Saturday 9:00 AM – 2:00 PM. Call (405) 763-6811.",
+    "Pulse CPR — Learn It. Know It. Save A Life. Heartsaver is $95.00 and takes 4 to 5 hours. Basic Life Support is $95.00 and takes 3 to 4 hours. First Aid $69, AED $59. Public classes start at 10:00 AM. Office (405) 373-6364. Cell (405) 763-6811.",
   path: "/",
   keywords: [
     "CPR certification Oklahoma City",

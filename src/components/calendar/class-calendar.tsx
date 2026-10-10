@@ -5,6 +5,7 @@ import Link from "next/link"
 import { Search } from "lucide-react"
 import { Calendar } from "@/components/ui/calendar"
 import { buttonVariants } from "@/components/ui/button-variants"
+import { isPublishedClassId } from "@/lib/tms/fallback"
 import { COURSE_TYPES, type ClassRecord } from "@/lib/tms/types"
 import {
   formatClassDate,
@@ -128,7 +129,7 @@ export function PublicClassCalendar({
           <p className="mt-8 rounded-2xl bg-white p-6 text-sm text-muted-foreground ring-1 ring-navy/10">
             {selectedDate
               ? "No classes on that day. Pick another date or show all upcoming classes."
-              : "No public classes are posted yet. Call Pulse CPR, request a date, or check back after the instructor adds a class."}
+              : "No upcoming public classes match that search. Call Pulse CPR or request a custom date."}
           </p>
         ) : (
           <ul className="mt-6 divide-y overflow-hidden rounded-2xl bg-white ring-1 ring-navy/10">
@@ -157,7 +158,7 @@ export function PublicClassCalendar({
                     {open ? (
                       <Link
                         href={
-                          liveRegistration
+                          liveRegistration && !isPublishedClassId(session.id)
                             ? `/register/${session.id}`
                             : `/book?course=${encodeURIComponent(session.course_type.toLowerCase())}&date=${session.class_date}`
                         }

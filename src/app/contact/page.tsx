@@ -10,7 +10,7 @@ import { siteConfig } from "@/lib/site"
 export const metadata = createMetadata({
   title: "Contact Pulse CPR",
   description:
-    "Contact Pulse CPR in Edmond for class questions, certification cards, and corporate scheduling. Call (405) 763-6811, email contact@pulsecprok.com, or send a message.",
+    "Contact Pulse CPR in Edmond for class questions, certification cards, and corporate scheduling. Call the office at (405) 373-6364 or cell (405) 763-6811, email contact@pulsecprok.com, or send a message.",
   path: "/contact",
 })
 
@@ -55,9 +55,15 @@ export default function ContactPage() {
                 </li>
                 <li className="flex gap-3">
                   <Phone className="mt-0.5 size-4 text-primary" aria-hidden="true" />
-                  <a href={siteConfig.phoneHref} className="text-navy hover:underline">
-                    {siteConfig.phone}
-                  </a>
+                  <span>
+                    <a href={siteConfig.officePhoneHref} className="text-navy hover:underline">
+                      {siteConfig.officePhoneLabel}: {siteConfig.officePhone}
+                    </a>
+                    <br />
+                    <a href={siteConfig.phoneHref} className="text-navy hover:underline">
+                      {siteConfig.phoneLabel}: {siteConfig.phone}
+                    </a>
+                  </span>
                 </li>
                 <li className="flex gap-3">
                   <Mail className="mt-0.5 size-4 text-primary" aria-hidden="true" />

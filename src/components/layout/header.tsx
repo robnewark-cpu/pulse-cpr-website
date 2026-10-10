@@ -110,11 +110,18 @@ export function Header() {
                   Sign Up Today
                 </Button>
                 <a
-                  href={siteConfig.phoneHref}
+                  href={siteConfig.officePhoneHref}
                   className="mt-2 inline-flex items-center justify-center gap-2 rounded-xl border px-4 py-3 text-sm font-medium text-navy"
                 >
                   <Phone className="size-4" aria-hidden="true" />
-                  {siteConfig.phone}
+                  {siteConfig.officePhoneLabel} {siteConfig.officePhone}
+                </a>
+                <a
+                  href={siteConfig.phoneHref}
+                  className="inline-flex items-center justify-center gap-2 rounded-xl border px-4 py-3 text-sm font-medium text-navy"
+                >
+                  <Phone className="size-4" aria-hidden="true" />
+                  {siteConfig.phoneLabel} {siteConfig.phone}
                 </a>
                 <a
                   href={`mailto:${siteConfig.email}`}

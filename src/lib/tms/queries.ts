@@ -1,6 +1,6 @@
 import { createSupabaseServerClient } from "@/lib/supabase/server"
 import { fallbackClasses } from "@/lib/tms/fallback"
-import { addDays } from "@/lib/tms/format"
+import { addDays, chicagoToday } from "@/lib/tms/format"
 import type {
   ClassInput,
   ClassRecord,
@@ -48,19 +48,42 @@ function mapRegistration(row: Record<string, unknown>): RegistrationRecord {
   }
 }
 
+function classKey(session: { class_date: string; name: string }) {
+  return `${session.class_date}|${session.name}`
+}
+
+function sortClasses<T extends { class_date: string; start_time: string }>(sessions: T[]) {
+  return [...sessions].sort(
+    (left, right) =>
+      left.class_date.localeCompare(right.class_date) || left.start_time.localeCompare(right.start_time)
+  )
+}
+
 export async function listPublicClasses() {
+  const today = chicagoToday()
+  const published = fallbackClasses().filter(
+    (session) => session.status === "scheduled" && session.class_date >= today
+  )
   if (!isSupabaseConfigured()) {
-    return fallbackClasses().filter((session) => session.status === "scheduled")
+    return sortClasses(published)
   }
-  const supabase = await createSupabaseServerClient()
-  const { data, error } = await supabase
-    .from("classes")
-    .select("*")
-    .eq("status", "scheduled")
-    .order("class_date", { ascending: true })
-    .order("start_time", { ascending: true })
-  if (error) throw error
-  return (data ?? []).map((row) => mapClass(row as Record<string, unknown>))
+  try {
+    const supabase = await createSupabaseServerClient()
+    const { data, error } = await supabase
+      .from("classes")
+      .select("*")
+      .eq("status", "scheduled")
+      .order("class_date", { ascending: true })
+      .order("start_time", { ascending: true })
+    if (error) throw error
+    const live = (data ?? [])
+      .map((row) => mapClass(row as Record<string, unknown>))
+      .filter((session) => session.class_date >= today)
+    const liveKeys = new Set(live.map(classKey))
+    return sortClasses([...live, ...published.filter((session) => !liveKeys.has(classKey(session)))])
+  } catch {
+    return sortClasses(published)
+  }
 }
 
 export async function getPublicClass(id: string) {

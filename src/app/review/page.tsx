@@ -52,7 +52,7 @@ const christineActions = [
   },
   {
     title: "Confirm the business facts already on the site",
-    detail: `Phone ${siteConfig.phone}. Email ${siteConfig.email}. Classroom ${siteConfig.address.street}, ${siteConfig.address.city}, ${siteConfig.address.region} ${siteConfig.address.postalCode}. Hours: weekdays 8:00 AM–6:00 PM, Saturday 9:00 AM–2:00 PM, Sunday by appointment. Legal name on the site: ${siteConfig.legalName}.`,
+    detail: `Office ${siteConfig.officePhone}. Cell ${siteConfig.phone}. Email ${siteConfig.email}. Classroom ${siteConfig.address.street}, ${siteConfig.address.city}, ${siteConfig.address.region} ${siteConfig.address.postalCode}. Hours: weekdays 8:00 AM–6:00 PM, Saturday 9:00 AM–2:00 PM, Sunday by appointment. Legal name on the site: ${siteConfig.legalName}.`,
   },
   {
     title: "Confirm prices",
@@ -70,9 +70,9 @@ const christineActions = [
       "Draft policy: free reschedule with 48 hours’ notice; same-day cancel may forfeit the seat. eCards typically same business day. Change either if that is not how you run class.",
   },
   {
-    title: "Add real class dates from your phone",
+    title: "Posted public class dates",
     detail:
-      "The public calendar is empty on purpose. Follow How to add a class from your phone on this page: sign in at /admin/login, tap New class, and students will see the date on Schedule.",
+      "The public calendar now lists Christine’s 10:00 AM dates: BLS on October 10, 24, and November 13; Heartsaver on October 16, 30, and November 7. Extra dates can still be added from /admin/login.",
   },
   {
     title: "Confirm the live domain",
@@ -116,9 +116,9 @@ const builderActions = [
       "Paste resume into instructors[0] in src/lib/site.ts, add her photo, correct prices, and replace AHA/eCard language to match the card she issues.",
   },
   {
-    title: "Calendar: connect Supabase if it is not on yet, then she adds dates",
+    title: "Calendar: posted dates show even if admin is empty",
     detail:
-      "The public calendar stays empty until she posts a class. For live registration: create a Supabase project, run supabase/schema.sql, add URL + anon key, create her /admin login. If demo dates were already inserted, run supabase/clear-classes.sql.",
+      "The October–November BLS and Heartsaver dates are published on the public calendar. Live seat checkout still needs Supabase. Extra dates can be added at /admin/login.",
   },
   {
     title: "Optional today, not required to publish",
@@ -127,7 +127,7 @@ const builderActions = [
   },
   {
     title: "Google Business Profile (AI and Maps visibility)",
-    detail: `Claim or create the Google Business Profile with this exact NAP so Google and AI answers match the website: Pulse CPR; ${siteConfig.address.street}, ${siteConfig.address.city}, ${siteConfig.address.region} ${siteConfig.address.postalCode}; ${siteConfig.phone}; website https://pulsecprok.com/; hours Monday–Friday 8:00 AM–6:00 PM, Saturday 9:00 AM–2:00 PM, Sunday by appointment. Primary categories: CPR class and First aid class. Do not invent Google reviews. Link the Facebook page Pulse.CPR.`,
+    detail: `Claim or create the Google Business Profile with this exact NAP so Google and AI answers match the website: Pulse CPR; ${siteConfig.address.street}, ${siteConfig.address.city}, ${siteConfig.address.region} ${siteConfig.address.postalCode}; office ${siteConfig.officePhone}; cell ${siteConfig.phone}; website https://pulsecprok.com/; hours Monday–Friday 8:00 AM–6:00 PM, Saturday 9:00 AM–2:00 PM, Sunday by appointment. Primary categories: CPR class and First aid class. Do not invent Google reviews. Link the Facebook page at ${siteConfig.social.facebook} (Pulse.CPR, Edmond OK). Do not use facebook.com/pulsecpr — that is a different company.`,
   },
 ]
 
@@ -163,7 +163,7 @@ export default function ReviewPage() {
               <li>• Your bio and credentials (waiting on resume)</li>
               <li>• Your photo (initials “CO” for now)</li>
               <li>• Stock photos on course pages</li>
-              <li>• Public calendar is empty until you add a class</li>
+              <li>• Extra class dates can still be added from your phone</li>
               <li>• Forms on this draft do not email you yet</li>
               <li>• Legal name {siteConfig.legalName} — confirm or correct</li>
             </ul>
