@@ -9,6 +9,7 @@ import {
   testimonials,
 } from "@/lib/site"
 import type { ClassRecord } from "@/lib/tms/types"
+import { isPublishedClassId } from "@/lib/tms/fallback"
 import { formatTimeRange } from "@/lib/tms/format"
 
 export const SHARE_IMAGE_URL = "https://pulsecprok.com/og-image.jpg"
@@ -16,7 +17,7 @@ export const HOME_OG_URL = "https://pulsecprok.com/"
 export const HOME_OG_TITLE =
   "Pulse CPR | CPR, BLS, AED & First Aid Training in Oklahoma"
 export const HOME_OG_DESCRIPTION =
-  "Pulse CPR — Learn It. Know It. Save A Life. Heartsaver, Basic Life Support, AED, and First Aid classes in Edmond, Oklahoma. Taught by an American Heart Association Instructor."
+  "Pulse CPR — Learn It. Know It. Save A Life. Heartsaver and Basic Life Support classes in Edmond start at 10:00 AM. Office (405) 373-6364. Cell (405) 763-6811."
 export const HOME_TWITTER_DESCRIPTION = "Pulse CPR — Learn It. Know It. Save A Life."
 
 /** Facebook's public default App ID. Clears the Sharing Debugger `fb:app_id` warning. */
@@ -38,6 +39,19 @@ export function geoAndFacebookOtherTags() {
     ICBM: `${siteConfig.geo.latitude}, ${siteConfig.geo.longitude}`,
   }
 }
+
+export const facebookBusinessTags = [
+  { property: "og:see_also", content: siteConfig.social.facebook },
+  { property: "business:contact_data:street_address", content: siteConfig.address.street },
+  { property: "business:contact_data:locality", content: siteConfig.address.city },
+  { property: "business:contact_data:region", content: siteConfig.address.region },
+  { property: "business:contact_data:postal_code", content: siteConfig.address.postalCode },
+  { property: "business:contact_data:country_name", content: "United States" },
+  { property: "business:contact_data:phone_number", content: "+1-405-763-6811" },
+  { property: "business:contact_data:website", content: HOME_OG_URL },
+  { property: "place:location:latitude", content: String(siteConfig.geo.latitude) },
+  { property: "place:location:longitude", content: String(siteConfig.geo.longitude) },
+] as const
 
 export const ogImage = {
   url: SHARE_IMAGE_URL,
@@ -143,7 +157,7 @@ export function localBusinessJsonLd() {
     name: siteConfig.name,
     legalName: siteConfig.legalName,
     url: siteConfig.url,
-    telephone: siteConfig.phone,
+    telephone: [siteConfig.officePhone, siteConfig.phone],
     email: siteConfig.email,
     image: [
       ogImage.url,
@@ -237,8 +251,15 @@ export function localBusinessJsonLd() {
     contactPoint: [
       {
         "@type": "ContactPoint",
-        telephone: siteConfig.phone,
+        telephone: siteConfig.officePhone,
         email: siteConfig.email,
+        contactType: "customer service",
+        areaServed: "US-OK",
+        availableLanguage: ["English"],
+      },
+      {
+        "@type": "ContactPoint",
+        telephone: siteConfig.phone,
         contactType: "customer service",
         areaServed: "US-OK",
         availableLanguage: ["English"],
@@ -516,7 +537,12 @@ export function classEventJsonLd(sessions: ClassRecord[]) {
     performer: { "@id": `${siteConfig.url}/#business` },
     offers: {
       "@type": "Offer",
-      url: new URL(`/register/${session.id}`, siteConfig.url).toString(),
+      url: new URL(
+        isPublishedClassId(session.id)
+          ? `/book?course=${encodeURIComponent(session.course_type.toLowerCase())}&date=${session.class_date}`
+          : `/register/${session.id}`,
+        siteConfig.url
+      ).toString(),
       price: session.price || undefined,
       priceCurrency: "USD",
       availability:

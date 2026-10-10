@@ -34,6 +34,7 @@ export default async function BookPage({
   const defaultCourse = courseSelectOptions.some((option) => option.value === mapped)
     ? mapped
     : undefined
+  const defaultDate = /^\d{4}-\d{2}-\d{2}$/.test(params.date ?? "") ? params.date : undefined
 
   return (
     <>
@@ -46,12 +47,12 @@ export default async function BookPage({
       <PageHero
         eyebrow="Online booking"
         title="Reserve a seat or request a private date"
-        description={`Public seats are listed on the class calendar when posted. Use this form for a custom date, on-site session, or if you are not sure which course you need. Payments are processed by ${siteConfig.payments.processor}.`}
+        description={`Public Basic Life Support and Heartsaver seats are listed on the class calendar and start at 10:00 AM. Use this form for a posted date, a custom date, or an on-site session. Payments are processed by ${siteConfig.payments.processor}.`}
       />
       <section className="py-12 sm:py-16">
         <Container className="max-w-3xl">
           <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-navy/10 sm:p-8">
-            <BookingForm defaultCourse={defaultCourse} />
+            <BookingForm defaultCourse={defaultCourse} defaultDate={defaultDate} />
           </div>
         </Container>
       </section>

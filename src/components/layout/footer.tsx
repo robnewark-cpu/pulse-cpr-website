@@ -79,11 +79,20 @@ export function Footer() {
             </li>
             <li>
               <a
+                href={siteConfig.officePhoneHref}
+                className="inline-flex min-h-11 items-center gap-2 hover:text-white"
+              >
+                <Phone className="size-4" aria-hidden="true" />
+                {siteConfig.officePhoneLabel} {siteConfig.officePhone}
+              </a>
+            </li>
+            <li>
+              <a
                 href={siteConfig.phoneHref}
                 className="inline-flex min-h-11 items-center gap-2 hover:text-white"
               >
                 <Phone className="size-4" aria-hidden="true" />
-                {siteConfig.phone}
+                {siteConfig.phoneLabel} {siteConfig.phone}
               </a>
             </li>
             <li>
@@ -119,7 +128,7 @@ export function Footer() {
             </a>
           </div>
           <p className="mt-4 text-xs leading-5 text-white/55">
-            Pulse.CPR on Facebook · Edmond classroom and on-site classes across Oklahoma.
+            Pulse.CPR on Facebook (Edmond, OK) · Edmond classroom and on-site classes across Oklahoma.
           </p>
         </div>
       </Container>

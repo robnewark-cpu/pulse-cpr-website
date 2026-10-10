@@ -1,5 +1,9 @@
 const TIME_ZONE = "America/Chicago"
 
+export function chicagoToday() {
+  return chicagoParts().date
+}
+
 function chicagoParts(date = new Date()) {
   const parts = new Intl.DateTimeFormat("en-US", {
     timeZone: TIME_ZONE,

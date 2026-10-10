@@ -7,6 +7,10 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://pulsecprok.com",
   phone: "(405) 763-6811",
   phoneHref: "tel:+14057636811",
+  phoneLabel: "Cell",
+  officePhone: "(405) 373-6364",
+  officePhoneHref: "tel:+14053736364",
+  officePhoneLabel: "Office",
   email: "contact@pulsecprok.com",
   bookingEmail: "contact@pulsecprok.com",
   address: {
@@ -43,9 +47,8 @@ export const siteConfig = {
   ],
   social: {
     facebookPageId: "61572683277410",
-    facebook: "https://www.facebook.com/profile.php?id=61572683277410",
-    facebookReviews:
-      "https://www.facebook.com/profile.php?id=61572683277410&sk=reviews",
+    facebook: "https://www.facebook.com/people/PulseCPR/61572683277410/",
+    facebookReviews: "https://www.facebook.com/people/PulseCPR/61572683277410/reviews",
   },
   payments: {
     processor: "Square",
@@ -362,12 +365,12 @@ export const faqs = [
   {
     question: "What are Pulse CPR business hours?",
     answer:
-      "The Edmond classroom is open Monday–Friday 8:00 AM – 6:00 PM and Saturday 9:00 AM – 2:00 PM. Sunday is by appointment. Call (405) 763-6811 or email contact@pulsecprok.com.",
+      "The Edmond classroom is open Monday–Friday 8:00 AM – 6:00 PM and Saturday 9:00 AM – 2:00 PM. Sunday is by appointment. Call the office at (405) 373-6364 or cell (405) 763-6811, or email contact@pulsecprok.com.",
   },
   {
     question: "When is the next CPR class in Edmond?",
     answer:
-      "Public Heartsaver, First Aid, AED, and Basic Life Support classes typically run weeknights and Saturdays in Edmond. Current open seats are listed at pulsecprok.com/class-calendar. Call (405) 763-6811 for the next available date if you do not see a time that works.",
+      "Upcoming public classes in Edmond start at 10:00 AM. Basic Life Support: October 10, October 24, and November 13. Heartsaver: October 16, October 30, and November 7. See pulsecprok.com/class-calendar. Call the office at (405) 373-6364 or cell (405) 763-6811 if you need another date.",
   },
   {
     question: "How long is CPR certification valid?",
@@ -427,7 +430,7 @@ export const faqs = [
   {
     question: "How do I book a CPR class in Oklahoma?",
     answer:
-      "Use the booking form at pulsecprok.com/book, call (405) 763-6811, or email contact@pulsecprok.com. Request an on-site quote for groups of six or more. Class payments are processed by Square.",
+      "Use the booking form at pulsecprok.com/book, call the office at (405) 373-6364 or cell (405) 763-6811, or email contact@pulsecprok.com. Request an on-site quote for groups of six or more. Class payments are processed by Square.",
   },
   {
     question: "How do I pay for a class?",

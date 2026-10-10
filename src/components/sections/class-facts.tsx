@@ -77,15 +77,19 @@ export function ClassFacts({
               ))}
             </ul>
             <p className="mt-4 text-sm leading-6 text-muted-foreground">
-              Public classes typically run weeknights and Saturdays. Open seats are posted on the{" "}
+              Upcoming public classes start at 10:00 AM. Open seats are on the{" "}
               <Link href="/class-calendar" className="font-semibold text-navy underline-offset-4 hover:underline">
                 class calendar
               </Link>
-              . Call{" "}
+              . Call the office at{" "}
+              <a href={siteConfig.officePhoneHref} className="font-semibold text-navy underline-offset-4 hover:underline">
+                {siteConfig.officePhone}
+              </a>{" "}
+              or cell{" "}
               <a href={siteConfig.phoneHref} className="font-semibold text-navy underline-offset-4 hover:underline">
                 {siteConfig.phone}
-              </a>{" "}
-              for the next available date.
+              </a>
+              .
             </p>
           </div>
         </div>

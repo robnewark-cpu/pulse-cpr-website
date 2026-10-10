@@ -14,6 +14,7 @@ import {
   HOME_OG_URL,
   HOME_TWITTER_DESCRIPTION,
   SHARE_IMAGE_URL,
+  facebookBusinessTags,
   facebookMeta,
   geoAndFacebookOtherTags,
   localBusinessJsonLd,
@@ -141,6 +142,9 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta property="fb:pages" content={siteConfig.social.facebookPageId} />
+        {facebookBusinessTags.map((tag) => (
+          <meta key={tag.property} property={tag.property} content={tag.content} />
+        ))}
       </head>
       <body
         className={`${plusJakarta.variable} ${geistMono.variable} flex min-h-screen flex-col font-sans antialiased`}

@@ -13,7 +13,7 @@ export const dynamic = "force-dynamic"
 export const metadata = createMetadata({
   title: "Class Calendar",
   description:
-    "Pulse CPR class calendar in Edmond. Public dates appear here after the instructor posts them. Request a private date anytime.",
+    "Pulse CPR class calendar in Edmond. Public Basic Life Support and Heartsaver classes start at 10:00 AM. Request a private date anytime.",
   path: "/class-calendar",
 })
 
@@ -34,7 +34,7 @@ export default async function ClassCalendarPage() {
       <PageHero
         eyebrow="Edmond classroom"
         title="Class calendar"
-        description="Public certification dates appear here when Pulse CPR posts them. Request a private or on-site date anytime."
+        description="Public Basic Life Support and Heartsaver classes start at 10:00 AM in Edmond. Request a private or on-site date anytime."
         primaryCta={{ href: "/book", label: "Request a private date" }}
         secondaryCta={{ href: "/corporate-training", label: "On-site training" }}
       />
@@ -47,8 +47,8 @@ export default async function ClassCalendarPage() {
               typically run weeknights and Saturdays at {siteConfig.address.street},{" "}
               {siteConfig.address.city}, {siteConfig.address.region} {siteConfig.address.postalCode}.
               Edmond classroom hours are Monday–Friday 8:00 AM – 6:00 PM and Saturday 9:00 AM – 2:00
-              PM; Sunday is by appointment. If no date is listed below, call {siteConfig.phone} or
-              request a private class.
+              PM; Sunday is by appointment. Upcoming public classes start at 10:00 AM. Call the office
+              at {siteConfig.officePhone} or cell {siteConfig.phone} if you need another date.
             </p>
           </div>
           <PublicClassCalendar classes={classes} liveRegistration={isSupabaseConfigured()} />

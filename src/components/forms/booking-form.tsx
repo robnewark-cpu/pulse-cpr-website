@@ -12,7 +12,13 @@ import {
 } from "@/components/forms/form-shared"
 import { courseSelectOptions, siteConfig } from "@/lib/site"
 
-export function BookingForm({ defaultCourse }: { defaultCourse?: string }) {
+export function BookingForm({
+  defaultCourse,
+  defaultDate,
+}: {
+  defaultCourse?: string
+  defaultDate?: string
+}) {
   const [state, action, pending] = useFormAction(submitBooking)
 
   return (
@@ -57,7 +63,14 @@ export function BookingForm({ defaultCourse }: { defaultCourse?: string }) {
       </div>
       <div className="grid gap-4 sm:grid-cols-2">
         <Field label="Preferred date" name="preferredDate" error={state.fieldErrors?.preferredDate}>
-          <input id="preferredDate" name="preferredDate" type="date" required className={fieldClassName} />
+          <input
+            id="preferredDate"
+            name="preferredDate"
+            type="date"
+            required
+            defaultValue={defaultDate}
+            className={fieldClassName}
+          />
         </Field>
         <Field label="Training location" name="location" error={state.fieldErrors?.location}>
           <select id="location" name="location" required defaultValue="" className={selectClassName}>
