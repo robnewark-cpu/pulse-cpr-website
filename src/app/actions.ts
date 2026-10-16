@@ -1,6 +1,7 @@
 "use server"
 
 import { z } from "zod"
+import { notifyInstructor } from "@/lib/notify"
 import { siteConfig } from "@/lib/site"
 
 export type FormState = {
@@ -52,20 +53,24 @@ const newsletterSchema = z.object({
   email: emailSchema,
 })
 
-async function deliver(payload: Record<string, unknown>) {
-  const webhook = process.env.FORM_WEBHOOK_URL
-  if (webhook) {
-    const response = await fetch(webhook, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    })
-    if (!response.ok) {
-      throw new Error("Delivery failed")
-    }
-    return
+function asFields(data: Record<string, unknown>) {
+  const fields: Record<string, string> = {}
+  for (const [key, value] of Object.entries(data)) {
+    if (value == null || value === "") continue
+    fields[key] = String(value)
   }
-  console.info("[Pulse CPR lead]", payload)
+  return fields
+}
+
+async function deliver(type: string, subject: string, data: Record<string, unknown>) {
+  const result = await notifyInstructor({
+    type,
+    subject,
+    fields: asFields(data),
+  })
+  if (!result.delivered) {
+    throw new Error("Delivery failed")
+  }
 }
 
 function flattenErrors(error: z.ZodError): Record<string, string> {
@@ -104,7 +109,7 @@ export async function submitContact(
   }
 
   try {
-    await deliver({ type: "contact", ...parsed.data, receivedAt: new Date().toISOString() })
+    await deliver("contact", `New Pulse CPR message from ${parsed.data.name}`, parsed.data)
     return {
       status: "success",
       message: "Thank you. A Pulse CPR coordinator will reply within one business day.",
@@ -141,7 +146,11 @@ export async function submitBooking(
   }
 
   try {
-    await deliver({ type: "booking", ...parsed.data, receivedAt: new Date().toISOString() })
+    await deliver(
+      "booking",
+      `New class signup: ${parsed.data.name} — ${parsed.data.course} on ${parsed.data.preferredDate}`,
+      parsed.data
+    )
     return {
       status: "success",
       message:
@@ -180,7 +189,7 @@ export async function submitQuote(
   }
 
   try {
-    await deliver({ type: "corporate-quote", ...parsed.data, receivedAt: new Date().toISOString() })
+    await deliver("corporate-quote", `New corporate quote from ${parsed.data.company}`, parsed.data)
     return {
       status: "success",
       message:
@@ -211,7 +220,7 @@ export async function submitNewsletter(
   }
 
   try {
-    await deliver({ type: "newsletter", ...parsed.data, receivedAt: new Date().toISOString() })
+    await deliver("newsletter", `Newsletter signup: ${parsed.data.email}`, parsed.data)
     return {
       status: "success",
       message: "You are on the list. Renewal reminders and class openings will come to this inbox.",

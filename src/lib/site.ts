@@ -13,6 +13,7 @@ export const siteConfig = {
   officePhoneLabel: "Office",
   email: "contact@pulsecprok.com",
   bookingEmail: "contact@pulsecprok.com",
+  notifyEmails: ["contact@pulsecprok.com", "Pulse.CPR2024@gmail.com"],
   address: {
     street: "1019 Waterwood Pkwy, Ste C",
     city: "Edmond",

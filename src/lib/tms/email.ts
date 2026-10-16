@@ -6,7 +6,12 @@ function fromAddress() {
   return process.env.EMAIL_FROM ?? `Pulse CPR <${siteConfig.email}>`
 }
 
-async function sendEmail(input: { to: string | string[]; subject: string; html: string }) {
+export async function sendEmail(input: {
+  to: string | string[]
+  subject: string
+  html: string
+  replyTo?: string
+}) {
   const key = process.env.RESEND_API_KEY
   if (!key) {
     console.info("[Pulse CPR email]", { to: input.to, subject: input.subject })
@@ -22,6 +27,7 @@ async function sendEmail(input: { to: string | string[]; subject: string; html: 
     body: JSON.stringify({
       from: fromAddress(),
       to: Array.isArray(input.to) ? input.to : [input.to],
+      reply_to: input.replyTo || undefined,
       subject: input.subject,
       html: input.html,
     }),
@@ -57,7 +63,8 @@ export async function sendRegistrationConfirmation(
     html,
   })
   await sendEmail({
-    to: siteConfig.email,
+    to: [...siteConfig.notifyEmails],
+    replyTo: registration.email,
     subject: `New registration: ${registration.student_name} — ${session.name}`,
     html: `<p>${registration.student_name} (${registration.email}, ${registration.phone}) booked ${registration.seats} seat(s) for ${classSummary(session)}.</p>`,
   }).catch((error) => console.error(error))
