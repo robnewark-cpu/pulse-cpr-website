@@ -103,7 +103,7 @@ const builderActions = [
   {
     title: "Make forms actually deliver",
     detail:
-      "Set FORM_WEBHOOK_URL (Formspree, Make, Zapier, or Resend) so contact, book, quote, and newsletter go to Pulse.CPR2024@gmail.com. Test one real submission before telling Christine it is live.",
+      "Class, contact, quote, and newsletter forms email contact@pulsecprok.com and Pulse.CPR2024@gmail.com. The first inbox notice may ask Christine to click Confirm. Optional: set FORM_WEBHOOK_URL or RESEND_API_KEY.",
   },
   {
     title: "Drop /review after she approves, or keep it noindex",
@@ -164,7 +164,7 @@ export default function ReviewPage() {
               <li>• Your photo (initials “CO” for now)</li>
               <li>• Stock photos on course pages</li>
               <li>• Extra class dates can still be added from your phone</li>
-              <li>• Forms on this draft do not email you yet</li>
+              <li>• First class-signup email may ask you to confirm the inbox</li>
               <li>• Legal name {siteConfig.legalName} — confirm or correct</li>
             </ul>
           </div>

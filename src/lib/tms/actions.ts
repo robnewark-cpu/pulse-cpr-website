@@ -4,6 +4,7 @@ import { revalidatePath } from "next/cache"
 import { redirect } from "next/navigation"
 import { z } from "zod"
 import { createSupabaseServerClient } from "@/lib/supabase/server"
+import { notifyInstructor } from "@/lib/notify"
 import { sendClassCancellation, sendClassUpdate, sendRegistrationConfirmation } from "@/lib/tms/email"
 import { fromDatetimeLocal } from "@/lib/tms/format"
 import {
@@ -206,6 +207,20 @@ export async function submitClassRegistration(
     if (session) {
       await sendRegistrationConfirmation(session, registration).catch((error) => {
         console.error(error)
+      })
+      await notifyInstructor({
+        type: "registration",
+        subject: `New class signup: ${registration.student_name} — ${session.name}`,
+        fields: {
+          Name: registration.student_name,
+          Email: registration.email,
+          Phone: registration.phone,
+          Class: session.name,
+          Date: session.class_date,
+          Time: `${session.start_time.slice(0, 5)}–${session.end_time.slice(0, 5)}`,
+          Seats: String(registration.seats),
+          Notes: registration.notes ?? "",
+        },
       })
     }
     revalidatePath("/class-calendar")

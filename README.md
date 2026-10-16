@@ -39,6 +39,7 @@ Copy `.env.example` to `.env.local`:
 - `NEXT_PUBLIC_SITE_URL` — canonical site URL for SEO
 - `NEXT_PUBLIC_GA_ID` — optional Google Analytics measurement ID
 - `FORM_WEBHOOK_URL` — optional POST endpoint for lead, booking, quote, and newsletter forms
+- Class and contact forms also email `contact@pulsecprok.com` and `Pulse.CPR2024@gmail.com` (Resend if `RESEND_API_KEY` is set, otherwise a direct inbox notice)
 - `NEXT_PUBLIC_SQUARE_PAY_URL` — optional Square payment link shown after class requests
 - `NEXT_PUBLIC_SUPABASE_URL` / `NEXT_PUBLIC_SUPABASE_ANON_KEY` — class manager
 - `SUPABASE_SERVICE_ROLE_KEY` — optional; keep on the server only
@@ -56,4 +57,4 @@ Without Supabase keys, the public calendar stays empty until the instructor post
 
 Payments are processed by **Square**. This site does not take card numbers. Optional: set `NEXT_PUBLIC_SQUARE_PAY_URL` to her Square payment or invoice link.
 
-Optional email: add a Resend API key. Students get a payment reminder; cancelled classes notify the roster.
+Class signups email Christine even without a webhook. Optional Resend key: students also get a payment reminder, and cancelled classes notify the roster.
